@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface SunsetIconHandle {
   startAnimation: () => void;
@@ -15,7 +16,7 @@ interface SunsetIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const arrowVariants: Variants = {
+const ARROW_VARIANTS: Variants = {
   normal: {
     y: 0,
   },
@@ -23,7 +24,7 @@ const arrowVariants: Variants = {
     y: [0, 1, 0],
   },
 };
-const raysVariants: Variants = {
+const RAYS_VARIANTS: Variants = {
   normal: { opacity: 1 },
   animate: (i: number) => ({
     opacity: [0, 1],
@@ -42,23 +43,23 @@ const SunsetIcon = forwardRef<SunsetIconHandle, SunsetIconProps>(
 
       return {
         startAnimation: () => {
-          arrowControls.start('animate');
-          raysControls.start('animate');
+          arrowControls.start("animate");
+          raysControls.start("animate");
         },
         stopAnimation: () => {
-          arrowControls.start('normal');
-          raysControls.start('normal');
+          arrowControls.start("normal");
+          raysControls.start("normal");
         },
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          arrowControls.start('animate');
-          raysControls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          arrowControls.start("animate");
+          raysControls.start("animate");
         }
       },
       [arrowControls, raysControls, onMouseEnter]
@@ -66,11 +67,11 @@ const SunsetIcon = forwardRef<SunsetIconHandle, SunsetIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          arrowControls.start('normal');
-          raysControls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          arrowControls.start("normal");
+          raysControls.start("normal");
         }
       },
       [arrowControls, raysControls, onMouseLeave]
@@ -84,40 +85,40 @@ const SunsetIcon = forwardRef<SunsetIconHandle, SunsetIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.g
             animate={arrowControls}
             initial="normal"
-            variants={arrowVariants}
+            variants={ARROW_VARIANTS}
           >
             <path d="M12 10V2" />
             <path d="m16 6-4 4-4-4" />
           </motion.g>
 
           {[
-            'm4.93 10.93 1.41 1.41',
-            'M2 18h2',
-            'M20 18h2',
-            'm19.07 10.93-1.41 1.41',
-            'M22 22H2',
+            "m4.93 10.93 1.41 1.41",
+            "M2 18h2",
+            "M20 18h2",
+            "m19.07 10.93-1.41 1.41",
+            "M22 22H2",
             ,
           ].map((d, index) => (
             <motion.path
-              key={d}
-              d={d}
               animate={raysControls}
-              variants={raysVariants}
               custom={index + 1}
+              d={d}
               initial="normal"
+              key={d}
+              variants={RAYS_VARIANTS}
             />
           ))}
           <path d="M16 18a4 4 0 0 0-8 0" />
@@ -127,6 +128,6 @@ const SunsetIcon = forwardRef<SunsetIconHandle, SunsetIconProps>(
   }
 );
 
-SunsetIcon.displayName = 'SunsetIcon';
+SunsetIcon.displayName = "SunsetIcon";
 
 export { SunsetIcon };

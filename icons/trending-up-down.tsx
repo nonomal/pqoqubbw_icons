@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface TrendingUpDownIconHandle {
   startAnimation: () => void;
@@ -15,7 +16,7 @@ interface TrendingUpDownIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const svgVariants: Variants = {
+const SVG_VARIANTS: Variants = {
   animate: {
     x: 0,
     y: 0,
@@ -26,7 +27,7 @@ const svgVariants: Variants = {
   },
 };
 
-const pathVariants: Variants = {
+const PATH_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -46,7 +47,7 @@ const pathVariants: Variants = {
   },
 };
 
-const arrowVariants: Variants = {
+const ARROW_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -79,17 +80,17 @@ const TrendingUpDownIcon = forwardRef<
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start('animate'),
-      stopAnimation: () => controls.start('normal'),
+      startAnimation: () => controls.start("animate"),
+      stopAnimation: () => controls.start("normal"),
     };
   });
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('animate');
-      } else {
+      if (isControlledRef.current) {
         onMouseEnter?.(e);
+      } else {
+        controls.start("animate");
       }
     },
     [controls, onMouseEnter]
@@ -97,10 +98,10 @@ const TrendingUpDownIcon = forwardRef<
 
   const handleMouseLeave = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('normal');
-      } else {
+      if (isControlledRef.current) {
         onMouseLeave?.(e);
+      } else {
+        controls.start("normal");
       }
     },
     [controls, onMouseLeave]
@@ -114,48 +115,48 @@ const TrendingUpDownIcon = forwardRef<
       {...props}
     >
       <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        viewBox="0 0 24 24"
+        animate={controls}
         fill="none"
+        height={size}
+        initial="normal"
         stroke="currentColor"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        variants={svgVariants}
-        initial="normal"
-        animate={controls}
+        strokeWidth="2"
+        variants={SVG_VARIANTS}
+        viewBox="0 0 24 24"
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
       >
         <motion.path
+          animate={controls}
           d="M21 21 14.828 14.828"
-          variants={pathVariants}
           initial="normal"
-          animate={controls}
+          variants={PATH_VARIANTS}
         />
         <motion.path
+          animate={controls}
           d="M21 16v5h-5"
-          variants={arrowVariants}
           initial="normal"
-          animate={controls}
+          variants={ARROW_VARIANTS}
         />
         <motion.path
+          animate={controls}
           d="m21 3-9 9-4-4-6 6"
-          variants={pathVariants}
           initial="normal"
-          animate={controls}
+          variants={PATH_VARIANTS}
         />
         <motion.path
-          d="M21 8V3h-5"
-          variants={arrowVariants}
-          initial="normal"
           animate={controls}
+          d="M21 8V3h-5"
+          initial="normal"
+          variants={ARROW_VARIANTS}
         />
       </motion.svg>
     </div>
   );
 });
 
-TrendingUpDownIcon.displayName = 'TrendingUpDownIcon';
+TrendingUpDownIcon.displayName = "TrendingUpDownIcon";
 
 export { TrendingUpDownIcon };

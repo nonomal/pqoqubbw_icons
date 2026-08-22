@@ -2,6 +2,8 @@
 
 **IMPORTANT:** This project only accepts contributions based on [lucide icons](https://lucide.dev/). Pull requests containing custom icons or icons from other icon packs will be closed.
 
+**Animation Quality:** Pull requests with simple path length animations (`strokeDasharray`/`strokeDashoffset` "drawing" effect) will likely be rejected. This type of animation looks generic and doesn't add meaningful interaction. We're looking for creative, purposeful animations that enhance the icon's meaning.
+
 We welcome contributions to our project! Please follow these steps to contribute:
 
 1. Fork the repository on GitHub.
@@ -130,27 +132,29 @@ We welcome contributions to our project! Please follow these steps to contribute
 
    e. Add your animation logic using Framer Motion's `motion` components and the `controls` object to create engaging hover animations.
 
-7. **Add your icon to the icon list:**
+7. **Register your icon:**
 
-   a. Open the `icons/index.tsx` file.
-
-   b. Import your new icon component at the top of the file:
-
-   ```tsx
-   import { [YourIconName]Icon } from './[icon-name]';
+   ```
+   pnpm gen-cli
    ```
 
-   c. Add your icon to the `ICON_LIST` array at the very beginning (top) of the list in this format:
+   This is the only command you need. It does everything:
 
-   ```tsx
-   {
-     name: '[icon-name]',
-     icon: [YourIconName]Icon,
-     keywords: ['keyword1', 'keyword2', 'keyword3'],
-   },
-   ```
+   - registers the icon in `icons/index.ts` (import + `ICON_LIST` entry)
+   - syncs `scripts/registry-components.ts`
+   - builds `public/r/*.json` and `registry.json` for the shadcn CLI
+   - removes entries and JSON files for icons that no longer exist
+   - drops duplicate imports and `ICON_LIST` entries
+   - formats and lints everything
+   - verifies the result and fails if anything is still out of sync
 
-   For example:
+   Re-run it after any change to `/icons/` — it is idempotent and self-healing, so you never have to edit `icons/index.ts` or the registry by hand.
+
+   `pnpm gen-cli:check` runs the same verification without writing anything. This is what CI runs.
+
+8. **Improve the generated keywords:**
+
+   `gen-cli` derives keywords from the file name, which is usually not enough for search. Open `icons/index.ts`, find your icon in `ICON_LIST`, and replace them with the keywords from [lucide.dev](https://lucide.dev/):
 
    ```tsx
    {
@@ -160,20 +164,11 @@ We welcome contributions to our project! Please follow these steps to contribute
    },
    ```
 
-   Note: Use the exact icon name, keywords, and other data from the [lucide.dev](https://lucide.dev/) website for your specific icon.
+9. Build the project to check for errors:
 
-8. Build the project to check for errors:
-
-   ```
-   pnpm build
-   ```
-
-9. Test the application to ensure your changes work as expected:
-
-   ```
-   pnpm lint
-   pnpm gen-cli
-   ```
+```
+pnpm build
+```
 
 10. Commit your changes:
 

@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { motion, useAnimation } from 'motion/react';
-import type { Variants } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface InstagramIconHandle {
   startAnimation: () => void;
@@ -15,7 +16,7 @@ interface InstagramIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const rectVariants: Variants = {
+const RECT_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -31,13 +32,13 @@ const rectVariants: Variants = {
     pathOffset: [1, 0],
     transition: {
       duration: 0.6,
-      ease: 'linear',
+      ease: "linear",
       opacity: { duration: 0.1 },
     },
   },
 };
 
-const pathVariants: Variants = {
+const PATH_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -53,13 +54,13 @@ const pathVariants: Variants = {
     pathOffset: [1, 0],
     transition: {
       duration: 0.6,
-      ease: 'linear',
+      ease: "linear",
       opacity: { duration: 0.1 },
     },
   },
 };
 
-const lineVariants: Variants = {
+const LINE_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -75,7 +76,7 @@ const lineVariants: Variants = {
     pathOffset: [1, 0],
     transition: {
       duration: 0.6,
-      ease: 'linear',
+      ease: "linear",
       opacity: { duration: 0.1 },
     },
   },
@@ -93,26 +94,26 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
 
       return {
         startAnimation: () => {
-          rectControls.start('animate');
-          pathControls.start('animate');
-          lineControls.start('animate');
+          rectControls.start("animate");
+          pathControls.start("animate");
+          lineControls.start("animate");
         },
         stopAnimation: () => {
-          rectControls.start('normal');
-          pathControls.start('normal');
-          lineControls.start('normal');
+          rectControls.start("normal");
+          pathControls.start("normal");
+          lineControls.start("normal");
         },
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          rectControls.start('animate');
-          pathControls.start('animate');
-          lineControls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          rectControls.start("animate");
+          pathControls.start("animate");
+          lineControls.start("animate");
         }
       },
       [lineControls, onMouseEnter, pathControls, rectControls]
@@ -120,12 +121,12 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          rectControls.start('normal');
-          pathControls.start('normal');
-          lineControls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          rectControls.start("normal");
+          pathControls.start("normal");
+          lineControls.start("normal");
         }
       },
       [rectControls, pathControls, lineControls, onMouseLeave]
@@ -139,40 +140,40 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.rect
-            variants={rectVariants}
-            initial="normal"
             animate={rectControls}
-            x="2"
-            y="2"
-            width="20"
             height="20"
+            initial="normal"
             rx="5"
             ry="5"
+            variants={RECT_VARIANTS}
+            width="20"
+            x="2"
+            y="2"
           />
           <motion.path
-            variants={pathVariants}
-            initial="normal"
             animate={pathControls}
             d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+            initial="normal"
+            variants={PATH_VARIANTS}
           />
           <motion.line
-            variants={lineVariants}
-            initial="normal"
             animate={lineControls}
+            initial="normal"
+            variants={LINE_VARIANTS}
             x1="17.5"
-            y1="6.5"
             x2="17.51"
+            y1="6.5"
             y2="6.5"
           />
         </svg>
@@ -181,6 +182,6 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
   }
 );
 
-InstagramIcon.displayName = 'InstagramIcon';
+InstagramIcon.displayName = "InstagramIcon";
 
 export { InstagramIcon };

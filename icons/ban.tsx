@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface BanIconHandle {
   startAnimation: () => void;
@@ -15,7 +16,7 @@ interface BanIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const circleVariants: Variants = {
+const CIRCLE_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -34,7 +35,7 @@ const circleVariants: Variants = {
   },
 };
 
-const lineVariants: Variants = {
+const LINE_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -63,20 +64,20 @@ const BanIcon = forwardRef<BanIconHandle, BanIconProps>(
 
       return {
         startAnimation: () => {
-          controls.start('animate');
-          controls.start('slash', { delay: 0.5 });
+          controls.start("animate");
+          controls.start("slash", { delay: 0.5 });
         },
-        stopAnimation: () => controls.start('normal'),
+        stopAnimation: () => controls.start("normal"),
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('animate');
-          controls.start('slash', { delay: 0.5 });
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          controls.start("animate");
+          controls.start("slash", { delay: 0.5 });
         }
       },
       [controls, onMouseEnter]
@@ -84,10 +85,10 @@ const BanIcon = forwardRef<BanIconHandle, BanIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          controls.start("normal");
         }
       },
       [controls, onMouseLeave]
@@ -101,29 +102,29 @@ const BanIcon = forwardRef<BanIconHandle, BanIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
+            animate={controls}
             cx="12"
             cy="12"
-            r="10"
-            variants={circleVariants}
             initial="normal"
-            animate={controls}
+            r="10"
+            variants={CIRCLE_VARIANTS}
           />
           <motion.path
-            d="m4.9 4.9 14.2 14.2"
-            variants={lineVariants}
-            initial="normal"
             animate={controls}
+            d="m4.9 4.9 14.2 14.2"
+            initial="normal"
+            variants={LINE_VARIANTS}
           />
         </svg>
       </div>
@@ -131,6 +132,6 @@ const BanIcon = forwardRef<BanIconHandle, BanIconProps>(
   }
 );
 
-BanIcon.displayName = 'BanIcon';
+BanIcon.displayName = "BanIcon";
 
 export { BanIcon };

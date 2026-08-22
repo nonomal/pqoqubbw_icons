@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Transition } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Transition } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface ChevronsDownUpIconHandle {
   startAnimation: () => void;
@@ -15,8 +16,8 @@ interface ChevronsDownUpIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const defaultTransition: Transition = {
-  type: 'spring',
+const DEFAULT_TRANSITION: Transition = {
+  type: "spring",
   stiffness: 250,
   damping: 25,
 };
@@ -32,17 +33,17 @@ const ChevronsDownUpIcon = forwardRef<
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start('animate'),
-      stopAnimation: () => controls.start('normal'),
+      startAnimation: () => controls.start("animate"),
+      stopAnimation: () => controls.start("normal"),
     };
   });
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('animate');
-      } else {
+      if (isControlledRef.current) {
         onMouseEnter?.(e);
+      } else {
+        controls.start("animate");
       }
     },
     [controls, onMouseEnter]
@@ -50,10 +51,10 @@ const ChevronsDownUpIcon = forwardRef<
 
   const handleMouseLeave = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('normal');
-      } else {
+      if (isControlledRef.current) {
         onMouseLeave?.(e);
+      } else {
+        controls.start("normal");
       }
     },
     [controls, onMouseLeave]
@@ -67,41 +68,41 @@ const ChevronsDownUpIcon = forwardRef<
       {...props}
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        viewBox="0 0 24 24"
         fill="none"
+        height={size}
         stroke="currentColor"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
       >
         <motion.path
-          variants={{
-            normal: { translateY: '0%' },
-            animate: { translateY: '-2px' },
-          }}
-          transition={defaultTransition}
           animate={controls}
-          initial="normal"
           d="m7 20 5-5 5 5"
+          initial="normal"
+          transition={DEFAULT_TRANSITION}
+          variants={{
+            normal: { translateY: "0%" },
+            animate: { translateY: "-2px" },
+          }}
         />
         <motion.path
-          variants={{
-            normal: { translateY: '0%' },
-            animate: { translateY: '2px' },
-          }}
-          transition={defaultTransition}
           animate={controls}
-          initial="normal"
           d="m7 4 5 5 5-5"
+          initial="normal"
+          transition={DEFAULT_TRANSITION}
+          variants={{
+            normal: { translateY: "0%" },
+            animate: { translateY: "2px" },
+          }}
         />
       </svg>
     </div>
   );
 });
 
-ChevronsDownUpIcon.displayName = 'ChevronsDownUpIcon';
+ChevronsDownUpIcon.displayName = "ChevronsDownUpIcon";
 
 export { ChevronsDownUpIcon };

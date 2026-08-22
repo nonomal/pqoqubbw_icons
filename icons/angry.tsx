@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface AngryIconHandle {
   startAnimation: () => void;
@@ -18,7 +19,7 @@ interface AngryIconProps extends HTMLAttributes<HTMLDivElement> {
 const EYEBROW_ROTATION = 20;
 const DURATION = 0.6;
 
-const pathVariantsFace: Variants = {
+const PATH_VARIANTS_FACE: Variants = {
   normal: { scale: 1, rotate: 0 },
   animate: {
     scale: [1, 1.2, 1.2, 1.2, 1],
@@ -26,12 +27,12 @@ const pathVariantsFace: Variants = {
     transition: {
       duration: DURATION,
       times: [0, 0.2, 0.4, 0.6, 1],
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
 
-const pathVariantsLeftEyebrow: Variants = {
+const PATH_VARIANTS_LEFT_EYEBROW: Variants = {
   normal: { rotate: 0 },
   animate: {
     rotate: [0, EYEBROW_ROTATION, 0],
@@ -41,7 +42,7 @@ const pathVariantsLeftEyebrow: Variants = {
   },
 };
 
-const pathVariantsRightEyebrow: Variants = {
+const PATH_VARIANTS_RIGHT_EYEBROW: Variants = {
   normal: { rotate: 0 },
   animate: {
     rotate: [0, -EYEBROW_ROTATION, 0],
@@ -51,7 +52,7 @@ const pathVariantsRightEyebrow: Variants = {
   },
 };
 
-const pathVariantsEye: Variants = {
+const PATH_VARIANTS_EYE: Variants = {
   normal: { scale: 1 },
   animate: {
     scale: [1, 1.2, 1],
@@ -61,7 +62,7 @@ const pathVariantsEye: Variants = {
   },
 };
 
-const pathVariantsMouth: Variants = {
+const PATH_VARIANTS_MOUTH: Variants = {
   normal: { translateY: 0 },
   animate: {
     translateY: [0, -0.5, 0],
@@ -80,17 +81,17 @@ const AngryIcon = forwardRef<AngryIconHandle, AngryIconProps>(
       isControlledRef.current = true;
 
       return {
-        startAnimation: () => controls.start('animate'),
-        stopAnimation: () => controls.start('normal'),
+        startAnimation: () => controls.start("animate"),
+        stopAnimation: () => controls.start("normal"),
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          controls.start("animate");
         }
       },
       [controls, onMouseEnter]
@@ -98,10 +99,10 @@ const AngryIcon = forwardRef<AngryIconHandle, AngryIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          controls.start("normal");
         }
       },
       [controls, onMouseLeave]
@@ -115,43 +116,43 @@ const AngryIcon = forwardRef<AngryIconHandle, AngryIconProps>(
         {...props}
       >
         <motion.svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
+          animate={controls}
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          animate={controls}
-          variants={pathVariantsFace}
+          strokeWidth="2"
+          variants={PATH_VARIANTS_FACE}
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="12" cy="12" r="10" />
           <motion.path
-            variants={pathVariantsMouth}
             animate={controls}
             d="M16 16s-1.5-2-4-2-4 2-4 2"
+            variants={PATH_VARIANTS_MOUTH}
           />
           <motion.path
-            variants={pathVariantsLeftEyebrow}
             animate={controls}
             d="M7.5 8 10 9"
+            variants={PATH_VARIANTS_LEFT_EYEBROW}
           />
           <motion.path
-            variants={pathVariantsRightEyebrow}
             animate={controls}
             d="m14 9 2.5-1"
+            variants={PATH_VARIANTS_RIGHT_EYEBROW}
           />
           <motion.path
-            variants={pathVariantsEye}
             animate={controls}
             d="M9 10h.01"
+            variants={PATH_VARIANTS_EYE}
           />
           <motion.path
-            variants={pathVariantsEye}
             animate={controls}
             d="M15 10h.01"
+            variants={PATH_VARIANTS_EYE}
           />
         </motion.svg>
       </div>
@@ -159,6 +160,6 @@ const AngryIcon = forwardRef<AngryIconHandle, AngryIconProps>(
   }
 );
 
-AngryIcon.displayName = 'AngryIcon';
+AngryIcon.displayName = "AngryIcon";
 
 export { AngryIcon };

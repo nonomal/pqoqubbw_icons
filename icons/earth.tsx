@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Transition, Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Transition, Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface EarthIconHandle {
   startAnimation: () => void;
@@ -15,13 +16,13 @@ interface EarthIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const circleTransition: Transition = {
+const CIRCLE_TRANSITION: Transition = {
   duration: 0.3,
   delay: 0.1,
   opacity: { delay: 0.15 },
 };
 
-const circleVariants: Variants = {
+const CIRCLE_VARIANTS: Variants = {
   normal: {
     pathLength: 1,
     opacity: 1,
@@ -41,17 +42,17 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
       isControlledRef.current = true;
 
       return {
-        startAnimation: () => controls.start('animate'),
-        stopAnimation: () => controls.start('normal'),
+        startAnimation: () => controls.start("animate"),
+        stopAnimation: () => controls.start("normal"),
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          controls.start("animate");
         }
       },
       [controls, onMouseEnter]
@@ -59,10 +60,10 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          controls.start("normal");
         }
       },
       [controls, onMouseLeave]
@@ -76,15 +77,15 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.path
             animate={controls}
@@ -138,12 +139,12 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
             }}
           />
           <motion.circle
+            animate={controls}
             cx="12"
             cy="12"
             r="10"
-            transition={circleTransition}
-            variants={circleVariants}
-            animate={controls}
+            transition={CIRCLE_TRANSITION}
+            variants={CIRCLE_VARIANTS}
           />
         </svg>
       </div>
@@ -151,6 +152,6 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
   }
 );
 
-EarthIcon.displayName = 'EarthIcon';
+EarthIcon.displayName = "EarthIcon";
 
 export { EarthIcon };

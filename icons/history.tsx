@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Transition, Variants } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Transition, Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface HistoryIconHandle {
   startAnimation: () => void;
@@ -15,54 +16,54 @@ interface HistoryIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const arrowTransition: Transition = {
-  type: 'spring',
+const ARROW_TRANSITION: Transition = {
+  type: "spring",
   stiffness: 250,
   damping: 25,
 };
 
-const arrowVariants: Variants = {
+const ARROW_VARIANTS: Variants = {
   normal: {
-    rotate: '0deg',
+    rotate: "0deg",
   },
   animate: {
-    rotate: '-50deg',
+    rotate: "-50deg",
   },
 };
 
-const handTransition: Transition = {
+const HAND_TRANSITION: Transition = {
   duration: 0.6,
   ease: [0.4, 0, 0.2, 1],
 };
 
-const handVariants: Variants = {
+const HAND_VARIANTS: Variants = {
   normal: {
     rotate: 0,
-    originX: '0%',
-    originY: '100%',
+    originX: "0%",
+    originY: "100%",
   },
   animate: {
     rotate: -360,
-    originX: '0%',
-    originY: '100%',
+    originX: "0%",
+    originY: "100%",
   },
 };
 
-const minuteHandTransition: Transition = {
+const MINUTE_HAND_TRANSITION: Transition = {
   duration: 0.5,
-  ease: 'easeInOut',
+  ease: "easeInOut",
 };
 
-const minuteHandVariants: Variants = {
+const MINUTE_HAND_VARIANTS: Variants = {
   normal: {
     rotate: 0,
-    originX: '0%',
-    originY: '0%',
+    originX: "0%",
+    originY: "0%",
   },
   animate: {
     rotate: -45,
-    originX: '0%',
-    originY: '0%',
+    originX: "0%",
+    originY: "0%",
   },
 };
 
@@ -74,17 +75,17 @@ const HistoryIcon = forwardRef<HistoryIconHandle, HistoryIconProps>(
     useImperativeHandle(ref, () => {
       isControlledRef.current = true;
       return {
-        startAnimation: () => controls.start('animate'),
-        stopAnimation: () => controls.start('normal'),
+        startAnimation: () => controls.start("animate"),
+        stopAnimation: () => controls.start("normal"),
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          controls.start("animate");
         }
       },
       [controls, onMouseEnter]
@@ -92,10 +93,10 @@ const HistoryIcon = forwardRef<HistoryIconHandle, HistoryIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          controls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          controls.start("normal");
         }
       },
       [controls, onMouseLeave]
@@ -109,43 +110,43 @@ const HistoryIcon = forwardRef<HistoryIconHandle, HistoryIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.g
-            transition={arrowTransition}
-            variants={arrowVariants}
             animate={controls}
+            transition={ARROW_TRANSITION}
+            variants={ARROW_VARIANTS}
           >
             <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
             <path d="M3 3v5h5" />
           </motion.g>
           <motion.line
-            x1="12"
-            y1="12"
-            x2="12"
-            y2="7"
-            variants={handVariants}
             animate={controls}
             initial="normal"
-            transition={handTransition}
+            transition={HAND_TRANSITION}
+            variants={HAND_VARIANTS}
+            x1="12"
+            x2="12"
+            y1="12"
+            y2="7"
           />
           <motion.line
-            x1="12"
-            y1="12"
-            x2="16"
-            y2="14"
-            variants={minuteHandVariants}
             animate={controls}
             initial="normal"
-            transition={minuteHandTransition}
+            transition={MINUTE_HAND_TRANSITION}
+            variants={MINUTE_HAND_VARIANTS}
+            x1="12"
+            x2="16"
+            y1="12"
+            y2="14"
           />
         </svg>
       </div>
@@ -153,6 +154,6 @@ const HistoryIcon = forwardRef<HistoryIconHandle, HistoryIconProps>(
   }
 );
 
-HistoryIcon.displayName = 'HistoryIcon';
+HistoryIcon.displayName = "HistoryIcon";
 
 export { HistoryIcon };

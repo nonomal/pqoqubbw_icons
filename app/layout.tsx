@@ -1,77 +1,55 @@
-import type { Metadata, Viewport } from 'next';
-import { Geist_Mono } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/providers/theme';
-import { Header } from '@/components/header';
+import type { Viewport } from "next";
+import localFont from "next/font/local";
 
-import ogImage from './og.png';
-import { Analytics } from '@/components/analytics';
-import { NuqsAdapter } from 'nuqs/adapters/next/app';
-// import { SnowfallComponent } from '@/components/snowfall';
-import { Toaster } from 'sonner';
-import { Banner } from '@/components/ui/banner';
-import { LINK } from '@/constants';
-import { ArrowUpRight } from 'lucide-react';
-import { PackageNameProvider } from '@/providers/package-name';
+import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+import { Analytics } from "@/components/analytics";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Toaster } from "@/components/toaster";
+import { PackageNameProvider } from "@/providers/package-name";
+import { ThemeProvider } from "@/providers/theme";
+import { OrganizationJsonLd, WebsiteJsonLd } from "@/seo/json-ld";
+import { baseMetadata } from "@/seo/metadata";
+
+const andaleMonoLocal = localFont({
+  src: "../fonts/ANDALEMO.woff",
+  variable: "--font-mono",
+  display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://lucide-animated.com'),
-  openGraph: {
-    title: 'lucide-animated',
-    description: 'beautifully crafted animated icons',
-    siteName: 'lucide-animated',
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://lucide-animated.com',
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-      },
-    ],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    'max-image-preview': 'large',
-    'max-snippet': -1,
-    'max-video-preview': -1,
-    googleBot: 'index, follow',
-  },
-  applicationName: 'lucide-animated',
-  appleWebApp: {
-    title: 'lucide-animated',
-    statusBarStyle: 'default',
-    capable: true,
-  },
-  title: {
-    default: 'lucide-animated',
-    template: `%s - lucide-animated`,
-  },
-  description: 'beautifully crafted animated icons',
-  twitter: {
-    card: 'summary_large_image',
-    title: 'lucide-animated',
-    description: 'beautifully crafted animated icons',
-    creator: '@pqoqubbw',
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-      },
-    ],
-  },
-};
+const gtCinetypeLocal = localFont({
+  src: "../fonts/GT-Cinetype-Regular.woff",
+  variable: "--font-sans",
+  display: "swap",
+  weight: "400",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const useProductionFonts =
+  process.env.NODE_ENV === "production" ||
+  process.env.USE_PRODUCTION_FONTS === "true";
+
+const andaleMono = useProductionFonts ? andaleMonoLocal : geistMono;
+const gtCinetype = useProductionFonts ? gtCinetypeLocal : geist;
+
+export const metadata = baseMetadata;
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   userScalable: false,
   maximumScale: 1,
@@ -84,37 +62,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      className={`${andaleMono.variable} ${gtCinetype.variable}`}
+      lang="en"
+      suppressHydrationWarning
+    >
       <body
-        className={`${geistMono.className} antialiased relative bg-background dark:bg-[#151515]`}
+        className={`${gtCinetype.className} relative bg-background antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <PackageNameProvider>
-            <a href={LINK.HELPY_UI} target="_blank" className="group">
-              <Banner variant="rainbow" className="h-10 md:text-sm text-xs">
-                <p className="group-hover:underline underline-offset-4">
-                  🎉 helpy-ui - warm blanket for your projects
-                </p>
-                <ArrowUpRight
-                  className="size-3.5 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out shrink-0"
-                  strokeWidth={2}
-                />
-              </Banner>
-            </a>
-            <Header />
-            <NuqsAdapter>
-              {children}
-              <Toaster theme="light" position="bottom-right" />
-              {/* <SnowfallComponent /> */}
-            </NuqsAdapter>
-            <Analytics />
-          </PackageNameProvider>
-        </ThemeProvider>
+        <div className="root">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            disableTransitionOnChange
+            enableSystem
+          >
+            <PackageNameProvider>
+              <main className="flex-1">
+                <blockquote className="sr-only">
+                  <a href="/llms.txt">llms.txt</a>
+                </blockquote>
+                <NuqsAdapter>{children}</NuqsAdapter>
+                <Toaster />
+              </main>
+              <Header />
+              <Analytics />
+              <Footer />
+              <WebsiteJsonLd />
+              <OrganizationJsonLd />
+            </PackageNameProvider>
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

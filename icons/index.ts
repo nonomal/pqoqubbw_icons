@@ -1,310 +1,470 @@
-import { AlarmClockIcon } from '@/icons/alarm-clock';
-import { AlignCenterIcon } from '@/icons/align-center';
-import { AlignHorizontalIcon } from '@/icons/align-horizontal';
-import { AlignVerticalIcon } from '@/icons/align-vertical';
-import { AngryIcon } from '@/icons/angry';
-import { ArchiveIcon } from '@/icons/archive';
-import { ArrowLeftIcon } from '@/icons/arrow-left';
-import { ArrowRightIcon } from '@/icons/arrow-right';
-import { AtSignIcon } from '@/icons/at-sign';
-import { AttachFileIcon } from '@/icons/attach-file';
-import { BadgePercentIcon } from '@/icons/badge-percent';
-import { BellIcon } from '@/icons/bell';
-import { BoldIcon } from '@/icons/bold';
-import { BoneIcon } from '@/icons/bone';
-import { CalendarCogIcon } from '@/icons/calendar-cog';
-import { ChartPieIcon } from '@/icons/chart-pie';
-import { ChartScatterIcon } from '@/icons/chart-scatter';
-import { CircleCheckIcon } from '@/icons/circle-check';
-import { CircleDollarSignIcon } from '@/icons/circle-dollar-sign';
-import { ClockIcon } from '@/icons/clock';
-import { CopyIcon } from '@/icons/copy';
-import { CursorClickIcon } from '@/icons/cursor-click';
-import { DeleteIcon } from '@/icons/delete';
-import { DownloadIcon } from '@/icons/download';
-import { DownvoteIcon } from '@/icons/downvote';
-import { SquarePenIcon } from '@/icons/square-pen';
-import { ExpandIcon } from '@/icons/expand';
-import { FilePenLineIcon } from '@/icons/file-pen-line';
-import { FileStackIcon } from '@/icons/file-stack';
-import { FingerprintIcon } from '@/icons/fingerprint';
-import { FrameIcon } from '@/icons/frame';
-import { GaugeIcon } from '@/icons/gauge';
-import { GitPullRequestIcon } from '@/icons/git-pull-request';
-import { GithubIcon } from '@/icons/github';
-import { GripIcon } from '@/icons/grip';
-import { HandCoinsIcon } from '@/icons/hand-coins';
-import { HomeIcon } from '@/icons/home';
-import { ItalicIcon } from '@/icons/italic';
-import { LanguagesIcon } from '@/icons/languages';
-import { LayersIcon } from '@/icons/layers';
-import { LinkIcon } from '@/icons/link';
-import { MenuIcon } from '@/icons/menu';
-import { PartyPopperIcon } from '@/icons/party-popper';
-import { PenToolIcon } from '@/icons/pen-tool';
-import { RefreshCCWIcon } from '@/icons/refresh-ccw';
-import { RouteIcon } from '@/icons/route';
-import { ScanTextIcon } from '@/icons/scan-text';
-import { SettingsIcon } from '@/icons/settings';
-import { SettingsGearIcon } from '@/icons/settings-gear';
-import { SunIcon } from '@/icons/sun';
-import { UnderlineIcon } from '@/icons/underline';
-import { UndoIcon } from '@/icons/undo';
-import { ConnectIcon } from '@/icons/connect';
-import { UpvoteIcon } from '@/icons/upvote';
-import { UsersIcon } from '@/icons/users';
-import { VolumeIcon } from '@/icons/volume';
-import { CartIcon } from '@/icons/cart';
-import { StethoscopeIcon } from '@/icons/stethoscope';
-import { EarthIcon } from '@/icons/earth';
-import { WorkflowIcon } from '@/icons/workflow';
-import { LogoutIcon } from '@/icons/logout';
-import { CircleHelpIcon } from '@/icons/circle-help';
-import { UserIcon } from '@/icons/user';
-import { AudioLinesIcon } from '@/icons/audio-lines';
-import { FlameIcon } from '@/icons/flame';
-import { EyeOffIcon } from '@/icons/eye-off';
-import { SquareStackIcon } from '@/icons/square-stack';
-import { BadgeAlertIcon } from '@/icons/badge-alert';
-import { MessageCircleIcon } from '@/icons/message-circle';
-import { MessageCircleMoreIcon } from '@/icons/message-circle-more';
-import { SearchIcon } from '@/icons/search';
-import { ShieldCheckIcon } from '@/icons/shield-check';
-import { TimerIcon } from '@/icons/timer';
-import { BluetoothSearchingIcon } from '@/icons/bluetooth-searching';
-import { BluetoothConnectedIcon } from '@/icons/bluetooth-connected';
-import { BluetoothOffIcon } from '@/icons/bluetooth-off';
-import { FlaskIcon } from '@/icons/flask';
-import { SyringeIcon } from '@/icons/syringe';
-import { AArrowDownIcon } from '@/icons/a-arrow-down';
-import { CompassIcon } from '@/icons/compass';
-import { TrendingDownIcon } from '@/icons/trending-down';
-import { TrendingUpIcon } from '@/icons/trending-up';
-import { TrendingUpDownIcon } from '@/icons/trending-up-down';
-import { PlayIcon } from '@/icons/play';
-import { PauseIcon } from '@/icons/pause';
-import { ChevronsUpDownIcon } from '@/icons/chevrons-up-down';
-import { ChevronsDownUpIcon } from '@/icons/chevrons-down-up';
-import { ChevronsLeftRightIcon } from '@/icons/chevrons-left-right';
-import { ChevronsRightLeftIcon } from '@/icons/chevrons-right-left';
-import { CircleChevronDownIcon } from '@/icons/circle-chevron-down';
-import { CircleChevronLeftIcon } from '@/icons/circle-chevron-left';
-import { CircleChevronRightIcon } from '@/icons/circle-chevron-right';
-import { CircleChevronUpIcon } from '@/icons/circle-chevron-up';
-import { CircleDashedIcon } from '@/icons/circle-dashed';
-import { CheckIcon } from '@/icons/check';
-import { CheckCheckIcon } from '@/icons/check-check';
-import { IdCardIcon } from '@/icons/id-card';
-import { LoaderPinwheelIcon } from '@/icons/loader-pinwheel';
-import { RockingChairIcon } from '@/icons/rocking-chair';
-import { ChartColumnDecreasingIcon } from '@/icons/chart-column-decreasing';
-import { ChartColumnIncreasingIcon } from '@/icons/chart-column-increasing';
-import { ChartBarDecreasingIcon } from '@/icons/chart-bar-decreasing';
-import { ChartBarIncreasingIcon } from '@/icons/chart-bar-increasing';
-import { BananaIcon } from '@/icons/banana';
-import { BanIcon } from '@/icons/ban';
-import { WifiIcon } from '@/icons/wifi';
-import { ChromeIcon } from '@/icons/chrome';
-import { FigmaIcon } from '@/icons/figma';
-import { FishSymbolIcon } from '@/icons/fish-symbol';
-import { GitCommitVerticalIcon } from '@/icons/git-commit-vertical';
-import { GitCommitHorizontalIcon } from '@/icons/git-commit-horizontal';
-import { WaypointsIcon } from '@/icons/waypoints';
-import { ShipIcon } from '@/icons/ship';
-import { RollerCoasterIcon } from '@/icons/roller-coaster';
-import { AirplaneIcon } from '@/icons/airplane';
-import { DrumIcon } from '@/icons/drum';
-import { TrainTrackIcon } from '@/icons/train-track';
-import { SparklesIcon } from '@/icons/sparkles';
-import { WebhookIcon } from '@/icons/webhook';
-import { RabbitIcon } from '@/icons/rabbit';
-import { CogIcon } from '@/icons/cog';
-import { CpuIcon } from '@/icons/cpu';
-import { RocketIcon } from '@/icons/rocket';
-import { ActivityIcon } from '@/icons/activity';
-import { MapPinIcon } from '@/icons/map-pin';
-import { MapPinCheckInsideIcon } from '@/icons/map-pin-check-inside';
-import { MapPinMinusInsideIcon } from '@/icons/map-pin-minus-inside';
-import { MapPinPlusInsideIcon } from '@/icons/map-pin-plus-inside';
-import { MapPinOffIcon } from '@/icons/map-pin-off';
-import { MapPinCheckIcon } from '@/icons/map-pin-check';
-import { MapPinHouseIcon } from '@/icons/map-pin-house';
-import { MapPinMinusIcon } from '@/icons/map-pin-minus';
-import { MapPinPlusIcon } from '@/icons/map-pin-plus';
-import { MapPinXInsideIcon } from '@/icons/map-pin-x-inside';
-import { BatteryFullIcon } from '@/icons/battery-full';
-import { TerminalIcon } from '@/icons/terminal';
-import { KeyboardIcon } from '@/icons/keyboard';
-import { ClapIcon } from '@/icons/clap';
-import { LayoutPanelTopIcon } from '@/icons/layout-panel-top';
-import { BookTextIcon } from '@/icons/book-text';
-import { ShowerHeadIcon } from '@/icons/shower-head';
-import { TelescopeIcon } from '@/icons/telescope';
-import { WindIcon } from '@/icons/wind';
-import { CctvIcon } from '@/icons/cctv';
-import { CoffeeIcon } from '@/icons/coffee';
-import { ArrowDownZAIcon } from '@/icons/arrow-down-z-a';
-import { ArrowDownAZIcon } from '@/icons/arrow-down-a-z';
-import { ArrowDown01con } from '@/icons/arrow-down-0-1';
-import { ArrowDown10Icon } from '@/icons/arrow-down-1-0';
-import { ClipboardCheckIcon } from '@/icons/clipboard-check';
-import { FacebookIcon } from '@/icons/facebook';
-import { LinkedinIcon } from '@/icons/linkedin';
-import { TwitterIcon } from '@/icons/twitter';
-import { YoutubeIcon } from '@/icons/youtube';
-import { InstagramIcon } from '@/icons/instagram';
-import { TwitchIcon } from '@/icons/twitch';
-import { DribbbleIcon } from '@/icons/dribbble';
-import { DiscordIcon } from '@/icons/discord';
-import { XIcon } from '@/icons/x';
-import { MoonIcon } from '@/icons/moon';
-import { VibrateIcon } from '@/icons/vibrate';
-import { SmartphoneChargingIcon } from '@/icons/smartphone-charging';
-import { CastIcon } from '@/icons/cast';
-import { UploadIcon } from '@/icons/upload';
-import { CloudSunIcon } from '@/icons/cloud-sun';
-import { SunsetIcon } from '@/icons/sunset';
-import { SunDimIcon } from '@/icons/sun-dim';
-import { SunMediumIcon } from '@/icons/sun-medium';
-import { SunMoonIcon } from '@/icons/sun-moon';
-import { MessageSquareIcon } from '@/icons/message-square';
-import { MessageSquareMoreIcon } from '@/icons/message-square-more';
-import { MessageCircleDashedIcon } from '@/icons/message-circle-dashed';
-import { MessageSquareDashedIcon } from '@/icons/message-square-dashed';
-import { AArrowUpIcon } from '@/icons/a-arrow-up';
-import { FileCogIcon } from '@/icons/file-cog';
-import { CalendarDaysIcon } from '@/icons/calendar-days';
-import { ArrowBigDownDashIcon } from '@/icons/arrow-big-down-dash';
-import { ArrowBigLeftDashIcon } from '@/icons/arrow-big-left-dash';
-import { ArrowBigRightDashIcon } from '@/icons/arrow-big-right-dash';
-import { ArrowBigUpDashIcon } from '@/icons/arrow-big-up-dash';
-import { ArrowDownIcon } from '@/icons/arrow-down';
-import { ArrowUpIcon } from '@/icons/arrow-up';
-import { ArrowBigDownIcon } from '@/icons/arrow-big-down';
-import { ArrowBigLeftIcon } from '@/icons/arrow-big-left';
-import { ArrowBigRightIcon } from '@/icons/arrow-big-right';
-import { ArrowBigUpIcon } from '@/icons/arrow-big-up';
-import { KeyIcon } from '@/icons/key';
-import { KeyCircleIcon } from '@/icons/key-circle';
-import { KeySquareIcon } from '@/icons/key-square';
-import { ChartLineIcon } from '@/icons/chart-line';
-import { ChartSplineIcon } from '@/icons/chart-spline';
-import { FileChartLineIcon } from '@/icons/file-chart-line';
-import { ChartNoAxesColumnIncreasingIcon } from '@/icons/chart-no-axes-column-increasing';
-import { ChartNoAxesColumnDecreasingIcon } from '@/icons/chart-no-axes-column-decreasing';
-import { RadioIcon } from '@/icons/radio';
-import { RadioTowerIcon } from '@/icons/radio-tower';
-import { AirVentIcon } from '@/icons/air-vent';
-import { TornadoIcon } from '@/icons/tornado';
-import { WindArrowDownIcon } from '@/icons/wind-arrow-down';
-import { CloudRainIcon } from '@/icons/cloud-rain';
-import { CloudRainWindIcon } from '@/icons/cloud-rain-wind';
-import { WavesIcon } from '@/icons/waves';
-import { WavesLadderIcon } from '@/icons/waves-ladder';
-import { SquareArrowDownIcon } from '@/icons/square-arrow-down';
-import { SquareArrowLeftIcon } from '@/icons/square-arrow-left';
-import { SquareArrowUpIcon } from '@/icons/square-arrow-up';
-import { SquareArrowRightIcon } from '@/icons/square-arrow-right';
-import { BlocksIcon } from '@/icons/blocks';
-import { CalendarCheckIcon } from '@/icons/calendar-check';
-import { CalendarCheck2Icon } from '@/icons/calendar-check-2';
-import { FileCheckIcon } from '@/icons/file-check';
-import { FileCheck2Icon } from '@/icons/file-check-2';
-import { MailCheckIcon } from '@/icons/mail-check';
-import { MonitorCheckIcon } from '@/icons/monitor-check';
-import { LaptopMinimalCheckIcon } from '@/icons/laptop-minimal-check';
-import { ChevronDownIcon } from '@/icons/chevron-down';
-import { ChevronUpIcon } from '@/icons/chevron-up';
-import { ChevronLeftIcon } from '@/icons/chevron-left';
-import { ChevronRightIcon } from '@/icons/chevron-right';
-import { SquareChevronDownIcon } from '@/icons/square-chevron-down';
-import { SquareChevronUpIcon } from '@/icons/square-chevron-up';
-import { SquareChevronRightIcon } from '@/icons/square-chevron-right';
-import { SquareChevronLeftIcon } from '@/icons/square-chevron-left';
-import { GalleryHorizontalEndIcon } from '@/icons/gallery-horizontal-end';
-import { GalleryVerticalEndIcon } from '@/icons/gallery-vertical-end';
-import { HandHeartIcon } from '@/icons/hand-heart';
-import { SquareActivityIcon } from '@/icons/square-activity';
-import { RotateCWIcon } from '@/icons/rotate-cw';
-import { RotateCCWIcon } from '@/icons/rotate-ccw';
-import { GalleryThumbnailsIcon } from '@/icons/gallery-thumbnails';
-import { UserCheckIcon } from '@/icons/user-check';
-import { UserRoundCheckIcon } from '@/icons/user-round-check';
-import { BoxesIcon } from '@/icons/boxes';
-import { RefreshCWIcon } from '@/icons/refresh-cw';
-import { RefreshCCWDotIcon } from '@/icons/refresh-ccw-dot';
-import { RefreshCWOffIcon } from '@/icons/refresh-cw-off';
-import { RedoIcon } from '@/icons/redo';
-import { UndoDotIcon } from '@/icons/undo-dot';
-import { RedoDotIcon } from '@/icons/redo-dot';
-import { ScanFaceIcon } from '@/icons/scan-face';
-import { FrownIcon } from '@/icons/frown';
-import { SmilePlusIcon } from '@/icons/smile-plus';
-import { SmileIcon } from '@/icons/smile';
-import { LaughIcon } from '@/icons/laugh';
-import { AnnoyedIcon } from '@/icons/annoyed';
-import { MehIcon } from '@/icons/meh';
-import { HistoryIcon } from '@/icons/history';
-import { FileTextIcon } from '@/icons/file-text';
-import { UserRoundPlusIcon } from '@/icons/user-round-plus';
-import { PanelLeftOpenIcon } from '@/icons/panel-left-open';
-import { PanelLeftCloseIcon } from '@/icons/panel-left-close';
-import { PanelRightOpenIcon } from '@/icons/panel-right-open';
-import { HeartIcon } from './heart';
-import { PlusIcon } from './plus';
-import { DropletIcon } from './droplet';
-import { ThermometerIcon } from './thermometer';
-import { SnowflakeIcon } from './snowflake';
-import { FoldersIcon } from './folders';
-import { LockIcon } from './lock';
-import { LockKeyholeIcon } from './lock-keyhole';
-import { LockOpenIcon } from './lock-open';
-import { LockKeyholeOpenIcon } from './lock-keyhole-open';
-import { ConstructionIcon } from './construction';
-import { BookmarkIcon } from './bookmark';
-import { BookmarkCheckIcon } from './bookmark-check';
-import { GripHorizontalIcon } from './grip-horizontal';
-import { ChevronFirstIcon } from './chevron-first';
-import { BotIcon } from './bot';
-import { BookmarkXIcon } from './bookmark-x';
-import { BookmarkMinusIcon } from './bookmark-minus';
-import { BookmarkPlusIcon } from './bookmark-plus';
-import { GripVerticalIcon } from './grip-vertical';
-import { BotMessageSquareIcon } from './bot-message-square';
-import { MaximizeIcon } from './maximize';
-import { Maximize2Icon } from './maximize-2';
-import { BluetoothIcon } from './bluetooth';
-import { CloudLightningIcon } from './cloud-lightning';
-import { CloudDownloadIcon } from './cloud-download';
-import { CloudUploadIcon } from './cloud-upload';
-import { HardDriveUploadIcon } from './hard-drive-upload';
-import { HardDriveDownloadIcon } from './hard-drive-download';
-import { SmartphoneNfcIcon } from './smartphone-nfc';
-import { NfcIcon } from './nfc';
-import { CloudCogIcon } from './cloud-cog';
-import { DollarSignIcon } from './dollar-sign';
-import { IndianRupeeIcon } from './indian-rupee';
-import { JapaneseYenIcon } from './japanese-yen';
-import { PhilippinePesoIcon } from './philippine-peso';
-import { EuroIcon } from './euro';
-import { PoundSterlingIcon } from './pound-sterling';
-import { GeorgianLariIcon } from './georgian-lari';
-import { RussianRubleIcon } from './russian-ruble';
-import { SaudiRiyalIcon } from './saudi-riyal';
-import { SwissFrancIcon } from './swiss-franc';
-import { TurkishLiraIcon } from './turkish-lira';
-import { ArrowDownLeftIcon } from './arrow-down-left';
-import { ArrowDownRightIcon } from './arrow-down-right';
-import { AccessibilityIcon } from './accessibility';
-import { BatteryMediumIcon } from './battery-medium';
-import { BatteryLowIcon } from './battery-low';
-import { PlugZapIcon } from './plug-zap';
-import { EvChargerIcon } from './ev-charger';
-import { ContrastIcon } from './contrast';
-import { ShrinkIcon } from './shrink';
-import { MinimizeIcon } from './minimize';
-import { WashingMachineIcon } from './washing-machine';
-import { GitMergeIcon } from './git-merge';
+import { AArrowDownIcon } from "@/icons/a-arrow-down";
+import { AArrowUpIcon } from "@/icons/a-arrow-up";
+import { AccessibilityIcon } from "@/icons/accessibility";
+import { ActivityIcon } from "@/icons/activity";
+import { AirVentIcon } from "@/icons/air-vent";
+import { AirplaneIcon } from "@/icons/airplane";
+import { AirplayIcon } from "@/icons/airplay";
+import { AlarmClockIcon } from "@/icons/alarm-clock";
+import { AlignCenterIcon } from "@/icons/align-center";
+import { AlignHorizontalIcon } from "@/icons/align-horizontal";
+import { AlignLeftIcon } from "@/icons/align-left";
+import { AlignRightIcon } from "@/icons/align-right";
+import { AlignVerticalIcon } from "@/icons/align-vertical";
+import { AmbulanceIcon } from "@/icons/ambulance";
+import { AngryIcon } from "@/icons/angry";
+import { AnnoyedIcon } from "@/icons/annoyed";
+import { ArchiveIcon } from "@/icons/archive";
+import { ArrowBigDownIcon } from "@/icons/arrow-big-down";
+import { ArrowBigDownDashIcon } from "@/icons/arrow-big-down-dash";
+import { ArrowBigLeftIcon } from "@/icons/arrow-big-left";
+import { ArrowBigLeftDashIcon } from "@/icons/arrow-big-left-dash";
+import { ArrowBigRightIcon } from "@/icons/arrow-big-right";
+import { ArrowBigRightDashIcon } from "@/icons/arrow-big-right-dash";
+import { ArrowBigUpIcon } from "@/icons/arrow-big-up";
+import { ArrowBigUpDashIcon } from "@/icons/arrow-big-up-dash";
+import { ArrowDownIcon } from "@/icons/arrow-down";
+import { ArrowDown01Icon } from "@/icons/arrow-down-0-1";
+import { ArrowDown10Icon } from "@/icons/arrow-down-1-0";
+import { ArrowDownAZIcon } from "@/icons/arrow-down-a-z";
+import { ArrowDownLeftIcon } from "@/icons/arrow-down-left";
+import { ArrowDownRightIcon } from "@/icons/arrow-down-right";
+import { ArrowDownZAIcon } from "@/icons/arrow-down-z-a";
+import { ArrowLeftIcon } from "@/icons/arrow-left";
+import { ArrowRightIcon } from "@/icons/arrow-right";
+import { ArrowUpIcon } from "@/icons/arrow-up";
+import { ArrowUpLeftIcon } from "@/icons/arrow-up-left";
+import { ArrowUpRightIcon } from "@/icons/arrow-up-right";
+import { AtSignIcon } from "@/icons/at-sign";
+import { AtomIcon } from "@/icons/atom";
+import { AttachFileIcon } from "@/icons/attach-file";
+import { AudioLinesIcon } from "@/icons/audio-lines";
+import { AxeIcon } from "@/icons/axe";
+import { BadgeAlertIcon } from "@/icons/badge-alert";
+import { BadgePercentIcon } from "@/icons/badge-percent";
+import { BanIcon } from "@/icons/ban";
+import { BananaIcon } from "@/icons/banana";
+import { BatteryFullIcon } from "@/icons/battery-full";
+import { BatteryLowIcon } from "@/icons/battery-low";
+import { BatteryMediumIcon } from "@/icons/battery-medium";
+import { BellIcon } from "@/icons/bell";
+import { BinaryIcon } from "@/icons/binary";
+import { BlocksIcon } from "@/icons/blocks";
+import { BluetoothIcon } from "@/icons/bluetooth";
+import { BluetoothConnectedIcon } from "@/icons/bluetooth-connected";
+import { BluetoothOffIcon } from "@/icons/bluetooth-off";
+import { BluetoothSearchingIcon } from "@/icons/bluetooth-searching";
+import { BoldIcon } from "@/icons/bold";
+import { BoneIcon } from "@/icons/bone";
+import { BookTextIcon } from "@/icons/book-text";
+import { BookmarkIcon } from "@/icons/bookmark";
+import { BookmarkCheckIcon } from "@/icons/bookmark-check";
+import { BookmarkMinusIcon } from "@/icons/bookmark-minus";
+import { BookmarkPlusIcon } from "@/icons/bookmark-plus";
+import { BookmarkXIcon } from "@/icons/bookmark-x";
+import { BotIcon } from "@/icons/bot";
+import { BotMessageSquareIcon } from "@/icons/bot-message-square";
+import { BoxIcon } from "@/icons/box";
+import { BoxesIcon } from "@/icons/boxes";
+import { BrainIcon } from "@/icons/brain";
+import { BriefcaseBusinessIcon } from "@/icons/briefcase-business";
+import { CalendarCheckIcon } from "@/icons/calendar-check";
+import { CalendarCheck2Icon } from "@/icons/calendar-check-2";
+import { CalendarCogIcon } from "@/icons/calendar-cog";
+import { CalendarDaysIcon } from "@/icons/calendar-days";
+import { CartIcon } from "@/icons/cart";
+import { CastIcon } from "@/icons/cast";
+import { CctvIcon } from "@/icons/cctv";
+import { ChartBarDecreasingIcon } from "@/icons/chart-bar-decreasing";
+import { ChartBarIncreasingIcon } from "@/icons/chart-bar-increasing";
+import { ChartColumnDecreasingIcon } from "@/icons/chart-column-decreasing";
+import { ChartColumnIncreasingIcon } from "@/icons/chart-column-increasing";
+import { ChartLineIcon } from "@/icons/chart-line";
+import { ChartNoAxesColumnDecreasingIcon } from "@/icons/chart-no-axes-column-decreasing";
+import { ChartNoAxesColumnIncreasingIcon } from "@/icons/chart-no-axes-column-increasing";
+import { ChartPieIcon } from "@/icons/chart-pie";
+import { ChartScatterIcon } from "@/icons/chart-scatter";
+import { ChartSplineIcon } from "@/icons/chart-spline";
+import { CheckIcon } from "@/icons/check";
+import { CheckCheckIcon } from "@/icons/check-check";
+import { ChevronDownIcon } from "@/icons/chevron-down";
+import { ChevronFirstIcon } from "@/icons/chevron-first";
+import { ChevronLeftIcon } from "@/icons/chevron-left";
+import { ChevronRightIcon } from "@/icons/chevron-right";
+import { ChevronUpIcon } from "@/icons/chevron-up";
+import { ChevronsDownUpIcon } from "@/icons/chevrons-down-up";
+import { ChevronsLeftRightIcon } from "@/icons/chevrons-left-right";
+import { ChevronsRightLeftIcon } from "@/icons/chevrons-right-left";
+import { ChevronsUpDownIcon } from "@/icons/chevrons-up-down";
+import { ChromeIcon } from "@/icons/chrome";
+import { CircleCheckIcon } from "@/icons/circle-check";
+import { CircleChevronDownIcon } from "@/icons/circle-chevron-down";
+import { CircleChevronLeftIcon } from "@/icons/circle-chevron-left";
+import { CircleChevronRightIcon } from "@/icons/circle-chevron-right";
+import { CircleChevronUpIcon } from "@/icons/circle-chevron-up";
+import { CircleDashedIcon } from "@/icons/circle-dashed";
+import { CircleDollarSignIcon } from "@/icons/circle-dollar-sign";
+import { CircleHelpIcon } from "@/icons/circle-help";
+import { ClapIcon } from "@/icons/clap";
+import { ClipboardCheckIcon } from "@/icons/clipboard-check";
+import { ClockIcon } from "@/icons/clock";
+import { CloudCogIcon } from "@/icons/cloud-cog";
+import { CloudDownloadIcon } from "@/icons/cloud-download";
+import { CloudLightningIcon } from "@/icons/cloud-lightning";
+import { CloudRainIcon } from "@/icons/cloud-rain";
+import { CloudRainWindIcon } from "@/icons/cloud-rain-wind";
+import { CloudSnowIcon } from "@/icons/cloud-snow";
+import { CloudSunIcon } from "@/icons/cloud-sun";
+import { CloudUploadIcon } from "@/icons/cloud-upload";
+import { CoffeeIcon } from "@/icons/coffee";
+import { CogIcon } from "@/icons/cog";
+import { CompassIcon } from "@/icons/compass";
+import { ConnectIcon } from "@/icons/connect";
+import { ConstructionIcon } from "@/icons/construction";
+import { ContrastIcon } from "@/icons/contrast";
+import { CookingPotIcon } from "@/icons/cooking-pot";
+import { CopyIcon } from "@/icons/copy";
+import { CpuIcon } from "@/icons/cpu";
+import { CreditCardIcon } from "@/icons/credit-card";
+import { CupSodaIcon } from "@/icons/cup-soda";
+import { CursorClickIcon } from "@/icons/cursor-click";
+import { DatabaseBackupIcon } from "@/icons/database-backup";
+import { DeleteIcon } from "@/icons/delete";
+import { Disc3Icon } from "@/icons/disc-3";
+import { DiscordIcon } from "@/icons/discord";
+import { DollarSignIcon } from "@/icons/dollar-sign";
+import { DownloadIcon } from "@/icons/download";
+import { DownvoteIcon } from "@/icons/downvote";
+import { DribbbleIcon } from "@/icons/dribbble";
+import { DropletIcon } from "@/icons/droplet";
+import { DrumIcon } from "@/icons/drum";
+import { EarthIcon } from "@/icons/earth";
+import { EuroIcon } from "@/icons/euro";
+import { EvChargerIcon } from "@/icons/ev-charger";
+import { ExpandIcon } from "@/icons/expand";
+import { ExternalLinkIcon } from "@/icons/external-link";
+import { EyeIcon } from "@/icons/eye";
+import { EyeOffIcon } from "@/icons/eye-off";
+import { FacebookIcon } from "@/icons/facebook";
+import { FeatherIcon } from "@/icons/feather";
+import { FigmaIcon } from "@/icons/figma";
+import { FileChartLineIcon } from "@/icons/file-chart-line";
+import { FileCheckIcon } from "@/icons/file-check";
+import { FileCheck2Icon } from "@/icons/file-check-2";
+import { FileCogIcon } from "@/icons/file-cog";
+import { FilePenLineIcon } from "@/icons/file-pen-line";
+import { FileStackIcon } from "@/icons/file-stack";
+import { FileTextIcon } from "@/icons/file-text";
+import { FingerprintIcon } from "@/icons/fingerprint";
+import { FishSymbolIcon } from "@/icons/fish-symbol";
+import { FlameIcon } from "@/icons/flame";
+import { FlaskIcon } from "@/icons/flask";
+import { FoldersIcon } from "@/icons/folders";
+import { FrameIcon } from "@/icons/frame";
+import { FrownIcon } from "@/icons/frown";
+import { GalleryHorizontalEndIcon } from "@/icons/gallery-horizontal-end";
+import { GalleryThumbnailsIcon } from "@/icons/gallery-thumbnails";
+import { GalleryVerticalEndIcon } from "@/icons/gallery-vertical-end";
+import { GaugeIcon } from "@/icons/gauge";
+import { GeorgianLariIcon } from "@/icons/georgian-lari";
+import { GitCommitHorizontalIcon } from "@/icons/git-commit-horizontal";
+import { GitCommitVerticalIcon } from "@/icons/git-commit-vertical";
+import { GitMergeIcon } from "@/icons/git-merge";
+import { GitPullRequestIcon } from "@/icons/git-pull-request";
+import { GithubIcon } from "@/icons/github";
+import { GripIcon } from "@/icons/grip";
+import { GripHorizontalIcon } from "@/icons/grip-horizontal";
+import { GripVerticalIcon } from "@/icons/grip-vertical";
+import { HammerIcon } from "@/icons/hammer";
+import { HandCoinsIcon } from "@/icons/hand-coins";
+import { HandHeartIcon } from "@/icons/hand-heart";
+import { HardDriveDownloadIcon } from "@/icons/hard-drive-download";
+import { HardDriveUploadIcon } from "@/icons/hard-drive-upload";
+import { HatGlassesIcon } from "@/icons/hat-glasses";
+import { HeartIcon } from "@/icons/heart";
+import { HistoryIcon } from "@/icons/history";
+import { HomeIcon } from "@/icons/home";
+import { HourglassIcon } from "@/icons/hourglass";
+import { IdCardIcon } from "@/icons/id-card";
+import { IndianRupeeIcon } from "@/icons/indian-rupee";
+import { InstagramIcon } from "@/icons/instagram";
+import { ItalicIcon } from "@/icons/italic";
+import { JapaneseYenIcon } from "@/icons/japanese-yen";
+import { KeyIcon } from "@/icons/key";
+import { KeyCircleIcon } from "@/icons/key-circle";
+import { KeySquareIcon } from "@/icons/key-square";
+import { KeyboardIcon } from "@/icons/keyboard";
+import { LanguagesIcon } from "@/icons/languages";
+import { LaptopMinimalCheckIcon } from "@/icons/laptop-minimal-check";
+import { LaughIcon } from "@/icons/laugh";
+import { LayersIcon } from "@/icons/layers";
+import { LayoutGridIcon } from "@/icons/layout-grid";
+import { LayoutPanelTopIcon } from "@/icons/layout-panel-top";
+import { LinkIcon } from "@/icons/link";
+import { Link2Icon } from "@/icons/link-2";
+import { LinkedinIcon } from "@/icons/linkedin";
+import { LoaderIcon } from "@/icons/loader";
+import { LoaderCircleIcon } from "@/icons/loader-circle";
+import { LoaderPinwheelIcon } from "@/icons/loader-pinwheel";
+import { LockIcon } from "@/icons/lock";
+import { LockKeyholeIcon } from "@/icons/lock-keyhole";
+import { LockKeyholeOpenIcon } from "@/icons/lock-keyhole-open";
+import { LockOpenIcon } from "@/icons/lock-open";
+import { LogInIcon } from "@/icons/login";
+import { LogoutIcon } from "@/icons/logout";
+import { MailCheckIcon } from "@/icons/mail-check";
+import { MailboxIcon } from "@/icons/mailbox";
+import { MapPinIcon } from "@/icons/map-pin";
+import { MapPinCheckIcon } from "@/icons/map-pin-check";
+import { MapPinCheckInsideIcon } from "@/icons/map-pin-check-inside";
+import { MapPinHouseIcon } from "@/icons/map-pin-house";
+import { MapPinMinusIcon } from "@/icons/map-pin-minus";
+import { MapPinMinusInsideIcon } from "@/icons/map-pin-minus-inside";
+import { MapPinOffIcon } from "@/icons/map-pin-off";
+import { MapPinPlusIcon } from "@/icons/map-pin-plus";
+import { MapPinPlusInsideIcon } from "@/icons/map-pin-plus-inside";
+import { MapPinXInsideIcon } from "@/icons/map-pin-x-inside";
+import { MaximizeIcon } from "@/icons/maximize";
+import { Maximize2Icon } from "@/icons/maximize-2";
+import { MehIcon } from "@/icons/meh";
+import { MenuIcon } from "@/icons/menu";
+import { MessageCircleIcon } from "@/icons/message-circle";
+import { MessageCircleCheckIcon } from "@/icons/message-circle-check";
+import { MessageCircleDashedIcon } from "@/icons/message-circle-dashed";
+import { MessageCircleMoreIcon } from "@/icons/message-circle-more";
+import { MessageCirclePlusIcon } from "@/icons/message-circle-plus";
+import { MessageCircleXIcon } from "@/icons/message-circle-x";
+import { MessageSquareIcon } from "@/icons/message-square";
+import { MessageSquareCheckIcon } from "@/icons/message-square-check";
+import { MessageSquareDashedIcon } from "@/icons/message-square-dashed";
+import { MessageSquareMoreIcon } from "@/icons/message-square-more";
+import { MessageSquarePlusIcon } from "@/icons/message-square-plus";
+import { MessageSquareXIcon } from "@/icons/message-square-x";
+import { MicIcon } from "@/icons/mic";
+import { MicOffIcon } from "@/icons/mic-off";
+import { MinimizeIcon } from "@/icons/minimize";
+import { MonitorCheckIcon } from "@/icons/monitor-check";
+import { MonitorCogIcon } from "@/icons/monitor-cog";
+import { MoonIcon } from "@/icons/moon";
+import { NfcIcon } from "@/icons/nfc";
+import { PanelLeftCloseIcon } from "@/icons/panel-left-close";
+import { PanelLeftOpenIcon } from "@/icons/panel-left-open";
+import { PanelRightOpenIcon } from "@/icons/panel-right-open";
+import { PartyPopperIcon } from "@/icons/party-popper";
+import { PauseIcon } from "@/icons/pause";
+import { PenToolIcon } from "@/icons/pen-tool";
+import { PhilippinePesoIcon } from "@/icons/philippine-peso";
+import { PickaxeIcon } from "@/icons/pickaxe";
+import { PlayIcon } from "@/icons/play";
+import { PlugZapIcon } from "@/icons/plug-zap";
+import { PlusIcon } from "@/icons/plus";
+import { PoundSterlingIcon } from "@/icons/pound-sterling";
+import { RabbitIcon } from "@/icons/rabbit";
+import { RadioIcon } from "@/icons/radio";
+import { RadioTowerIcon } from "@/icons/radio-tower";
+import { ReceiptIcon } from "@/icons/receipt";
+import { ReceiptCentIcon } from "@/icons/receipt-cent";
+import { ReceiptEuroIcon } from "@/icons/receipt-euro";
+import { ReceiptIndianRupeeIcon } from "@/icons/receipt-indian-rupee";
+import { ReceiptJapaneseYenIcon } from "@/icons/receipt-japanese-yen";
+import { ReceiptPoundSterlingIcon } from "@/icons/receipt-pound-sterling";
+import { ReceiptRussianRubleIcon } from "@/icons/receipt-russian-ruble";
+import { ReceiptSwissFrancIcon } from "@/icons/receipt-swiss-franc";
+import { ReceiptTextIcon } from "@/icons/receipt-text";
+import { ReceiptTurkishLiraIcon } from "@/icons/receipt-turkish-lira";
+import { RedoIcon } from "@/icons/redo";
+import { RedoDotIcon } from "@/icons/redo-dot";
+import { RefreshCCWIcon } from "@/icons/refresh-ccw";
+import { RefreshCCWDotIcon } from "@/icons/refresh-ccw-dot";
+import { RefreshCWIcon } from "@/icons/refresh-cw";
+import { RefreshCWOffIcon } from "@/icons/refresh-cw-off";
+import { RocketIcon } from "@/icons/rocket";
+import { RockingChairIcon } from "@/icons/rocking-chair";
+import { RollerCoasterIcon } from "@/icons/roller-coaster";
+import { RotateCCWIcon } from "@/icons/rotate-ccw";
+import { RotateCWIcon } from "@/icons/rotate-cw";
+import { RouteIcon } from "@/icons/route";
+import { RussianRubleIcon } from "@/icons/russian-ruble";
+import { SaudiRiyalIcon } from "@/icons/saudi-riyal";
+import { ScanFaceIcon } from "@/icons/scan-face";
+import { ScanTextIcon } from "@/icons/scan-text";
+import { SearchIcon } from "@/icons/search";
+import { SendIcon } from "@/icons/send";
+import { SettingsIcon } from "@/icons/settings";
+import { ShieldCheckIcon } from "@/icons/shield-check";
+import { ShipIcon } from "@/icons/ship";
+import { ShowerHeadIcon } from "@/icons/shower-head";
+import { ShrinkIcon } from "@/icons/shrink";
+import { SlidersHorizontalIcon } from "@/icons/sliders-horizontal";
+import { SmartphoneChargingIcon } from "@/icons/smartphone-charging";
+import { SmartphoneNfcIcon } from "@/icons/smartphone-nfc";
+import { SmileIcon } from "@/icons/smile";
+import { SmilePlusIcon } from "@/icons/smile-plus";
+import { SnowflakeIcon } from "@/icons/snowflake";
+import { SparklesIcon } from "@/icons/sparkles";
+import { SquareActivityIcon } from "@/icons/square-activity";
+import { SquareArrowDownIcon } from "@/icons/square-arrow-down";
+import { SquareArrowLeftIcon } from "@/icons/square-arrow-left";
+import { SquareArrowRightIcon } from "@/icons/square-arrow-right";
+import { SquareArrowUpIcon } from "@/icons/square-arrow-up";
+import { SquareChevronDownIcon } from "@/icons/square-chevron-down";
+import { SquareChevronLeftIcon } from "@/icons/square-chevron-left";
+import { SquareChevronRightIcon } from "@/icons/square-chevron-right";
+import { SquareChevronUpIcon } from "@/icons/square-chevron-up";
+import { SquarePenIcon } from "@/icons/square-pen";
+import { SquareStackIcon } from "@/icons/square-stack";
+import { StampIcon } from "@/icons/stamp";
+import { StethoscopeIcon } from "@/icons/stethoscope";
+import { SunIcon } from "@/icons/sun";
+import { SunDimIcon } from "@/icons/sun-dim";
+import { SunMediumIcon } from "@/icons/sun-medium";
+import { SunMoonIcon } from "@/icons/sun-moon";
+import { SunsetIcon } from "@/icons/sunset";
+import { SwissFrancIcon } from "@/icons/swiss-franc";
+import { SyringeIcon } from "@/icons/syringe";
+import { TelescopeIcon } from "@/icons/telescope";
+import { TerminalIcon } from "@/icons/terminal";
+import { ThermometerIcon } from "@/icons/thermometer";
+import { TicketIcon } from "@/icons/ticket";
+import { TimerIcon } from "@/icons/timer";
+import { TornadoIcon } from "@/icons/tornado";
+import { TrainTrackIcon } from "@/icons/train-track";
+import { TrendingDownIcon } from "@/icons/trending-down";
+import { TrendingUpIcon } from "@/icons/trending-up";
+import { TrendingUpDownIcon } from "@/icons/trending-up-down";
+import { TurkishLiraIcon } from "@/icons/turkish-lira";
+import { TwitchIcon } from "@/icons/twitch";
+import { TwitterIcon } from "@/icons/twitter";
+import { UnderlineIcon } from "@/icons/underline";
+import { UndoIcon } from "@/icons/undo";
+import { UndoDotIcon } from "@/icons/undo-dot";
+import { UploadIcon } from "@/icons/upload";
+import { UpvoteIcon } from "@/icons/upvote";
+import { UserIcon } from "@/icons/user";
+import { UserCheckIcon } from "@/icons/user-check";
+import { UserPlusIcon } from "@/icons/user-plus";
+import { UserRoundCheckIcon } from "@/icons/user-round-check";
+import { UserRoundPlusIcon } from "@/icons/user-round-plus";
+import { UsersIcon } from "@/icons/users";
+import { VibrateIcon } from "@/icons/vibrate";
+import { VolumeIcon } from "@/icons/volume";
+import { WalletIcon } from "@/icons/wallet";
+import { WashingMachineIcon } from "@/icons/washing-machine";
+import { WavesIcon } from "@/icons/waves";
+import { WavesLadderIcon } from "@/icons/waves-ladder";
+import { WaypointsIcon } from "@/icons/waypoints";
+import { WebhookIcon } from "@/icons/webhook";
+import { WifiIcon } from "@/icons/wifi";
+import { WifiLowIcon } from "@/icons/wifi-low";
+import { WindIcon } from "@/icons/wind";
+import { WindArrowDownIcon } from "@/icons/wind-arrow-down";
+import { WorkflowIcon } from "@/icons/workflow";
+import { WrenchIcon } from "@/icons/wrench";
+import { XIcon } from "@/icons/x";
+import { YoutubeIcon } from "@/icons/youtube";
+import { ZapIcon } from "@/icons/zap";
+import { ZapOffIcon } from "@/icons/zap-off";
+import { AlarmClockCheckIcon } from "./alarm-clock-check";
+import { AlarmClockMinusIcon } from "./alarm-clock-minus";
+import { AlarmClockPlusIcon } from "./alarm-clock-plus";
+import { AlarmSmokeIcon } from "./alarm-smoke";
+import { BatteryIcon } from "./battery";
+import { BatteryChargingIcon } from "./battery-charging";
+import { BatteryPlusIcon } from "./battery-plus";
+import { BatteryWarningIcon } from "./battery-warning";
+import { BellElectricIcon } from "./bell-electric";
+import { BicepsFlexedIcon } from "./biceps-flexed";
+import { ChessBishopIcon } from "./chess-bishop";
+import { ChessKingIcon } from "./chess-king";
+import { ChessKnightIcon } from "./chess-knight";
+import { ChessPawnIcon } from "./chess-pawn";
+import { CigaretteIcon } from "./cigarette";
+import { CigaretteOffIcon } from "./cigarette-off";
+import { CircleGaugeIcon } from "./circle-gauge";
+import { CloudBackupIcon } from "./cloud-backup";
+import { CloudSyncIcon } from "./cloud-sync";
+import { ConciergeBellIcon } from "./concierge-bell";
+import { CornerDownLeftIcon } from "./corner-down-left";
+import { CornerDownRightIcon } from "./corner-down-right";
+import { CornerLeftDownIcon } from "./corner-left-down";
+import { CornerLeftUpIcon } from "./corner-left-up";
+import { CornerRightDownIcon } from "./corner-right-down";
+import { CornerRightUpIcon } from "./corner-right-up";
+import { CornerUpLeftIcon } from "./corner-up-left";
+import { CornerUpRightIcon } from "./corner-up-right";
+import { FanIcon } from "./fan";
+import { FolderArchiveIcon } from "./folder-archive";
+import { FolderCheckIcon } from "./folder-check";
+import { FolderClockIcon } from "./folder-clock";
+import { FolderCodeIcon } from "./folder-code";
+import { FolderCogIcon } from "./folder-cog";
+import { FolderDotIcon } from "./folder-dot";
+import { FolderDownIcon } from "./folder-down";
+import { FolderGitIcon } from "./folder-git";
+import { FolderGit2Icon } from "./folder-git-2";
+import { FolderHeartIcon } from "./folder-heart";
+import { FolderInputIcon } from "./folder-input";
+import { FolderKanbanIcon } from "./folder-kanban";
+import { FolderKeyIcon } from "./folder-key";
+import { FolderLockIcon } from "./folder-lock";
+import { FolderMinusIcon } from "./folder-minus";
+import { FolderOpenIcon } from "./folder-open";
+import { FolderOutputIcon } from "./folder-output";
+import { FolderPlusIcon } from "./folder-plus";
+import { FolderRootIcon } from "./folder-root";
+import { FolderSyncIcon } from "./folder-sync";
+import { FolderTreeIcon } from "./folder-tree";
+import { FolderUpIcon } from "./folder-up";
+import { FolderXIcon } from "./folder-x";
+import { GavelIcon } from "./gavel";
+import { GitBranchIcon } from "./git-branch";
+import { GitCompareIcon } from "./git-compare";
+import { GitCompareArrowsIcon } from "./git-compare-arrows";
+import { GitForkIcon } from "./git-fork";
+import { GitGraphIcon } from "./git-graph";
+import { GitPullRequestClosedIcon } from "./git-pull-request-closed";
+import { GitPullRequestCreateIcon } from "./git-pull-request-create";
+import { GitlabIcon } from "./gitlab";
+import { GraduationCapIcon } from "./graduation-cap";
+import { HandIcon } from "./hand";
+import { HandFistIcon } from "./hand-fist";
+import { HandGrabIcon } from "./hand-grab";
+import { HandHelpingIcon } from "./hand-helping";
+import { HandMetalIcon } from "./hand-metal";
+import { HeartHandshakeIcon } from "./heart-handshake";
+import { HeartPulseIcon } from "./heart-pulse";
+import { LeafIcon } from "./leaf";
+import { LeafyGreenIcon } from "./leafy-green";
+import { PaletteIcon } from "./palette";
+import { PhoneIcon } from "./phone";
+import { PhoneCallIcon } from "./phone-call";
+import { PhoneForwardedIcon } from "./phone-forwarded";
+import { PhoneIncomingIcon } from "./phone-incoming";
+import { PhoneMissedIcon } from "./phone-missed";
+import { PhoneOffIcon } from "./phone-off";
+import { PlaneLandingIcon } from "./plane-landing";
+import { PlaneTakeoffIcon } from "./plane-takeoff";
+import { ProjectorIcon } from "./projector";
+import { RouterIcon } from "./router";
+import { SatelliteDishIcon } from "./satellite-dish";
+import { ServerIcon } from "./server";
+import { ServerCogIcon } from "./server-cog";
+import { ServerCrashIcon } from "./server-crash";
+import { ShipWheelIcon } from "./ship-wheel";
+import { ShredderIcon } from "./shredder";
+import { SoupIcon } from "./soup";
+import { SprayCanIcon } from "./spray-can";
+import { SwitchCameraIcon } from "./switch-camera";
+import { TreeDeciduousIcon } from "./tree-deciduous";
+import { TreePineIcon } from "./tree-pine";
+import { TruckIcon } from "./truck";
+import { UserRoundCogIcon } from "./user-round-cog";
+import { UsersRoundIcon } from "./users-round";
+import { WavesArrowDownIcon } from "./waves-arrow-down";
+import { WavesArrowUpIcon } from "./waves-arrow-up";
+import { WifiCogIcon } from "./wifi-cog";
+import { WifiPenIcon } from "./wifi-pen";
+import { WifiSyncIcon } from "./wifi-sync";
 
 type IconListItem = {
   name: string;
@@ -314,2451 +474,3764 @@ type IconListItem = {
 
 const ICON_LIST: IconListItem[] = [
   {
-    name: 'chevron-first',
+    name: "ticket",
+    icon: TicketIcon,
+    keywords: ["voucher", "event", "admission", "coupon"],
+  },
+  {
+    name: "user-plus",
+    icon: UserPlusIcon,
+    keywords: ["user", "plus", "add", "new", "person", "account", "signup"],
+  },
+  {
+    name: "link-2",
+    icon: Link2Icon,
+    keywords: ["link", "connect", "chain", "url", "hyperlink"],
+  },
+  {
+    name: "external-link",
+    icon: ExternalLinkIcon,
+    keywords: [
+      "external",
+      "link",
+      "outbound",
+      "open",
+      "share",
+      "north-east",
+      "diagonal",
+    ],
+  },
+  {
+    name: "hat-glasses",
+    icon: HatGlassesIcon,
+    keywords: [
+      "incognito",
+      "disguise",
+      "costume",
+      "masked",
+      "anonymous",
+      "anonymity",
+      "privacy",
+      "private browsing",
+      "stealth",
+      "hidden",
+      "undercover",
+      "cloak",
+      "invisible",
+      "ghost",
+      "spy",
+      "agent",
+      "detective",
+      "identity",
+      "cap",
+      "fedora",
+      "spectacles",
+      "shades",
+      "sunglasses",
+      "eyewear",
+    ],
+  },
+  {
+    name: "monitor-cog",
+    icon: MonitorCogIcon,
+    keywords: [
+      "tv",
+      "screen",
+      "display",
+      "virtual machine",
+      "vm",
+      "executable",
+      "settings",
+      "cog",
+      "edit",
+      "gear",
+      "configuration",
+      "preferences",
+      "system",
+      "control panel",
+      "network",
+      "computing",
+    ],
+  },
+  {
+    name: "receipt",
+    icon: ReceiptIcon,
+    keywords: [
+      "receipt",
+      "bill",
+      "voucher",
+      "slip",
+      "check",
+      "counterfoil",
+      "invoice",
+      "details",
+      "transaction",
+      "purchase",
+      "expense",
+    ],
+  },
+  {
+    name: "receipt-cent",
+    icon: ReceiptCentIcon,
+    keywords: [
+      "receipt",
+      "cent",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+      "invoice",
+    ],
+  },
+  {
+    name: "receipt-euro",
+    icon: ReceiptEuroIcon,
+    keywords: [
+      "receipt",
+      "euro",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+      "invoice",
+    ],
+  },
+  {
+    name: "receipt-indian-rupee",
+    icon: ReceiptIndianRupeeIcon,
+    keywords: [
+      "receipt",
+      "indian rupee",
+      "inr",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "receipt-japanese-yen",
+    icon: ReceiptJapaneseYenIcon,
+    keywords: [
+      "receipt",
+      "japanese yen",
+      "yen",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "receipt-pound-sterling",
+    icon: ReceiptPoundSterlingIcon,
+    keywords: [
+      "receipt",
+      "pound sterling",
+      "gbp",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "receipt-russian-ruble",
+    icon: ReceiptRussianRubleIcon,
+    keywords: [
+      "receipt",
+      "russian ruble",
+      "ruble",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "receipt-swiss-franc",
+    icon: ReceiptSwissFrancIcon,
+    keywords: [
+      "receipt",
+      "swiss franc",
+      "chf",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "receipt-text",
+    icon: ReceiptTextIcon,
+    keywords: ["receipt", "text", "details", "invoice", "bill", "purchase"],
+  },
+  {
+    name: "receipt-turkish-lira",
+    icon: ReceiptTurkishLiraIcon,
+    keywords: [
+      "receipt",
+      "turkish lira",
+      "try",
+      "currency",
+      "money",
+      "payment",
+      "bill",
+    ],
+  },
+  {
+    name: "briefcase-business",
+    icon: BriefcaseBusinessIcon,
+    keywords: [
+      "briefcase",
+      "business",
+      "work",
+      "office",
+      "case",
+      "luggage",
+      "job",
+      "career",
+    ],
+  },
+  {
+    name: "wallet",
+    icon: WalletIcon,
+    keywords: [
+      "wallet",
+      "money",
+      "purse",
+      "billfold",
+      "cash",
+      "finance",
+      "payment",
+    ],
+  },
+  {
+    name: "credit-card",
+    icon: CreditCardIcon,
+    keywords: [
+      "credit card",
+      "card",
+      "payment",
+      "debit",
+      "money",
+      "finance",
+      "bank",
+    ],
+  },
+  {
+    name: "stamp",
+    icon: StampIcon,
+    keywords: [
+      "stamp",
+      "seal",
+      "postage",
+      "letter",
+      "mail",
+      "mark",
+      "official",
+      "document",
+    ],
+  },
+  {
+    name: "alarm-clock-check",
+    icon: AlarmClockCheckIcon,
+    keywords: ["alarm", "clock", "check", "time", "schedule"],
+  },
+  {
+    name: "alarm-clock-minus",
+    icon: AlarmClockMinusIcon,
+    keywords: ["alarm", "clock", "minus", "time", "schedule"],
+  },
+  {
+    name: "alarm-clock-plus",
+    icon: AlarmClockPlusIcon,
+    keywords: ["alarm", "clock", "plus", "time", "schedule"],
+  },
+  {
+    name: "alarm-smoke",
+    icon: AlarmSmokeIcon,
+    keywords: ["alarm", "smoke", "fire", "detector", "fire alarm"],
+  },
+  {
+    name: "biceps-flexed",
+    icon: BicepsFlexedIcon,
+    keywords: [
+      "biceps",
+      "flexed",
+      "muscle",
+      "arm",
+      "strong",
+      "fitness",
+      "workout",
+      "gym",
+    ],
+  },
+  {
+    name: "phone",
+    icon: PhoneIcon,
+    keywords: ["phone", "call", "communication", "signal", "wireless"],
+  },
+  {
+    name: "phone-call",
+    icon: PhoneCallIcon,
+    keywords: ["phone", "call", "communication", "signal", "wireless"],
+  },
+  {
+    name: "phone-forwarded",
+    icon: PhoneForwardedIcon,
+    keywords: ["phone", "forwarded", "communication", "signal", "wireless"],
+  },
+  {
+    name: "phone-incoming",
+    icon: PhoneIncomingIcon,
+    keywords: ["phone", "incoming", "communication", "signal", "wireless"],
+  },
+  {
+    name: "phone-missed",
+    icon: PhoneMissedIcon,
+    keywords: ["phone", "missed", "communication", "signal", "wireless"],
+  },
+  {
+    name: "phone-off",
+    icon: PhoneOffIcon,
+    keywords: ["phone", "off", "communication", "signal", "wireless"],
+  },
+  {
+    name: "server",
+    icon: ServerIcon,
+    keywords: ["server", "network", "communication", "signal", "wireless"],
+  },
+  {
+    name: "server-cog",
+    icon: ServerCogIcon,
+    keywords: ["server", "network", "communication", "signal", "wireless"],
+  },
+  {
+    name: "server-crash",
+    icon: ServerCrashIcon,
+    keywords: ["server", "network", "communication", "signal", "wireless"],
+  },
+  {
+    name: "router",
+    icon: RouterIcon,
+    keywords: ["router", "network", "communication", "signal", "wireless"],
+  },
+  {
+    name: "satellite-dish",
+    icon: SatelliteDishIcon,
+    keywords: ["satellite", "dish", "communication", "signal", "wireless"],
+  },
+  {
+    name: "projector",
+    icon: ProjectorIcon,
+    keywords: ["projector", "screen", "display", "video", "projection"],
+  },
+  {
+    name: "ship-wheel",
+    icon: ShipWheelIcon,
+    keywords: ["ship", "wheel", "navigation", "transportation"],
+  },
+  {
+    name: "plane-takeoff",
+    icon: PlaneTakeoffIcon,
+    keywords: ["plane", "takeoff", "flight", "airplane", "aircraft"],
+  },
+  {
+    name: "plane-landing",
+    icon: PlaneLandingIcon,
+    keywords: ["plane", "landing", "flight", "airplane", "aircraft"],
+  },
+  {
+    name: "fan",
+    icon: FanIcon,
+    keywords: ["fan", "air", "ventilation", "breeze"],
+  },
+  {
+    name: "switch-camera",
+    icon: SwitchCameraIcon,
+    keywords: ["switch", "camera", "video", "photo", "capture"],
+  },
+  {
+    name: "wifi-cog",
+    icon: WifiCogIcon,
+    keywords: ["wifi", "cog", "settings", "configuration"],
+  },
+  {
+    name: "wifi-sync",
+    icon: WifiSyncIcon,
+    keywords: ["wifi", "sync", "synchronize", "update"],
+  },
+  {
+    name: "wifi-pen",
+    icon: WifiPenIcon,
+    keywords: ["wifi", "pen", "edit", "write"],
+  },
+  {
+    name: "user-round-cog",
+    icon: UserRoundCogIcon,
+    keywords: ["user", "cog", "settings", "configuration"],
+  },
+  {
+    name: "users-round",
+    icon: UsersRoundIcon,
+    keywords: ["users", "group", "team", "people"],
+  },
+  {
+    name: "leaf",
+    icon: LeafIcon,
+    keywords: ["leaf", "tree", "plant", "nature", "green"],
+  },
+  {
+    name: "leafy-green",
+    icon: LeafyGreenIcon,
+    keywords: ["leaf", "tree", "plant", "nature", "green"],
+  },
+  {
+    name: "waves-arrow-down",
+    icon: WavesArrowDownIcon,
+    keywords: ["waves", "arrow", "down", "navigation", "scroll"],
+  },
+  {
+    name: "waves-arrow-up",
+    icon: WavesArrowUpIcon,
+    keywords: ["waves", "arrow", "up", "navigation", "scroll"],
+  },
+  {
+    name: "tree-deciduous",
+    icon: TreeDeciduousIcon,
+    keywords: ["tree", "deciduous", "forest", "nature", "green"],
+  },
+  {
+    name: "tree-pine",
+    icon: TreePineIcon,
+    keywords: ["tree", "pine", "forest", "nature", "green"],
+  },
+  {
+    name: "circle-gauge",
+    icon: CircleGaugeIcon,
+    keywords: ["gauge", "meter", "speed", "pressure", "measure", "circle"],
+  },
+  {
+    name: "spray-can",
+    icon: SprayCanIcon,
+    keywords: ["spray", "can", "paint", "color", "art"],
+  },
+  {
+    name: "shredder",
+    icon: ShredderIcon,
+    keywords: ["shredder", "trash", "garbage", "waste", "recycling"],
+  },
+  {
+    name: "soup",
+    icon: SoupIcon,
+    keywords: ["soup", "food", "meal", "bowl", "hot"],
+  },
+  {
+    name: "layout-grid",
+    icon: LayoutGridIcon,
+    keywords: [
+      "layout",
+      "grid",
+      "dashboard",
+      "tiles",
+      "panels",
+      "gallery",
+      "window",
+      "interface",
+    ],
+  },
+  {
+    name: "login",
+    icon: LogInIcon,
+    keywords: ["sign in", "arrow", "enter", "auth"],
+  },
+  {
+    name: "axe",
+    icon: AxeIcon,
+    keywords: [
+      "hatchet",
+      "weapon",
+      "chop",
+      "sharp",
+      "equipment",
+      "fireman",
+      "firefighter",
+      "brigade",
+      "lumberjack",
+      "woodcutter",
+      "logger",
+      "forestry",
+    ],
+  },
+  {
+    name: "pickaxe",
+    icon: PickaxeIcon,
+    keywords: [
+      "mining",
+      "mine",
+      "land worker",
+      "extraction",
+      "labor",
+      "construction",
+      "progress",
+      "advancement",
+      "crafting",
+      "building",
+      "creation",
+    ],
+  },
+  {
+    name: "hammer",
+    icon: HammerIcon,
+    keywords: ["mallet", "nails", "diy", "toolbox", "build", "construction"],
+  },
+  {
+    name: "gavel",
+    icon: GavelIcon,
+    keywords: [
+      "justice",
+      "law",
+      "court",
+      "judgment",
+      "legal",
+      "hands",
+      "penalty",
+      "decision",
+      "authority",
+      "hammer",
+      "mallet",
+    ],
+  },
+  {
+    name: "mailbox",
+    icon: MailboxIcon,
+    keywords: ["emails", "messages", "letters", "mailing list", "newsletter"],
+  },
+  {
+    name: "send",
+    icon: SendIcon,
+    keywords: [
+      "email",
+      "message",
+      "mail",
+      "paper airplane",
+      "paper aeroplane",
+      "submit",
+    ],
+  },
+  {
+    name: "heart-pulse",
+    icon: HeartPulseIcon,
+    keywords: [
+      "heartbeat",
+      "pulse",
+      "health",
+      "medical",
+      "cardiac",
+      "ecg",
+      "vital",
+    ],
+  },
+  {
+    name: "graduation-cap",
+    icon: GraduationCapIcon,
+    keywords: [
+      "school",
+      "university",
+      "learn",
+      "study",
+      "mortarboard",
+      "education",
+      "ceremony",
+      "academic",
+      "hat",
+      "diploma",
+      "bachlor's",
+      "master's",
+      "doctorate",
+    ],
+  },
+  {
+    name: "brain",
+    icon: BrainIcon,
+    keywords: [
+      "medical",
+      "mind",
+      "mental",
+      "intellect",
+      "cerebral",
+      "consciousness",
+      "genius",
+      "artificial intelligence",
+      "ai",
+      "think",
+      "thought",
+      "insight",
+      "intelligent",
+      "smart",
+    ],
+  },
+  {
+    name: "truck",
+    icon: TruckIcon,
+    keywords: [
+      "delivery",
+      "van",
+      "shipping",
+      "haulage",
+      "lorry",
+      "transportation",
+    ],
+  },
+  {
+    name: "mic",
+    icon: MicIcon,
+    keywords: ["microphone", "audio", "sound", "record", "voice"],
+  },
+  {
+    name: "mic-off",
+    icon: MicOffIcon,
+    keywords: ["microphone", "audio", "sound", "mute", "silent", "disabled"],
+  },
+  {
+    name: "align-left",
+    icon: AlignLeftIcon,
+    keywords: ["text", "alignment", "left", "paragraph", "format"],
+  },
+  {
+    name: "align-right",
+    icon: AlignRightIcon,
+    keywords: ["text", "alignment", "right", "paragraph", "format"],
+  },
+  {
+    name: "folder-lock",
+    icon: FolderLockIcon,
+    keywords: ["folder", "lock", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-key",
+    icon: FolderKeyIcon,
+    keywords: ["folder", "key", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-input",
+    icon: FolderInputIcon,
+    keywords: ["folder", "input", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-heart",
+    icon: FolderHeartIcon,
+    keywords: ["folder", "heart", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-root",
+    icon: FolderRootIcon,
+    keywords: ["folder", "root", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-tree",
+    icon: FolderTreeIcon,
+    keywords: ["folder", "tree", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-open",
+    icon: FolderOpenIcon,
+    keywords: ["folder", "open", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-kanban",
+    icon: FolderKanbanIcon,
+    keywords: ["folder", "kanban", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-code",
+    icon: FolderCodeIcon,
+    keywords: ["folder", "code", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-sync",
+    icon: FolderSyncIcon,
+    keywords: ["folder", "sync", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-plus",
+    icon: FolderPlusIcon,
+    keywords: ["folder", "plus", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-minus",
+    icon: FolderMinusIcon,
+    keywords: ["folder", "minus", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-archive",
+    icon: FolderArchiveIcon,
+    keywords: ["folder", "archive", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-x",
+    icon: FolderXIcon,
+    keywords: ["folder", "x", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-dot",
+    icon: FolderDotIcon,
+    keywords: ["folder", "dot", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-cog",
+    icon: FolderCogIcon,
+    keywords: ["folder", "cog", "settings", "configuration"],
+  },
+  {
+    name: "folder-git-2",
+    icon: FolderGit2Icon,
+    keywords: ["folder", "git", "version control", "repository"],
+  },
+  {
+    name: "folder-git",
+    icon: FolderGitIcon,
+    keywords: ["folder", "git", "version control", "repository"],
+  },
+  {
+    name: "folder-down",
+    icon: FolderDownIcon,
+    keywords: ["folder", "down", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-output",
+    icon: FolderOutputIcon,
+    keywords: ["folder", "output", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-up",
+    icon: FolderUpIcon,
+    keywords: ["folder", "up", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-check",
+    icon: FolderCheckIcon,
+    keywords: ["folder", "check", "file", "storage", "organization"],
+  },
+  {
+    name: "folder-clock",
+    icon: FolderClockIcon,
+    keywords: ["folder", "clock", "time", "schedule"],
+  },
+  {
+    name: "feather",
+    icon: FeatherIcon,
+    keywords: ["feather", "quill", "writing", "light", "bird"],
+  },
+  {
+    name: "bell-electric",
+    icon: BellElectricIcon,
+    keywords: ["bell", "electric", "notification", "alert"],
+  },
+  {
+    name: "concierge-bell",
+    icon: ConciergeBellIcon,
+    keywords: ["bell", "icon-bell", "notification", "alert"],
+  },
+  {
+    name: "corner-up-right",
+    icon: CornerUpRightIcon,
+    keywords: ["corner", "up", "right", "arrow"],
+  },
+  {
+    name: "corner-up-left",
+    icon: CornerUpLeftIcon,
+    keywords: ["corner", "up", "left", "arrow"],
+  },
+  {
+    name: "corner-right-up",
+    icon: CornerRightUpIcon,
+    keywords: ["corner", "right", "up", "arrow"],
+  },
+  {
+    name: "corner-right-down",
+    icon: CornerRightDownIcon,
+    keywords: ["corner", "right", "down", "arrow"],
+  },
+  {
+    name: "corner-left-up",
+    icon: CornerLeftUpIcon,
+    keywords: ["corner", "left", "up", "arrow"],
+  },
+  {
+    name: "corner-left-down",
+    icon: CornerLeftDownIcon,
+    keywords: ["corner", "left", "down", "arrow"],
+  },
+  {
+    name: "corner-down-right",
+    icon: CornerDownRightIcon,
+    keywords: ["corner", "down", "right", "arrow"],
+  },
+  {
+    name: "corner-down-left",
+    icon: CornerDownLeftIcon,
+    keywords: ["corner", "down", "left", "arrow"],
+  },
+  {
+    name: "git-pull-request-create",
+    icon: GitPullRequestCreateIcon,
+    keywords: [
+      "git",
+      "pull request",
+      "create",
+      "version control",
+      "repository",
+    ],
+  },
+  {
+    name: "git-pull-request-closed",
+    icon: GitPullRequestClosedIcon,
+    keywords: [
+      "git",
+      "pull request",
+      "closed",
+      "version control",
+      "repository",
+    ],
+  },
+  {
+    name: "gitlab",
+    icon: GitlabIcon,
+    keywords: ["git", "gitlab", "version control", "repository"],
+  },
+  {
+    name: "git-graph",
+    icon: GitGraphIcon,
+    keywords: ["git", "graph", "version control", "repository"],
+  },
+  {
+    name: "git-compare-arrows",
+    icon: GitCompareArrowsIcon,
+    keywords: ["git", "compare", "arrows", "version control", "repository"],
+  },
+  {
+    name: "git-compare",
+    icon: GitCompareIcon,
+    keywords: ["git", "compare", "version control", "repository"],
+  },
+  {
+    name: "git-fork",
+    icon: GitForkIcon,
+    keywords: ["git", "fork", "version control", "repository"],
+  },
+  {
+    name: "git-branch",
+    icon: GitBranchIcon,
+    keywords: ["git", "branch", "version control", "repository"],
+  },
+  {
+    name: "hourglass",
+    icon: HourglassIcon,
+    keywords: ["hourglass", "time", "timer", "sandglass"],
+  },
+  {
+    name: "cloud-snow",
+    icon: CloudSnowIcon,
+    keywords: ["cloud snow", "weather", "blizzard"],
+  },
+  {
+    name: "chevron-first",
     icon: ChevronFirstIcon,
-    keywords: ['chevron', 'first', 'down', 'arrow'],
+    keywords: ["chevron", "first", "down", "arrow"],
   },
-  { name: 'bot', icon: BotIcon, keywords: ['bot', 'user', 'avatar'] },
+  { name: "bot", icon: BotIcon, keywords: ["bot", "user", "avatar"] },
   {
-    name: 'grip-horizontal',
+    name: "grip-horizontal",
     icon: GripHorizontalIcon,
-    keywords: ['grip', 'move', 'drag', 'resize', 'drag and drop'],
+    keywords: ["grip", "move", "drag", "resize", "drag and drop"],
   },
   {
-    name: 'grip-vertical',
+    name: "grip-vertical",
     icon: GripVerticalIcon,
-    keywords: ['grip', 'move', 'drag', 'resize', 'drag and drop'],
+    keywords: ["grip", "move", "drag", "resize", "drag and drop"],
   },
   {
-    name: 'bot-message-square',
+    name: "bot-message-square",
     icon: BotMessageSquareIcon,
-    keywords: ['bot', 'message', 'square', 'bubble', 'chat', 'conversation'],
+    keywords: ["bot", "message", "square", "bubble", "chat", "conversation"],
   },
   {
-    name: 'bookmark',
+    name: "bookmark",
     icon: BookmarkIcon,
-    keywords: ['bookmark', 'save', 'tag', 'label'],
+    keywords: ["bookmark", "save", "tag", "label"],
   },
   {
-    name: 'bookmark-x',
+    name: "bookmark-x",
     icon: BookmarkXIcon,
-    keywords: ['bookmark', 'x', 'remove', 'delete', 'tag', 'label'],
+    keywords: ["bookmark", "x", "remove", "delete", "tag", "label"],
   },
   {
-    name: 'bookmark-minus',
+    name: "bookmark-minus",
     icon: BookmarkMinusIcon,
-    keywords: ['bookmark', 'minus', 'remove', 'delete', 'tag', 'label'],
+    keywords: ["bookmark", "minus", "remove", "delete", "tag", "label"],
   },
   {
-    name: 'bookmark-plus',
+    name: "bookmark-plus",
     icon: BookmarkPlusIcon,
-    keywords: ['bookmark', 'plus', 'add', 'create', 'tag', 'label'],
+    keywords: ["bookmark", "plus", "add", "create", "tag", "label"],
   },
   {
-    name: 'bookmark-check',
+    name: "bookmark-check",
     icon: BookmarkCheckIcon,
-    keywords: ['bookmark', 'check', 'save', 'tag', 'label'],
+    keywords: ["bookmark", "check", "save", "tag", "label"],
   },
   {
-    name: 'washing-machine',
+    name: "washing-machine",
     icon: WashingMachineIcon,
     keywords: [
-      'washing machine',
-      'tumble dryer',
-      'electronics',
-      'cycle',
-      'clothes',
-      'rinse',
-      'spin',
-      'drum',
+      "washing machine",
+      "tumble dryer",
+      "electronics",
+      "cycle",
+      "clothes",
+      "rinse",
+      "spin",
+      "drum",
     ],
   },
   {
-    name: 'accessibility',
+    name: "accessibility",
     icon: AccessibilityIcon,
-    keywords: ['accessibility', 'disabled', 'wheelchair', 'assistive'],
+    keywords: ["accessibility", "disabled", "wheelchair", "assistive"],
   },
   {
-    name: 'lock-keyhole-open',
+    name: "lock-keyhole-open",
     icon: LockKeyholeOpenIcon,
-    keywords: ['security', 'password', 'secure', 'admin', 'lock', 'open'],
+    keywords: ["security", "password", "secure", "admin", "lock", "open"],
   },
   {
-    name: 'lock-open',
+    name: "lock-open",
     icon: LockOpenIcon,
-    keywords: ['security', 'password', 'secure', 'admin', 'lock', 'open'],
+    keywords: ["security", "password", "secure", "admin", "lock", "open"],
   },
   {
-    name: 'lock-keyhole',
+    name: "lock-keyhole",
     icon: LockKeyholeIcon,
-    keywords: ['security', 'password', 'secure', 'admin', 'lock'],
+    keywords: ["security", "password", "secure", "admin", "lock"],
   },
   {
-    name: 'lock',
+    name: "lock",
     icon: LockIcon,
-    keywords: ['security', 'password', 'secure', 'admin', 'lock'],
+    keywords: ["security", "password", "secure", "admin", "lock"],
   },
   {
-    name: 'folders',
+    name: "folders",
     icon: FoldersIcon,
-    keywords: ['folder', 'directory', 'file', 'storage', 'organization'],
+    keywords: ["folder", "directory", "file", "storage", "organization"],
   },
   {
-    name: 'snowflake',
+    name: "snowflake",
     icon: SnowflakeIcon,
-    keywords: ['snow', 'weather', 'cold', 'winter', 'flake'],
+    keywords: ["snow", "weather", "cold", "winter", "flake"],
   },
   {
-    name: 'thermometer',
+    name: "thermometer",
     icon: ThermometerIcon,
-    keywords: ['temperature', 'celsius', 'fahrenheit', 'weather'],
+    keywords: ["temperature", "celsius", "fahrenheit", "weather"],
   },
   {
-    name: 'droplet',
+    name: "droplet",
     icon: DropletIcon,
     keywords: [
-      'water',
-      'weather',
-      'liquid',
-      'fluid',
-      'wet',
-      'moisture',
-      'damp',
-      'bead',
-      'globule',
+      "water",
+      "weather",
+      "liquid",
+      "fluid",
+      "wet",
+      "moisture",
+      "damp",
+      "bead",
+      "globule",
     ],
   },
   {
-    name: 'plus',
+    name: "plus",
     icon: PlusIcon,
     keywords: [
-      'add',
-      'new',
-      'increase',
-      'increment',
-      'positive',
-      'calculate',
-      'toolbar',
-      'crosshair',
-      'aim',
-      'target',
-      'scope',
-      'sight',
-      'reticule',
-      'maximum',
-      'upgrade',
-      'extra',
-      '+',
+      "add",
+      "new",
+      "increase",
+      "increment",
+      "positive",
+      "calculate",
+      "toolbar",
+      "crosshair",
+      "aim",
+      "target",
+      "scope",
+      "sight",
+      "reticule",
+      "maximum",
+      "upgrade",
+      "extra",
+      "+",
     ],
   },
   {
-    name: 'heart',
+    name: "heart",
     icon: HeartIcon,
-    keywords: ['like', 'love', 'emotion', 'suit', 'playing', 'cards'],
+    keywords: ["like", "love", "emotion", "suit", "playing", "cards"],
   },
   {
-    name: 'smartphone-charging',
+    name: "smartphone-charging",
     icon: SmartphoneChargingIcon,
-    keywords: ['phone', 'cellphone', 'device', 'power', 'screen'],
+    keywords: ["phone", "cellphone", "device", "power", "screen"],
   },
   {
-    name: 'smartphone-nfc',
+    name: "smartphone-nfc",
     icon: SmartphoneNfcIcon,
-    keywords: ['phone', 'cellphone', 'device', 'nfc', 'screen'],
+    keywords: ["phone", "cellphone", "device", "nfc", "screen"],
   },
   {
-    name: 'nfc',
+    name: "nfc",
     icon: NfcIcon,
-    keywords: ['nfc', 'near field communication', 'wireless', 'signal'],
+    keywords: ["nfc", "near field communication", "wireless", "signal"],
   },
   {
-    name: 'history',
+    name: "history",
     icon: HistoryIcon,
-    keywords: ['history', 'back', 'previous', 'arrow'],
+    keywords: ["history", "back", "previous", "arrow"],
   },
   {
-    name: 'hard-drive-upload',
+    name: "hard-drive-upload",
     icon: HardDriveUploadIcon,
-    keywords: ['hard drive', 'upload', 'storage', 'data', 'save'],
+    keywords: ["hard drive", "upload", "storage", "data", "save"],
   },
   {
-    name: 'hard-drive-download',
+    name: "hard-drive-download",
     icon: HardDriveDownloadIcon,
-    keywords: ['hard drive', 'download', 'storage', 'data', 'save'],
+    keywords: ["hard drive", "download", "storage", "data", "save"],
   },
-  { name: 'square-activity', icon: SquareActivityIcon, keywords: ['activity'] },
+  { name: "square-activity", icon: SquareActivityIcon, keywords: ["activity"] },
   {
-    name: 'square-arrow-down',
+    name: "square-arrow-down",
     icon: SquareArrowDownIcon,
-    keywords: ['arrow', 'down', 'a'],
+    keywords: ["arrow", "down", "a"],
   },
   {
-    name: 'square-arrow-left',
+    name: "square-arrow-left",
     icon: SquareArrowLeftIcon,
-    keywords: ['arrow', 'left', 'a'],
+    keywords: ["arrow", "left", "a"],
   },
   {
-    name: 'square-arrow-right',
+    name: "square-arrow-right",
     icon: SquareArrowRightIcon,
-    keywords: ['arrow', 'right', 'a'],
+    keywords: ["arrow", "right", "a"],
   },
   {
-    name: 'square-arrow-up',
+    name: "square-arrow-up",
     icon: SquareArrowUpIcon,
-    keywords: ['arrow', 'up', 'a'],
+    keywords: ["arrow", "up", "a"],
   },
   {
-    name: 'scan-face',
+    name: "scan-face",
     icon: ScanFaceIcon,
-    keywords: ['scan', 'face', 'emotion'],
+    keywords: ["scan", "face", "emotion"],
   },
   {
-    name: 'frown',
+    name: "frown",
     icon: FrownIcon,
-    keywords: ['frown', 'emotion', 'face', 'sad'],
+    keywords: ["frown", "emotion", "face", "sad"],
   },
   {
-    name: 'smile-plus',
+    name: "smile-plus",
     icon: SmilePlusIcon,
-    keywords: ['smile', 'plus', 'emotion', 'face'],
+    keywords: ["smile", "plus", "emotion", "face"],
   },
-  { name: 'smile', icon: SmileIcon, keywords: ['smile', 'emotion', 'face'] },
-  { name: 'laugh', icon: LaughIcon, keywords: ['laugh', 'emotion', 'face'] },
+  { name: "smile", icon: SmileIcon, keywords: ["smile", "emotion", "face"] },
+  { name: "laugh", icon: LaughIcon, keywords: ["laugh", "emotion", "face"] },
   {
-    name: 'annoyed',
+    name: "annoyed",
     icon: AnnoyedIcon,
-    keywords: ['annoyed', 'emotion', 'face'],
+    keywords: ["annoyed", "emotion", "face"],
   },
-  { name: 'meh', icon: MehIcon, keywords: ['meh', 'emotion', 'face'] },
+  { name: "meh", icon: MehIcon, keywords: ["meh", "emotion", "face"] },
   {
-    name: 'key',
+    name: "key",
     icon: KeyIcon,
-    keywords: ['key', 'authentication', 'security', 'access', 'password'],
+    keywords: ["key", "authentication", "security", "access", "password"],
   },
   {
-    name: 'key-square',
+    name: "key-square",
     icon: KeySquareIcon,
-    keywords: ['key', 'authentication', 'security', 'access', 'password'],
+    keywords: ["key", "authentication", "security", "access", "password"],
   },
   {
-    name: 'key-circle',
+    name: "key-circle",
     icon: KeyCircleIcon,
-    keywords: ['key', 'authentication', 'security', 'access', 'password'],
+    keywords: ["key", "authentication", "security", "access", "password"],
   },
   {
-    name: 'maximize',
+    name: "maximize",
     icon: MaximizeIcon,
-    keywords: ['maximize', 'fullscreen', 'expand', 'screen'],
+    keywords: ["maximize", "fullscreen", "expand", "screen"],
   },
   {
-    name: 'maximize-2',
+    name: "maximize-2",
     icon: Maximize2Icon,
-    keywords: ['maximize', 'fullscreen', 'expand', 'screen'],
+    keywords: ["maximize", "fullscreen", "expand", "screen"],
   },
   {
-    name: 'minimize',
+    name: "minimize",
     icon: MinimizeIcon,
-    keywords: ['minimize', 'contract', 'reduce', 'small', 'smaller'],
+    keywords: ["minimize", "contract", "reduce", "small", "smaller"],
   },
   {
-    name: 'shrink',
+    name: "shrink",
     icon: ShrinkIcon,
-    keywords: ['shrink', 'contract', 'reduce', 'small', 'smaller'],
+    keywords: ["shrink", "contract", "reduce", "small", "smaller"],
   },
   {
-    name: 'rotate-cw',
+    name: "rotate-cw",
     icon: RotateCWIcon,
     keywords: [
-      'rotate',
-      'clockwise',
-      'turn',
-      'degrees',
-      'degrees',
-      'clockwise',
-      'counterclockwise',
+      "rotate",
+      "clockwise",
+      "turn",
+      "degrees",
+      "degrees",
+      "clockwise",
+      "counterclockwise",
     ],
   },
   {
-    name: 'rotate-ccw',
+    name: "rotate-ccw",
     icon: RotateCCWIcon,
     keywords: [
-      'rotate',
-      'counterclockwise',
-      'turn',
-      'degrees',
-      'degrees',
-      'clockwise',
-      'counterclockwise',
+      "rotate",
+      "counterclockwise",
+      "turn",
+      "degrees",
+      "degrees",
+      "clockwise",
+      "counterclockwise",
     ],
   },
   {
-    name: 'refresh-cw-off',
+    name: "refresh-cw-off",
     icon: RefreshCWOffIcon,
-    keywords: ['refresh', 'rotate', 'reload', 'rerun', 'circular', 'cycle'],
+    keywords: ["refresh", "rotate", "reload", "rerun", "circular", "cycle"],
   },
   {
-    name: 'refresh-cw',
+    name: "refresh-cw",
     icon: RefreshCWIcon,
-    keywords: ['refresh', 'rotate', 'reload', 'rerun', 'circular', 'cycle'],
+    keywords: ["refresh", "rotate", "reload", "rerun", "circular", "cycle"],
   },
   {
-    name: 'refresh-ccw-dot',
+    name: "refresh-ccw-dot",
     icon: RefreshCCWDotIcon,
-    keywords: ['refresh', 'rotate', 'reload', 'rerun', 'circular', 'cycle'],
+    keywords: ["refresh", "rotate", "reload", "rerun", "circular", "cycle"],
   },
   {
-    name: 'redo',
+    name: "redo",
     icon: RedoIcon,
-    keywords: ['redo', 'repeat', 'undo', 'back', 'previous', 'arrow'],
+    keywords: ["redo", "repeat", "undo", "back", "previous", "arrow"],
   },
   {
-    name: 'undo-dot',
+    name: "undo-dot",
     icon: UndoDotIcon,
-    keywords: ['undo', 'repeat', 'back', 'previous', 'arrow'],
+    keywords: ["undo", "repeat", "back", "previous", "arrow"],
   },
   {
-    name: 'redo-dot',
+    name: "redo-dot",
     icon: RedoDotIcon,
-    keywords: ['redo', 'repeat', 'undo', 'back', 'previous', 'arrow'],
+    keywords: ["redo", "repeat", "undo", "back", "previous", "arrow"],
   },
   {
-    name: 'arrow-big-down',
+    name: "arrow-big-down",
     icon: ArrowBigDownIcon,
-    keywords: ['arrow', 'down', 'big', 'below', 'south', 'bottom'],
+    keywords: ["arrow", "down", "big", "below", "south", "bottom"],
   },
   {
-    name: 'arrow-big-left',
+    name: "arrow-big-left",
     icon: ArrowBigLeftIcon,
-    keywords: ['arrow', 'left', 'big', 'west', 'previous', '<-'],
+    keywords: ["arrow", "left", "big", "west", "previous", "<-"],
   },
   {
-    name: 'arrow-big-right',
+    name: "arrow-big-right",
     icon: ArrowBigRightIcon,
-    keywords: ['arrow', 'right', 'big', 'east', 'next', '->'],
+    keywords: ["arrow", "right", "big", "east", "next", "->"],
   },
   {
-    name: 'arrow-big-up',
+    name: "arrow-big-up",
     icon: ArrowBigUpIcon,
-    keywords: ['arrow', 'up', 'big', 'north', 'top'],
+    keywords: ["arrow", "up", "big", "north", "top"],
   },
   {
-    name: 'a-arrow-up',
+    name: "a-arrow-up",
     icon: AArrowUpIcon,
-    keywords: ['arrow', 'up', 'a'],
+    keywords: ["arrow", "up", "a"],
   },
   {
-    name: 'chart-spline',
+    name: "chart-spline",
     icon: ChartSplineIcon,
     keywords: [
-      'chart',
-      'spline',
-      'graph',
-      'statistics',
-      'analytics',
-      'diagram',
-      'presentation',
-      'analytics',
+      "chart",
+      "spline",
+      "graph",
+      "statistics",
+      "analytics",
+      "diagram",
+      "presentation",
+      "analytics",
     ],
   },
   {
-    name: 'arrow-up',
+    name: "arrow-up",
     icon: ArrowUpIcon,
-    keywords: ['up', 'above', 'direction', 'north', 'top'],
+    keywords: ["up", "above", "direction", "north", "top"],
   },
   {
-    name: 'arrow-down',
+    name: "arrow-down",
     icon: ArrowDownIcon,
-    keywords: ['down', 'below', 'direction', 'south', 'bottom'],
+    keywords: ["down", "below", "direction", "south", "bottom"],
   },
   {
-    name: 'arrow-down-left',
+    name: "arrow-down-left",
     icon: ArrowDownLeftIcon,
     keywords: [
-      'arrow',
-      'down',
-      'left',
-      'direction',
-      'southwest',
-      'bottom left',
+      "arrow",
+      "down",
+      "left",
+      "direction",
+      "southwest",
+      "bottom left",
     ],
   },
   {
-    name: 'arrow-down-right',
+    name: "arrow-down-right",
     icon: ArrowDownRightIcon,
     keywords: [
-      'arrow',
-      'down',
-      'right',
-      'direction',
-      'southeast',
-      'bottom right',
+      "arrow",
+      "down",
+      "right",
+      "direction",
+      "southeast",
+      "bottom right",
     ],
   },
   {
-    name: 'vibrate',
+    name: "arrow-up-left",
+    icon: ArrowUpLeftIcon,
+    keywords: ["arrow", "up", "left", "direction", "northwest", "top left"],
+  },
+  {
+    name: "arrow-up-right",
+    icon: ArrowUpRightIcon,
+    keywords: ["arrow", "up", "right", "direction", "northeast", "top right"],
+  },
+  {
+    name: "vibrate",
     icon: VibrateIcon,
     keywords: [
-      'smartphone',
-      'notification',
-      'rumble',
-      'haptic feedback',
-      'screen',
+      "smartphone",
+      "notification",
+      "rumble",
+      "haptic feedback",
+      "screen",
     ],
   },
   {
-    name: 'waves-ladder',
+    name: "waves-ladder",
     icon: WavesLadderIcon,
-    keywords: ['waves', 'ladder', 'water', 'ocean', 'sea'],
+    keywords: ["waves", "ladder", "water", "ocean", "sea"],
   },
   {
-    name: 'waves',
+    name: "waves",
     icon: WavesIcon,
-    keywords: ['waves', 'water', 'ocean', 'sea', 'wave', 'sea wave'],
+    keywords: ["waves", "water", "ocean", "sea", "wave", "sea wave"],
   },
   {
-    name: 'wind-arrow-down',
+    name: "wind-arrow-down",
     icon: WindArrowDownIcon,
-    keywords: ['wind', 'arrow', 'down', 'wind arrow down'],
+    keywords: ["wind", "arrow", "down", "wind arrow down"],
   },
   {
-    name: 'air-vent',
+    name: "air-vent",
     icon: AirVentIcon,
-    keywords: ['air', 'vent', 'fan', 'air conditioning', 'wind', 'cooling'],
+    keywords: ["air", "vent", "fan", "air conditioning", "wind", "cooling"],
   },
   {
-    name: 'tornado',
+    name: "tornado",
     icon: TornadoIcon,
-    keywords: ['tornado', 'wind', 'weather', 'spin', 'twister', 'whirlwind'],
+    keywords: ["tornado", "wind", "weather", "spin", "twister", "whirlwind"],
   },
   {
-    name: 'cloud-download',
+    name: "cloud-download",
     icon: CloudDownloadIcon,
-    keywords: ['cloud', 'download', 'weather', 'cloud download'],
+    keywords: ["cloud", "download", "weather", "cloud download"],
   },
   {
-    name: 'cloud-upload',
+    name: "cloud-upload",
     icon: CloudUploadIcon,
-    keywords: ['cloud', 'upload', 'weather', 'cloud upload'],
+    keywords: ["cloud", "upload", "weather", "cloud upload"],
   },
   {
-    name: 'cloud-cog',
+    name: "cloud-cog",
     icon: CloudCogIcon,
-    keywords: ['cloud', 'cog', 'cloud cog', 'edit', 'gear', 'preferences'],
+    keywords: ["cloud", "cog", "cloud cog", "edit", "gear", "preferences"],
   },
   {
-    name: 'cloud-lightning',
+    name: "cloud-lightning",
     icon: CloudLightningIcon,
-    keywords: ['cloud', 'lightning', 'weather', 'cloud lightning'],
+    keywords: ["cloud", "lightning", "weather", "cloud lightning"],
   },
   {
-    name: 'cloud-rain',
+    name: "cloud-rain",
     icon: CloudRainIcon,
-    keywords: ['cloud', 'rain', 'weather', 'cloud rain'],
+    keywords: ["cloud", "rain", "weather", "cloud rain"],
   },
   {
-    name: 'cloud-rain-wind',
+    name: "cloud-rain-wind",
     icon: CloudRainWindIcon,
-    keywords: ['cloud', 'rain', 'wind', 'weather', 'cloud rain wind'],
+    keywords: ["cloud", "rain", "wind", "weather", "cloud rain wind"],
   },
   {
-    name: 'arrow-big-down-dash',
+    name: "arrow-big-down-dash",
     icon: ArrowBigDownDashIcon,
-    keywords: ['arrow', 'down', 'big', 'below', 'south', 'bottom', 'dash'],
+    keywords: ["arrow", "down", "big", "below", "south", "bottom", "dash"],
   },
   {
-    name: 'arrow-big-left-dash',
+    name: "arrow-big-left-dash",
     icon: ArrowBigLeftDashIcon,
-    keywords: ['arrow', 'left', 'big', 'below', 'west', 'dash'],
+    keywords: ["arrow", "left", "big", "below", "west", "dash"],
   },
   {
-    name: 'arrow-big-right-dash',
+    name: "arrow-big-right-dash",
     icon: ArrowBigRightDashIcon,
-    keywords: ['arrow', 'right', 'big', 'below', 'east', 'dash'],
+    keywords: ["arrow", "right", "big", "below", "east", "dash"],
   },
   {
-    name: 'arrow-big-up-dash',
+    name: "arrow-big-up-dash",
     icon: ArrowBigUpDashIcon,
-    keywords: ['arrow', 'up', 'big', 'above', 'north', 'dash'],
+    keywords: ["arrow", "up", "big", "above", "north", "dash"],
   },
   {
-    name: 'moon',
+    name: "moon",
     icon: MoonIcon,
-    keywords: ['night', 'dark', 'moon'],
+    keywords: ["night", "dark", "moon"],
   },
   {
-    name: 'facebook',
+    name: "facebook",
     icon: FacebookIcon,
-    keywords: ['social', 'network', 'facebook'],
+    keywords: ["social", "network", "facebook"],
   },
   {
-    name: 'twitter',
+    name: "twitter",
     icon: TwitterIcon,
-    keywords: ['social', 'network', 'twitter', 'X'],
+    keywords: ["social", "network", "twitter", "X"],
   },
   {
-    name: 'linkedin',
+    name: "linkedin",
     icon: LinkedinIcon,
-    keywords: ['social', 'network', 'linkedin'],
+    keywords: ["social", "network", "linkedin"],
   },
   {
-    name: 'youtube',
+    name: "youtube",
     icon: YoutubeIcon,
-    keywords: ['social', 'network', 'youtube'],
+    keywords: ["social", "network", "youtube"],
   },
   {
-    name: 'instagram',
+    name: "instagram",
     icon: InstagramIcon,
-    keywords: ['social', 'network', 'instagram'],
+    keywords: ["social", "network", "instagram"],
   },
   {
-    name: 'twitch',
+    name: "twitch",
     icon: TwitchIcon,
-    keywords: ['social', 'network', 'twitch'],
+    keywords: ["social", "network", "twitch"],
   },
   {
-    name: 'dribbble',
+    name: "dribbble",
     icon: DribbbleIcon,
-    keywords: ['social', 'network', 'dribbble'],
+    keywords: ["social", "network", "dribbble"],
   },
   {
-    name: 'discord',
+    name: "discord",
     icon: DiscordIcon,
-    keywords: ['social', 'network', 'discord'],
+    keywords: ["social", "network", "discord"],
   },
   {
-    name: 'search',
+    name: "search",
     icon: SearchIcon,
-    keywords: ['find', 'scan', 'magnifier', 'magnifying glass'],
+    keywords: ["find", "scan", "magnifier", "magnifying glass"],
   },
   {
-    name: 'cloud-sun',
+    name: "cloud-sun",
     icon: CloudSunIcon,
-    keywords: ['weather', 'sun', 'cloud', 'light', 'bright'],
+    keywords: ["weather", "sun", "cloud", "light", "bright"],
   },
   {
-    name: 'sunset',
+    name: "sunset",
     icon: SunsetIcon,
-    keywords: ['sun', 'sunset', 'weather', 'bright', 'dawn', 'evening'],
+    keywords: ["sun", "sunset", "weather", "bright", "dawn", "evening"],
   },
   {
-    name: 'sun-dim',
+    name: "sun-dim",
     icon: SunDimIcon,
-    keywords: ['sun', 'dim', 'weather', 'light', 'day'],
+    keywords: ["sun", "dim", "weather", "light", "day"],
   },
   {
-    name: 'sun-medium',
+    name: "sun-medium",
     icon: SunMediumIcon,
-    keywords: ['sun', 'medium', 'weather', 'light', 'day'],
+    keywords: ["sun", "medium", "weather", "light", "day"],
   },
   {
-    name: 'sun-moon',
+    name: "sun-moon",
     icon: SunMoonIcon,
-    keywords: ['sun', 'moon', 'day', 'night', 'evening'],
+    keywords: ["sun", "moon", "day", "night", "evening"],
   },
   {
-    name: 'cart',
+    name: "cart",
     icon: CartIcon,
     keywords: [
-      'trolley',
-      'cart',
-      'basket',
-      'e-commerce',
-      'store',
-      'purchase',
-      'products',
-      'items',
-      'ingredients',
+      "trolley",
+      "cart",
+      "basket",
+      "e-commerce",
+      "store",
+      "purchase",
+      "products",
+      "items",
+      "ingredients",
     ],
   },
   {
-    name: 'stethoscope',
+    name: "stethoscope",
     icon: StethoscopeIcon,
-    keywords: ['phonendoscope', 'medical', 'heart', 'lungs', 'sound'],
+    keywords: ["phonendoscope", "medical", "heart", "lungs", "sound"],
   },
   {
-    name: 'circle-check',
+    name: "circle-check",
     icon: CircleCheckIcon,
-    keywords: ['done', 'todo', 'tick', 'complete', 'task'],
+    keywords: ["done", "todo", "tick", "complete", "task"],
   },
   {
-    name: 'earth',
+    name: "earth",
     icon: EarthIcon,
-    keywords: ['world', 'browser', 'language', 'translate', 'globe'],
+    keywords: ["world", "browser", "language", "translate", "globe"],
   },
   {
-    name: 'workflow',
+    name: "workflow",
     icon: WorkflowIcon,
     keywords: [
-      'action',
-      'continuous integration',
-      'ci',
-      'automation',
-      'devops',
-      'network',
-      'node',
-      'connection',
+      "action",
+      "continuous integration",
+      "ci",
+      "automation",
+      "devops",
+      "network",
+      "node",
+      "connection",
     ],
   },
   {
-    name: 'logout',
+    name: "wrench",
+    icon: WrenchIcon,
+    keywords: [
+      "account",
+      "settings",
+      "spanner",
+      "diy",
+      "toolbox",
+      "build",
+      "construction",
+    ],
+  },
+  {
+    name: "logout",
     icon: LogoutIcon,
-    keywords: ['sign out', 'arrow', 'exit', 'auth'],
+    keywords: ["sign out", "arrow", "exit", "auth"],
   },
   {
-    name: 'circle-help',
+    name: "circle-help",
     icon: CircleHelpIcon,
-    keywords: ['question mark'],
+    keywords: ["question mark"],
   },
   {
-    name: 'user',
+    name: "user",
     icon: UserIcon,
-    keywords: ['person', 'account', 'contact'],
+    keywords: ["person", "account", "contact"],
   },
   {
-    name: 'flame',
+    name: "flame",
     icon: FlameIcon,
-    keywords: ['fire', 'flame', 'hot'],
+    keywords: ["fire", "flame", "hot"],
   },
   {
-    name: 'audio-lines',
+    name: "audio-lines",
     icon: AudioLinesIcon,
     keywords: [
-      'graphic equaliser',
-      'sound',
-      'noise',
-      'listen',
-      'hearing',
-      'hertz',
-      'frequency',
-      'wavelength',
-      'vibrate',
-      'sine',
-      'synthesizer',
-      'synthesiser',
-      'levels',
-      'track',
-      'music',
-      'playback',
-      'radio',
-      'broadcast',
-      'airwaves',
-      'voice',
-      'vocals',
-      'singer',
-      'song',
+      "graphic equaliser",
+      "sound",
+      "noise",
+      "listen",
+      "hearing",
+      "hertz",
+      "frequency",
+      "wavelength",
+      "vibrate",
+      "sine",
+      "synthesizer",
+      "synthesiser",
+      "levels",
+      "track",
+      "music",
+      "playback",
+      "radio",
+      "broadcast",
+      "airwaves",
+      "voice",
+      "vocals",
+      "singer",
+      "song",
     ],
   },
   {
-    name: 'eye-off',
+    name: "eye-off",
     icon: EyeOffIcon,
     keywords: [
-      'view',
-      'watch',
-      'see',
-      'hide',
-      'conceal',
-      'mask',
-      'hidden',
-      'visibility',
-      'vision',
+      "view",
+      "watch",
+      "see",
+      "hide",
+      "conceal",
+      "mask",
+      "hidden",
+      "visibility",
+      "vision",
     ],
   },
   {
-    name: 'square-stack',
+    name: "eye",
+    icon: EyeIcon,
+    keywords: [
+      "view",
+      "watch",
+      "see",
+      "show",
+      "expose",
+      "reveal",
+      "display",
+      "visible",
+      "visibility",
+      "vision",
+      "preview",
+      "read",
+    ],
+  },
+  {
+    name: "square-stack",
     icon: SquareStackIcon,
     keywords: [
-      'versions',
-      'clone',
-      'copy',
-      'duplicate',
-      'multiple',
-      'revisions',
-      'version control',
-      'backup',
-      'history',
+      "versions",
+      "clone",
+      "copy",
+      "duplicate",
+      "multiple",
+      "revisions",
+      "version control",
+      "backup",
+      "history",
     ],
   },
   {
-    name: 'badge-alert',
+    name: "chess-king",
+    icon: ChessKingIcon,
+    keywords: [
+      "chess",
+      "king",
+      "piece",
+      "board game",
+      "strategy",
+      "game",
+      "checkmate",
+      "royal",
+      "crown",
+    ],
+  },
+  {
+    name: "chess-knight",
+    icon: ChessKnightIcon,
+    keywords: [
+      "chess",
+      "knight",
+      "piece",
+      "board game",
+      "strategy",
+      "game",
+      "horse",
+      "L-shape",
+      "move",
+    ],
+  },
+  {
+    name: "chess-pawn",
+    icon: ChessPawnIcon,
+    keywords: [
+      "chess",
+      "pawn",
+      "piece",
+      "board game",
+      "strategy",
+      "game",
+      "pawn",
+      "pawn-shape",
+      "move",
+    ],
+  },
+  {
+    name: "chess-bishop",
+    icon: ChessBishopIcon,
+    keywords: [
+      "chess",
+      "bishop",
+      "piece",
+      "board game",
+      "strategy",
+      "game",
+      "bishop",
+      "bishop-shape",
+      "move",
+    ],
+  },
+  {
+    name: "badge-alert",
     icon: BadgeAlertIcon,
     keywords: [
-      'check',
-      'verified',
-      'unverified',
-      'security',
-      'safety',
-      'issue',
+      "check",
+      "verified",
+      "unverified",
+      "security",
+      "safety",
+      "issue",
     ],
   },
   {
-    name: 'message-circle',
+    name: "message-circle",
     icon: MessageCircleIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
     ],
   },
   {
-    name: 'message-circle-more',
+    name: "message-circle-check",
+    icon: MessageCircleCheckIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "moderate",
+      "check",
+      "done",
+      "todo",
+      "complete",
+    ],
+  },
+  {
+    name: "message-circle-more",
     icon: MessageCircleMoreIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
-      'typing',
-      'writing',
-      'responding',
-      'ellipsis',
-      'etc',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "typing",
+      "writing",
+      "responding",
+      "ellipsis",
+      "etc",
     ],
   },
   {
-    name: 'message-square',
+    name: "message-circle-plus",
+    icon: MessageCirclePlusIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "add",
+    ],
+  },
+  {
+    name: "message-circle-x",
+    icon: MessageCircleXIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "clear",
+      "close",
+      "delete",
+      "remove",
+      "cancel",
+      "silence",
+      "mute",
+      "moderate",
+    ],
+  },
+  {
+    name: "message-square",
     icon: MessageSquareIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
-      'message',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "message",
     ],
   },
   {
-    name: 'message-square-more',
+    name: "message-square-check",
+    icon: MessageSquareCheckIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "moderate",
+      "check",
+      "done",
+      "todo",
+      "complete",
+    ],
+  },
+  {
+    name: "message-square-more",
     icon: MessageSquareMoreIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
-      'typing',
-      'writing',
-      'message',
-      'responding',
-      'ellipsis',
-      'etc',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "typing",
+      "writing",
+      "message",
+      "responding",
+      "ellipsis",
+      "etc",
     ],
   },
   {
-    name: 'message-circle-dashed',
+    name: "message-square-plus",
+    icon: MessageSquarePlusIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "add",
+    ],
+  },
+  {
+    name: "message-square-x",
+    icon: MessageSquareXIcon,
+    keywords: [
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "clear",
+      "close",
+      "delete",
+      "remove",
+      "cancel",
+      "silence",
+      "mute",
+      "moderate",
+    ],
+  },
+  {
+    name: "message-circle-dashed",
     icon: MessageCircleDashedIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
-      'typing',
-      'writing',
-      'message',
-      'responding',
-      'ellipsis',
-      'etc',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "typing",
+      "writing",
+      "message",
+      "responding",
+      "ellipsis",
+      "etc",
     ],
   },
   {
-    name: 'message-square-dashed',
+    name: "message-square-dashed",
     icon: MessageSquareDashedIcon,
     keywords: [
-      'comment',
-      'chat',
-      'conversation',
-      'dialog',
-      'feedback',
-      'speech bubble',
-      'typing',
-      'writing',
-      'message',
-      'responding',
-      'ellipsis',
-      'etc',
+      "comment",
+      "chat",
+      "conversation",
+      "dialog",
+      "feedback",
+      "speech bubble",
+      "typing",
+      "writing",
+      "message",
+      "responding",
+      "ellipsis",
+      "etc",
     ],
   },
   {
-    name: 'clipboard-check',
+    name: "clipboard-check",
     icon: ClipboardCheckIcon,
-    keywords: ['clipboard', 'check', 'clipboard-check', 'clipboard-checkmark'],
+    keywords: ["clipboard", "check", "clipboard-check", "clipboard-checkmark"],
   },
   {
-    name: 'home',
+    name: "home",
     icon: HomeIcon,
-    keywords: ['home', 'living', 'building', 'residence', 'architecture'],
+    keywords: ["home", "living", "building", "residence", "architecture"],
   },
   {
-    name: 'arrow-left',
+    name: "arrow-left",
     icon: ArrowLeftIcon,
-    keywords: ['previous', 'back', 'direction', 'west', '<-'],
+    keywords: ["previous", "back", "direction", "west", "<-"],
   },
   {
-    name: 'arrow-right',
+    name: "arrow-right",
     icon: ArrowRightIcon,
-    keywords: ['forward', 'next', 'direction', 'east', '->'],
+    keywords: ["forward", "next", "direction", "east", "->"],
   },
   {
-    name: 'expand',
+    name: "expand",
     icon: ExpandIcon,
-    keywords: ['scale', 'fullscreen'],
+    keywords: ["scale", "fullscreen"],
   },
   {
-    name: 'route',
+    name: "route",
     icon: RouteIcon,
-    keywords: ['path', 'journey', 'planner', 'points', 'stops', 'stations'],
+    keywords: ["path", "journey", "planner", "points", "stops", "stations"],
   },
   {
-    name: 'airplane',
+    name: "airplane",
     icon: AirplaneIcon,
     keywords: [
-      'flight',
-      'path',
-      'journey',
-      'planner',
-      'points',
-      'stops',
-      'stations',
+      "flight",
+      "path",
+      "journey",
+      "planner",
+      "points",
+      "stops",
+      "stations",
     ],
   },
   {
-    name: 'refresh-ccw',
+    name: "airplay",
+    icon: AirplayIcon,
+    keywords: ["stream", "cast", "device", "screen", "monitor"],
+  },
+  {
+    name: "refresh-ccw",
     icon: RefreshCCWIcon,
     keywords: [
-      'arrows',
-      'rotate',
-      'reload',
-      'rerun',
-      'synchronise',
-      'synchronize',
-      'circular',
-      'cycle',
+      "arrows",
+      "rotate",
+      "reload",
+      "rerun",
+      "synchronise",
+      "synchronize",
+      "circular",
+      "cycle",
     ],
   },
-  { name: 'undo', icon: UndoIcon, keywords: ['redo', 'rerun', 'history'] },
+  { name: "undo", icon: UndoIcon, keywords: ["redo", "rerun", "history"] },
   {
-    name: 'download',
+    name: "download",
     icon: DownloadIcon,
-    keywords: ['import', 'export', 'save'],
+    keywords: ["import", "export", "save"],
   },
   {
-    name: 'square-pen',
+    name: "square-pen",
     icon: SquarePenIcon,
     keywords: [
-      'pencil',
-      'change',
-      'create',
-      'draw',
-      'sketch',
-      'draft',
-      'writer',
-      'writing',
-      'biro',
-      'ink',
-      'marker',
-      'felt tip',
-      'stationery',
-      'artist',
+      "pencil",
+      "change",
+      "create",
+      "draw",
+      "sketch",
+      "draft",
+      "writer",
+      "writing",
+      "biro",
+      "ink",
+      "marker",
+      "felt tip",
+      "stationery",
+      "artist",
     ],
   },
   {
-    name: 'delete',
+    name: "delete",
     icon: DeleteIcon,
-    keywords: ['garbage', 'delete', 'remove', 'bin'],
+    keywords: ["garbage", "delete", "remove", "bin"],
   },
   {
-    name: 'settings',
+    name: "sliders-horizontal",
+    icon: SlidersHorizontalIcon,
+    keywords: ["settings", "filters", "controls"],
+  },
+  {
+    name: "settings",
     icon: SettingsIcon,
-    keywords: ['settings', 'filters', 'controls'],
+    keywords: ["cog", "edit", "gear", "preferences"],
   },
   {
-    name: 'settings-gear',
-    icon: SettingsGearIcon,
-    keywords: ['cog', 'edit', 'gear', 'preferences'],
-  },
-  {
-    name: 'calendar-cog',
+    name: "calendar-cog",
     icon: CalendarCogIcon,
     keywords: [
-      'date',
-      'day',
-      'month',
-      'year',
-      'events',
-      'settings',
-      'gear',
-      'cog',
+      "date",
+      "day",
+      "month",
+      "year",
+      "events",
+      "settings",
+      "gear",
+      "cog",
     ],
   },
   {
-    name: 'cursor-click',
+    name: "cursor-click",
     icon: CursorClickIcon,
-    keywords: ['click', 'select'],
+    keywords: ["click", "select"],
   },
   {
-    name: 'menu',
+    name: "menu",
     icon: MenuIcon,
-    keywords: ['bars', 'navigation', 'hamburger', 'options'],
+    keywords: ["bars", "navigation", "hamburger", "options"],
   },
   {
-    name: 'clock',
+    name: "clock",
     icon: ClockIcon,
-    keywords: ['time', 'watch', 'alarm'],
+    keywords: ["time", "watch", "alarm"],
   },
   {
-    name: 'file-stack',
+    name: "file-stack",
     icon: FileStackIcon,
     keywords: [
-      'versions',
-      'multiple',
-      'copy',
-      'documents',
-      'revisions',
-      'version control',
-      'history',
+      "versions",
+      "multiple",
+      "copy",
+      "documents",
+      "revisions",
+      "version control",
+      "history",
     ],
   },
   {
-    name: 'file-pen-line',
+    name: "file-pen-line",
     icon: FilePenLineIcon,
-    keywords: ['edit'],
+    keywords: ["edit"],
   },
   {
-    name: 'archive',
+    name: "archive",
     icon: ArchiveIcon,
-    keywords: ['index', 'backup', 'box', 'storage', 'records'],
+    keywords: ["index", "backup", "box", "storage", "records"],
   },
   {
-    name: 'copy',
+    name: "copy",
     icon: CopyIcon,
-    keywords: ['clone', 'duplicate', 'multiple'],
+    keywords: ["clone", "duplicate", "multiple"],
   },
   {
-    name: 'attach-file',
+    name: "attach-file",
     icon: AttachFileIcon,
-    keywords: ['attachment', 'file'],
+    keywords: ["attachment", "file"],
   },
-  { name: 'alarm-clock', icon: AlarmClockIcon, keywords: ['morning'] },
-  { name: 'bold', icon: BoldIcon, keywords: ['text', 'strong', 'format'] },
+  { name: "alarm-clock", icon: AlarmClockIcon, keywords: ["morning"] },
+  { name: "bold", icon: BoldIcon, keywords: ["text", "strong", "format"] },
   {
-    name: 'italic',
+    name: "italic",
     icon: ItalicIcon,
-    keywords: ['oblique', 'text', 'format'],
+    keywords: ["oblique", "text", "format"],
   },
   {
-    name: 'underline',
+    name: "underline",
     icon: UnderlineIcon,
-    keywords: ['text', 'format'],
+    keywords: ["text", "format"],
   },
   {
-    name: 'scan-text',
+    name: "scan-text",
     icon: ScanTextIcon,
-    keywords: ['recognition', 'read', 'translate', 'copy', 'lines'],
+    keywords: ["recognition", "read", "translate", "copy", "lines"],
   },
   {
-    name: 'languages',
+    name: "languages",
     icon: LanguagesIcon,
-    keywords: ['translate'],
+    keywords: ["translate"],
   },
   {
-    name: 'at-sign',
+    name: "at-sign",
     icon: AtSignIcon,
-    keywords: ['mention', 'at', 'email', 'message', '@'],
+    keywords: ["mention", "at", "email", "message", "@"],
   },
   {
-    name: 'bell',
+    name: "atom",
+    icon: AtomIcon,
+    keywords: ["science", "physics", "chemistry", "nucleus", "electron"],
+  },
+  {
+    name: "bell",
     icon: BellIcon,
-    keywords: ['alarm', 'notification', 'sound', 'reminder'],
+    keywords: ["alarm", "notification", "sound", "reminder"],
   },
   {
-    name: 'users',
+    name: "users",
     icon: UsersIcon,
-    keywords: ['group', 'people'],
+    keywords: ["group", "people"],
   },
   {
-    name: 'upvote',
+    name: "upvote",
     icon: UpvoteIcon,
-    keywords: ['like', 'good', 'emotion'],
+    keywords: ["like", "good", "emotion"],
   },
   {
-    name: 'downvote',
+    name: "downvote",
     icon: DownvoteIcon,
-    keywords: ['dislike', 'bad', 'emotion'],
+    keywords: ["dislike", "bad", "emotion"],
   },
   {
-    name: 'circle-dollar-sign',
+    name: "circle-dollar-sign",
     icon: CircleDollarSignIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'dollar-sign',
+    name: "dollar-sign",
     icon: DollarSignIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'indian-rupee',
+    name: "indian-rupee",
     icon: IndianRupeeIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'japanese-yen',
+    name: "japanese-yen",
     icon: JapaneseYenIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'philippine-peso',
+    name: "philippine-peso",
     icon: PhilippinePesoIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'euro',
+    name: "euro",
     icon: EuroIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'pound-sterling',
+    name: "pound-sterling",
     icon: PoundSterlingIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'georgian-lari',
+    name: "georgian-lari",
     icon: GeorgianLariIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'russian-ruble',
+    name: "russian-ruble",
     icon: RussianRubleIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'saudi-riyal',
+    name: "saudi-riyal",
     icon: SaudiRiyalIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'swiss-franc',
+    name: "swiss-franc",
     icon: SwissFrancIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'turkish-lira',
+    name: "turkish-lira",
     icon: TurkishLiraIcon,
-    keywords: ['monetization', 'marketing', 'currency', 'money', 'payment'],
+    keywords: ["monetization", "marketing", "currency", "money", "payment"],
   },
   {
-    name: 'hand-coins',
+    name: "hand-coins",
     icon: HandCoinsIcon,
     keywords: [
-      'savings',
-      'banking',
-      'money',
-      'finance',
-      'offers',
-      'mortgage',
-      'payment',
-      'received',
-      'wage',
-      'payroll',
-      'allowance',
-      'pocket money',
-      'handout',
-      'pennies',
+      "savings",
+      "banking",
+      "money",
+      "finance",
+      "offers",
+      "mortgage",
+      "payment",
+      "received",
+      "wage",
+      "payroll",
+      "allowance",
+      "pocket money",
+      "handout",
+      "pennies",
     ],
   },
   {
-    name: 'badge-percent',
+    name: "badge-percent",
     icon: BadgePercentIcon,
     keywords: [
-      'verified',
-      'unverified',
-      'sale',
-      'discount',
-      'offer',
-      'marketing',
-      'sticker',
-      'price tag',
+      "verified",
+      "unverified",
+      "sale",
+      "discount",
+      "offer",
+      "marketing",
+      "sticker",
+      "price tag",
     ],
   },
   {
-    name: 'chart-pie',
+    name: "chart-pie",
     icon: ChartPieIcon,
-    keywords: ['statistics', 'analytics', 'diagram', 'presentation'],
+    keywords: ["statistics", "analytics", "diagram", "presentation"],
   },
   {
-    name: 'chart-scatter',
+    name: "chart-scatter",
     icon: ChartScatterIcon,
-    keywords: ['chart', 'analytics', 'scatter'],
+    keywords: ["chart", "analytics", "scatter"],
   },
   {
-    name: 'gauge',
+    name: "gauge",
     icon: GaugeIcon,
     keywords: [
-      'dashboard',
-      'dial',
-      'meter',
-      'speed',
-      'pressure',
-      'measure',
-      'level',
+      "dashboard",
+      "dial",
+      "meter",
+      "speed",
+      "pressure",
+      "measure",
+      "level",
     ],
   },
   {
-    name: 'pen-tool',
+    name: "pen-tool",
     icon: PenToolIcon,
-    keywords: ['vector', 'drawing', 'path'],
+    keywords: ["vector", "drawing", "path"],
   },
   {
-    name: 'fingerprint',
+    name: "fingerprint",
     icon: FingerprintIcon,
-    keywords: ['2fa', 'authentication', 'biometric', 'identity', 'security'],
+    keywords: ["2fa", "authentication", "biometric", "identity", "security"],
   },
   {
-    name: 'link',
+    name: "link",
     icon: LinkIcon,
-    keywords: ['chain', 'url'],
+    keywords: ["chain", "url"],
   },
   {
-    name: 'layers',
+    name: "layers",
     icon: LayersIcon,
     keywords: [
-      'stack',
-      'pile',
-      'pages',
-      'sheets',
-      'paperwork',
-      'copies',
-      'copy',
+      "stack",
+      "pile",
+      "pages",
+      "sheets",
+      "paperwork",
+      "copies",
+      "copy",
     ],
   },
   {
-    name: 'grip',
+    name: "grip",
     icon: GripIcon,
-    keywords: ['grab', 'dots', 'handle', 'move', 'drag'],
+    keywords: ["grab", "dots", "handle", "move", "drag"],
   },
   {
-    name: 'git-pull-request',
+    name: "git-pull-request",
     icon: GitPullRequestIcon,
-    keywords: ['code', 'version control', 'open'],
+    keywords: ["code", "version control", "open"],
   },
   {
-    name: 'github',
+    name: "github",
     icon: GithubIcon,
-    keywords: ['logo', 'version control', 'repository', 'source code', 'git'],
+    keywords: ["logo", "version control", "repository", "source code", "git"],
   },
   {
-    name: 'connect',
+    name: "connect",
     icon: ConnectIcon,
     keywords: [
-      'electricity',
-      'energy',
-      'electronics',
-      'socket',
-      'outlet',
-      'disconnect',
+      "electricity",
+      "energy",
+      "electronics",
+      "socket",
+      "outlet",
+      "disconnect",
     ],
   },
   {
-    name: 'volume',
+    name: "volume",
     icon: VolumeIcon,
-    keywords: ['music', 'sound', 'mute', 'speaker'],
+    keywords: ["music", "sound", "mute", "speaker"],
   },
   {
-    name: 'sun',
+    name: "sun",
     icon: SunIcon,
-    keywords: ['brightness', 'weather', 'light', 'summer'],
+    keywords: ["brightness", "weather", "light", "summer"],
   },
   {
-    name: 'party-popper',
+    name: "party-popper",
     icon: PartyPopperIcon,
     keywords: [
-      'emoji',
-      'congratulations',
-      'celebration',
-      'party',
-      'tada',
-      '🎉',
-      '🎊',
-      'excitement',
-      'exciting',
-      'excites',
-      'confetti',
+      "emoji",
+      "congratulations",
+      "celebration",
+      "party",
+      "tada",
+      "🎉",
+      "🎊",
+      "excitement",
+      "exciting",
+      "excites",
+      "confetti",
     ],
   },
   {
-    name: 'frame',
+    name: "frame",
     icon: FrameIcon,
-    keywords: ['logo', 'design', 'tool'],
+    keywords: ["logo", "design", "tool"],
   },
   {
-    name: 'bone',
+    name: "bone",
     icon: BoneIcon,
-    keywords: ['health', 'skeleton', 'skull', 'death', 'pets', 'dog'],
+    keywords: ["health", "skeleton", "skull", "death", "pets", "dog"],
   },
   {
-    name: 'align-center',
+    name: "align-center",
     icon: AlignCenterIcon,
-    keywords: ['text', 'alignment', 'center'],
+    keywords: ["text", "alignment", "center"],
   },
   {
-    name: 'align-vertical',
+    name: "align-vertical",
     icon: AlignVerticalIcon,
-    keywords: ['center', 'items', 'flex', 'justify', 'distribute', 'between'],
+    keywords: ["center", "items", "flex", "justify", "distribute", "between"],
   },
   {
-    name: 'align-horizontal',
+    name: "align-horizontal",
     icon: AlignHorizontalIcon,
-    keywords: ['center', 'items', 'flex', 'justify', 'distribute', 'between'],
+    keywords: ["center", "items", "flex", "justify", "distribute", "between"],
   },
   {
-    name: 'compass',
+    name: "compass",
     icon: CompassIcon,
     keywords: [
-      'direction',
-      'navigation',
-      'north',
-      'south',
-      'east',
-      'west',
-      'compass',
+      "direction",
+      "navigation",
+      "north",
+      "south",
+      "east",
+      "west",
+      "compass",
     ],
   },
   {
-    name: 'shield-check',
+    name: "shield-check",
     icon: ShieldCheckIcon,
-    keywords: ['security', 'verified', 'safe', 'protection', 'secure'],
+    keywords: ["security", "verified", "safe", "protection", "secure"],
   },
   {
-    name: 'trending-down',
+    name: "trending-down",
     icon: TrendingDownIcon,
-    keywords: ['down', 'trend', 'graph', 'downward', 'decrease', 'statistics'],
+    keywords: ["down", "trend", "graph", "downward", "decrease", "statistics"],
   },
   {
-    name: 'trending-up',
+    name: "trending-up",
     icon: TrendingUpIcon,
-    keywords: ['up', 'trend', 'graph', 'upward', 'increase', 'statistics'],
+    keywords: ["up", "trend", "graph", "upward", "increase", "statistics"],
   },
   {
-    name: 'trending-up-down',
+    name: "trending-up-down",
     icon: TrendingUpDownIcon,
     keywords: [
-      'up',
-      'trend',
-      'graph',
-      'upward',
-      'increase',
-      'statistics',
-      'down',
-      'trend',
-      'graph',
-      'downward',
-      'decrease',
+      "up",
+      "trend",
+      "graph",
+      "upward",
+      "increase",
+      "statistics",
+      "down",
+      "trend",
+      "graph",
+      "downward",
+      "decrease",
     ],
   },
   {
-    name: 'timer',
+    name: "timer",
     icon: TimerIcon,
-    keywords: ['time', 'watch', 'alarm', 'stopwatch', 'stopwatch'],
+    keywords: ["time", "watch", "alarm", "stopwatch", "stopwatch"],
   },
   {
-    name: 'bluetooth',
+    name: "bluetooth",
     icon: BluetoothIcon,
-    keywords: ['tool', 'connection', 'network'],
+    keywords: ["tool", "connection", "network"],
   },
   {
-    name: 'bluetooth-searching',
+    name: "bluetooth-searching",
     icon: BluetoothSearchingIcon,
-    keywords: ['tool', 'connection', 'network'],
+    keywords: ["tool", "connection", "network"],
   },
   {
-    name: 'bluetooth-connected',
+    name: "bluetooth-connected",
     icon: BluetoothConnectedIcon,
-    keywords: ['tool', 'connection', 'network'],
+    keywords: ["tool", "connection", "network"],
   },
   {
-    name: 'bluetooth-off',
+    name: "bluetooth-off",
     icon: BluetoothOffIcon,
-    keywords: ['tool', 'connection', 'network'],
+    keywords: ["tool", "connection", "network"],
   },
   {
-    name: 'flask',
+    name: "flask",
     icon: FlaskIcon,
     keywords: [
-      'beaker',
-      'erlenmeyer',
-      'lab',
-      'chemistry',
-      'experiment',
-      'test',
+      "beaker",
+      "erlenmeyer",
+      "lab",
+      "chemistry",
+      "experiment",
+      "test",
     ],
   },
   {
-    name: 'syringe',
+    name: "syringe",
     icon: SyringeIcon,
     keywords: [
-      'medicine',
-      'medical',
-      'needle',
-      'pump',
-      'plunger',
-      'nozzle',
-      'blood',
+      "medicine",
+      "medical",
+      "needle",
+      "pump",
+      "plunger",
+      "nozzle",
+      "blood",
     ],
   },
   {
-    name: 'play',
+    name: "play",
     icon: PlayIcon,
-    keywords: ['video', 'play', 'start'],
+    keywords: ["video", "play", "start"],
   },
   {
-    name: 'pause',
+    name: "pause",
     icon: PauseIcon,
-    keywords: ['video', 'pause', 'stop'],
+    keywords: ["video", "pause", "stop"],
   },
   {
-    name: 'chart-column-decreasing',
+    name: "chart-column-decreasing",
     icon: ChartColumnDecreasingIcon,
-    keywords: ['chart', 'column', 'decreasing'],
+    keywords: ["chart", "column", "decreasing"],
   },
   {
-    name: 'chart-column-increasing',
+    name: "chart-column-increasing",
     icon: ChartColumnIncreasingIcon,
-    keywords: ['chart', 'column', 'increasing'],
+    keywords: ["chart", "column", "increasing"],
   },
   {
-    name: 'chart-bar-decreasing',
+    name: "chart-bar-decreasing",
     icon: ChartBarDecreasingIcon,
-    keywords: ['chart', 'bar', 'decreasing'],
+    keywords: ["chart", "bar", "decreasing"],
   },
   {
-    name: 'chart-bar-increasing',
+    name: "chart-bar-increasing",
     icon: ChartBarIncreasingIcon,
-    keywords: ['chart', 'bar', 'increasing'],
+    keywords: ["chart", "bar", "increasing"],
   },
   {
-    name: 'chevron-down',
+    name: "chevron-down",
     icon: ChevronDownIcon,
-    keywords: ['chevron', 'down', 'expand', 'unfold', 'vertical'],
+    keywords: ["chevron", "down", "expand", "unfold", "vertical"],
   },
   {
-    name: 'chevron-up',
+    name: "chevron-up",
     icon: ChevronUpIcon,
-    keywords: ['chevron', 'up', 'collapse', 'fold', 'vertical'],
+    keywords: ["chevron", "up", "collapse", "fold", "vertical"],
   },
   {
-    name: 'chevron-left',
+    name: "chevron-left",
     icon: ChevronLeftIcon,
-    keywords: ['chevron', 'left', 'previous', 'back', 'direction'],
+    keywords: ["chevron", "left", "previous", "back", "direction"],
   },
   {
-    name: 'chevron-right',
+    name: "chevron-right",
     icon: ChevronRightIcon,
-    keywords: ['chevron', 'right', 'next', 'forward', 'direction'],
+    keywords: ["chevron", "right", "next", "forward", "direction"],
   },
   {
-    name: 'chevrons-up-down',
+    name: "chevrons-up-down",
     icon: ChevronsUpDownIcon,
-    keywords: ['expand', 'unfold', 'vertical', 'chevron'],
+    keywords: ["expand", "unfold", "vertical", "chevron"],
   },
   {
-    name: 'chevrons-down-up',
+    name: "chevrons-down-up",
     icon: ChevronsDownUpIcon,
-    keywords: ['collapse', 'fold', 'vertical', 'chevron'],
+    keywords: ["collapse", "fold", "vertical", "chevron"],
   },
   {
-    name: 'chevrons-left-right',
+    name: "chevrons-left-right",
     icon: ChevronsLeftRightIcon,
-    keywords: ['expand', 'unfold', 'horizontal', 'chevron'],
+    keywords: ["expand", "unfold", "horizontal", "chevron"],
   },
   {
-    name: 'chevrons-right-left',
+    name: "chevrons-right-left",
     icon: ChevronsRightLeftIcon,
-    keywords: ['collapse', 'fold', 'horizontal', 'chevron'],
+    keywords: ["collapse", "fold", "horizontal", "chevron"],
   },
   {
-    name: 'circle-chevron-down',
+    name: "circle-chevron-down",
     icon: CircleChevronDownIcon,
-    keywords: ['back', 'menu', 'chevron'],
+    keywords: ["back", "menu", "chevron"],
   },
   {
-    name: 'circle-chevron-left',
+    name: "circle-chevron-left",
     icon: CircleChevronLeftIcon,
     keywords: [
-      'back',
-      'previous',
-      'less than',
-      'fewer',
-      'menu',
-      '<',
-      'chevron',
+      "back",
+      "previous",
+      "less than",
+      "fewer",
+      "menu",
+      "<",
+      "chevron",
     ],
   },
   {
-    name: 'circle-chevron-right',
+    name: "circle-chevron-right",
     icon: CircleChevronRightIcon,
     keywords: [
-      'next',
-      'forward',
-      'more than',
-      'greater',
-      'menu',
-      '>',
-      'chevron',
+      "next",
+      "forward",
+      "more than",
+      "greater",
+      "menu",
+      ">",
+      "chevron",
     ],
   },
   {
-    name: 'square-chevron-down',
+    name: "square-chevron-down",
     icon: SquareChevronDownIcon,
-    keywords: ['chevron', 'down', 'expand'],
+    keywords: ["chevron", "down", "expand"],
   },
   {
-    name: 'square-chevron-up',
+    name: "square-chevron-up",
     icon: SquareChevronUpIcon,
-    keywords: ['chevron', 'up', 'collapse'],
+    keywords: ["chevron", "up", "collapse"],
   },
   {
-    name: 'square-chevron-right',
+    name: "square-chevron-right",
     icon: SquareChevronRightIcon,
-    keywords: ['chevron', 'right', 'next'],
+    keywords: ["chevron", "right", "next"],
   },
   {
-    name: 'square-chevron-left',
+    name: "square-chevron-left",
     icon: SquareChevronLeftIcon,
-    keywords: ['chevron', 'left', 'previous'],
+    keywords: ["chevron", "left", "previous"],
   },
   {
-    name: 'a-arrow-down',
+    name: "a-arrow-down",
     icon: AArrowDownIcon,
-    keywords: ['arrow', 'down', 'a'],
+    keywords: ["arrow", "down", "a"],
   },
-
   {
-    name: 'circle-dashed',
+    name: "circle-dashed",
     icon: CircleDashedIcon,
-    keywords: ['dashed', 'circle', 'dashed circle'],
+    keywords: ["dashed", "circle", "dashed circle"],
   },
   {
-    name: 'circle-chevron-up',
+    name: "circle-chevron-up",
     icon: CircleChevronUpIcon,
-    keywords: ['caret', 'ahead', 'forward', 'menu', 'chevron'],
+    keywords: ["caret", "ahead", "forward", "menu", "chevron"],
   },
   {
-    name: 'check',
+    name: "check",
     icon: CheckIcon,
-    keywords: ['done', 'todo', 'tick', 'complete', 'task'],
+    keywords: ["done", "todo", "tick", "complete", "task"],
   },
   {
-    name: 'check-check',
+    name: "check-check",
     icon: CheckCheckIcon,
     keywords: [
-      'done',
-      'received',
-      'double',
-      'todo',
-      'tick',
-      'complete',
-      'task',
+      "done",
+      "received",
+      "double",
+      "todo",
+      "tick",
+      "complete",
+      "task",
     ],
   },
   {
-    name: 'id-card',
+    name: "id-card",
     icon: IdCardIcon,
     keywords: [
-      'identification',
-      'personal',
-      'details',
-      'profile',
-      'card',
-      'badge',
-      'identity',
-      'authentication',
-      'secure',
+      "identification",
+      "personal",
+      "details",
+      "profile",
+      "card",
+      "badge",
+      "identity",
+      "authentication",
+      "secure",
     ],
   },
   {
-    name: 'loader-pinwheel',
+    name: "loader-pinwheel",
     icon: LoaderPinwheelIcon,
     keywords: [
-      'loading',
-      'wait',
-      'busy',
-      'progress',
-      'throbber',
-      'spinner',
-      'spinning',
-      'beach ball',
-      'frozen',
-      'freeze',
+      "loading",
+      "wait",
+      "busy",
+      "progress",
+      "throbber",
+      "spinner",
+      "spinning",
+      "beach ball",
+      "frozen",
+      "freeze",
     ],
   },
   {
-    name: 'rocking-chair',
+    name: "rocking-chair",
     icon: RockingChairIcon,
-    keywords: ['furniture', 'seat', 'rock', 'relax', 'sit', 'chair'],
+    keywords: ["furniture", "seat", "rock", "relax", "sit", "chair"],
   },
   {
-    name: 'banana',
+    name: "banana",
     icon: BananaIcon,
-    keywords: ['fruit', 'food', 'yellow', 'tropical'],
+    keywords: ["fruit", "food", "yellow", "tropical"],
   },
   {
-    name: 'wifi',
+    name: "wifi",
     icon: WifiIcon,
-    keywords: ['internet', 'electronic', 'connection', 'data'],
+    keywords: ["internet", "electronic", "connection", "data"],
   },
   {
-    name: 'chrome',
+    name: "chrome",
     icon: ChromeIcon,
-    keywords: ['browser', 'google', 'internet', 'web', 'logo'],
+    keywords: ["browser", "google", "internet", "web", "logo"],
   },
   {
-    name: 'figma',
+    name: "figma",
     icon: FigmaIcon,
-    keywords: ['design', 'tool', 'logo'],
+    keywords: ["design", "tool", "logo"],
   },
   {
-    name: 'fish-symbol',
+    name: "fish-symbol",
     icon: FishSymbolIcon,
     keywords: [
-      'fish',
-      'seafood',
-      'ocean',
-      'marine',
-      'dish',
-      'restaurant',
-      'course',
-      'meal',
-      'seafood',
-      'pet',
-      'sea',
-      'marine',
+      "fish",
+      "seafood",
+      "ocean",
+      "marine",
+      "dish",
+      "restaurant",
+      "course",
+      "meal",
+      "seafood",
+      "pet",
+      "sea",
+      "marine",
     ],
   },
   {
-    name: 'git-commit-vertical',
+    name: "git-commit-vertical",
     icon: GitCommitVerticalIcon,
     keywords: [
-      'code',
-      'open',
-      'version control ',
-      'waypoint',
-      'stop',
-      'station',
+      "code",
+      "open",
+      "version control ",
+      "waypoint",
+      "stop",
+      "station",
     ],
   },
   {
-    name: 'git-commit-horizontal',
+    name: "git-commit-horizontal",
     icon: GitCommitHorizontalIcon,
     keywords: [
-      'code',
-      'open',
-      'version control ',
-      'waypoint',
-      'stop',
-      'station',
+      "code",
+      "open",
+      "version control ",
+      "waypoint",
+      "stop",
+      "station",
     ],
   },
   {
-    name: 'waypoints',
+    name: "waypoints",
     icon: WaypointsIcon,
     keywords: [
-      'indirection',
-      'vpn',
-      'virtual private network',
-      'proxy',
-      'connections',
-      'bounce',
-      'reroute',
-      'path',
-      'journey',
-      'planner',
-      'stops',
-      'stations',
-      'shared',
-      'spread',
-      'vira',
+      "indirection",
+      "vpn",
+      "virtual private network",
+      "proxy",
+      "connections",
+      "bounce",
+      "reroute",
+      "path",
+      "journey",
+      "planner",
+      "stops",
+      "stations",
+      "shared",
+      "spread",
+      "vira",
     ],
   },
   {
-    name: 'ship',
+    name: "ship",
     icon: ShipIcon,
     keywords: [
-      'boat',
-      'vessel',
-      'sea',
-      'ocean',
-      'water',
-      'transport',
-      'knots',
-      'nautical mile',
-      'maritime',
-      'sailing',
-      'yacht',
-      'cruise',
-      'ocean liner',
-      'tanker',
-      'vessel',
-      'navy',
-      'trip',
+      "boat",
+      "vessel",
+      "sea",
+      "ocean",
+      "water",
+      "transport",
+      "knots",
+      "nautical mile",
+      "maritime",
+      "sailing",
+      "yacht",
+      "cruise",
+      "ocean liner",
+      "tanker",
+      "vessel",
+      "navy",
+      "trip",
     ],
   },
   {
-    name: 'roller-coaster',
+    name: "roller-coaster",
     icon: RollerCoasterIcon,
     keywords: [
-      'ride',
-      'fun',
-      'amusement',
-      'park',
-      'thrill',
-      'excitement',
-      'attraction',
-      'entertainment',
-      'amusement park',
-      'theme park',
-      'funfair',
+      "ride",
+      "fun",
+      "amusement",
+      "park",
+      "thrill",
+      "excitement",
+      "attraction",
+      "entertainment",
+      "amusement park",
+      "theme park",
+      "funfair",
     ],
   },
   {
-    name: 'drum',
+    name: "drum",
     icon: DrumIcon,
-    keywords: ['music', 'instrument', 'percussion', 'beat', 'rhythm', 'sound'],
+    keywords: ["music", "instrument", "percussion", "beat", "rhythm", "sound"],
   },
   {
-    name: 'train-track',
+    name: "train-track",
     icon: TrainTrackIcon,
-    keywords: ['railway', 'track', 'train', 'transport', 'travel', 'line'],
+    keywords: ["railway", "track", "train", "transport", "travel", "line"],
   },
   {
-    name: 'webhook',
+    name: "webhook",
     icon: WebhookIcon,
     keywords: [
-      'api',
-      'integration',
-      'web',
-      'hook',
-      'connect',
-      'link',
-      'push api',
-      'callback',
+      "api",
+      "integration",
+      "web",
+      "hook",
+      "connect",
+      "link",
+      "push api",
+      "callback",
     ],
   },
   {
-    name: 'rabbit',
+    name: "rabbit",
     icon: RabbitIcon,
     keywords: [
-      'bunny',
-      'hare',
-      'animal',
-      'mammal',
-      'ears',
-      'fluffy',
-      'rodent',
-      'pet',
-      'pest',
-      'bunny',
-      'hare',
-      'fast',
-      'speed',
-      'hop',
+      "bunny",
+      "hare",
+      "animal",
+      "mammal",
+      "ears",
+      "fluffy",
+      "rodent",
+      "pet",
+      "pest",
+      "bunny",
+      "hare",
+      "fast",
+      "speed",
+      "hop",
     ],
   },
   {
-    name: 'cog',
+    name: "cog",
     icon: CogIcon,
     keywords: [
-      'gear',
-      'settings',
-      'preferences',
-      'controls',
-      'computing',
-      'settings',
-      'cog',
-      'edit',
+      "gear",
+      "settings",
+      "preferences",
+      "controls",
+      "computing",
+      "settings",
+      "cog",
+      "edit",
     ],
   },
   {
-    name: 'cpu',
+    name: "cpu",
     icon: CpuIcon,
     keywords: [
-      'processor',
-      'chip',
-      'computer',
-      'hardware',
-      'central processing unit',
-      'computing',
-      'cores',
-      'technology',
-      'circuit',
-      'memory',
-      'ram',
-      'specs',
-      'gigahertz',
-      'ghz',
+      "processor",
+      "chip",
+      "computer",
+      "hardware",
+      "central processing unit",
+      "computing",
+      "cores",
+      "technology",
+      "circuit",
+      "memory",
+      "ram",
+      "specs",
+      "gigahertz",
+      "ghz",
     ],
   },
   {
-    name: 'sparkles',
+    name: "sparkles",
     icon: SparklesIcon,
-    keywords: ['sparkles', 'sparkle', 'star', 'stars', 'shine', 'shining'],
+    keywords: ["sparkles", "sparkle", "star", "stars", "shine", "shining"],
   },
   {
-    name: 'rocket',
+    name: "rocket",
     icon: RocketIcon,
-    keywords: ['launch', 'space', 'boost', 'release', 'version'],
+    keywords: ["launch", "space", "boost", "release", "version"],
   },
   {
-    name: 'activity',
+    name: "activity",
     icon: ActivityIcon,
     keywords: [
-      'pulse',
-      'action',
-      'motion/react',
-      'movement',
-      'exercise',
-      'fitness',
-      'healthcare',
-      'heart rate monitor',
-      'vital signs',
-      'vitals',
-      'emergency room',
-      'er',
-      'intensive care',
-      'hospital',
-      'defibrillator',
-      'earthquake',
-      'siesmic',
-      'magnitude',
-      'richter scale',
-      'aftershock',
-      'tremor',
-      'shockwave',
-      'audio',
-      'waveform',
-      'synthesizer',
-      'synthesiser',
-      'music',
+      "pulse",
+      "action",
+      "motion/react",
+      "movement",
+      "exercise",
+      "fitness",
+      "healthcare",
+      "heart rate monitor",
+      "vital signs",
+      "vitals",
+      "emergency room",
+      "er",
+      "intensive care",
+      "hospital",
+      "defibrillator",
+      "earthquake",
+      "siesmic",
+      "magnitude",
+      "richter scale",
+      "aftershock",
+      "tremor",
+      "shockwave",
+      "audio",
+      "waveform",
+      "synthesizer",
+      "synthesiser",
+      "music",
     ],
   },
   {
-    name: 'ban',
+    name: "ban",
     icon: BanIcon,
-    keywords: ['ban', 'stop', 'prevent', 'no'],
+    keywords: ["ban", "stop", "prevent", "no"],
   },
   {
-    name: 'map-pin',
+    name: "map-pin",
     icon: MapPinIcon,
-    keywords: ['map', 'pin', 'marker', 'location', 'address'],
+    keywords: ["map", "pin", "marker", "location", "address"],
   },
   {
-    name: 'map-pin-check-inside',
+    name: "map-pin-check-inside",
     icon: MapPinCheckInsideIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'done',
-      'tick',
-      'complete',
-      'task',
-      'added',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "done",
+      "tick",
+      "complete",
+      "task",
+      "added",
     ],
   },
   {
-    name: 'map-pin-minus-inside',
+    name: "map-pin-minus-inside",
     icon: MapPinMinusInsideIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'delete',
-      'remove',
-      'erase',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "delete",
+      "remove",
+      "erase",
     ],
   },
   {
-    name: 'map-pin-plus-inside',
+    name: "map-pin-plus-inside",
     icon: MapPinPlusInsideIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'add',
-      'create',
-      'new',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "add",
+      "create",
+      "new",
     ],
   },
   {
-    name: 'map-pin-off',
+    name: "map-pin-off",
     icon: MapPinOffIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'off',
-      'remove',
-      'non available',
-      'invalid',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "off",
+      "remove",
+      "non available",
+      "invalid",
     ],
   },
   {
-    name: 'map-pin-check',
+    name: "map-pin-check",
     icon: MapPinCheckIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'done',
-      'tick',
-      'complete',
-      'task',
-      'added',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "done",
+      "tick",
+      "complete",
+      "task",
+      "added",
     ],
   },
   {
-    name: 'map-pin-house',
+    name: "map-pin-house",
     icon: MapPinHouseIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'home',
-      'living',
-      'place',
-      'landmark',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "home",
+      "living",
+      "place",
+      "landmark",
     ],
   },
   {
-    name: 'map-pin-minus',
+    name: "map-pin-minus",
     icon: MapPinMinusIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'delete',
-      'remove',
-      'erase',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "delete",
+      "remove",
+      "erase",
     ],
   },
   {
-    name: 'map-pin-plus',
+    name: "map-pin-plus",
     icon: MapPinPlusIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'add',
-      'create',
-      'new',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "add",
+      "create",
+      "new",
     ],
   },
   {
-    name: 'map-pin-x-inside',
+    name: "map-pin-x-inside",
     icon: MapPinXInsideIcon,
     keywords: [
-      'map',
-      'pin',
-      'marker',
-      'location',
-      'address',
-      'waypoint',
-      'delete',
-      'remove',
-      'erase',
+      "map",
+      "pin",
+      "marker",
+      "location",
+      "address",
+      "waypoint",
+      "delete",
+      "remove",
+      "erase",
     ],
   },
   {
-    name: 'battery-full',
+    name: "battery-full",
     icon: BatteryFullIcon,
-    keywords: ['battery', 'power', 'energy', 'full', 'charge'],
+    keywords: ["battery", "power", "energy", "full", "charge"],
   },
   {
-    name: 'battery-medium',
+    name: "battery-medium",
     icon: BatteryMediumIcon,
-    keywords: ['battery', 'power', 'energy', 'medium', 'charge'],
+    keywords: ["battery", "power", "energy", "medium", "charge"],
   },
   {
-    name: 'battery-low',
+    name: "battery-low",
     icon: BatteryLowIcon,
-    keywords: ['battery', 'power', 'energy', 'low', 'charge'],
+    keywords: ["battery", "power", "energy", "low", "charge"],
   },
   {
-    name: 'terminal',
+    name: "terminal",
     icon: TerminalIcon,
-    keywords: ['terminal', 'console', 'command line', 'shell', 'prompt'],
+    keywords: ["terminal", "console", "command line", "shell", "prompt"],
   },
   {
-    name: 'keyboard',
+    name: "keyboard",
     icon: KeyboardIcon,
-    keywords: ['keyboard', 'input', 'text', 'type', 'input method'],
+    keywords: ["keyboard", "input", "text", "type", "input method"],
   },
   {
-    name: 'clap',
+    name: "clap",
     icon: ClapIcon,
     keywords: [
-      'clap',
-      'movie',
-      'film',
-      'video',
-      'camera',
-      'cinema',
-      'cut',
-      'action',
-      'television',
-      'tv',
-      'show',
-      'entertainment',
+      "clap",
+      "movie",
+      "film",
+      "video",
+      "camera",
+      "cinema",
+      "cut",
+      "action",
+      "television",
+      "tv",
+      "show",
+      "entertainment",
     ],
   },
   {
-    name: 'layout-panel-top',
+    name: "layout-panel-top",
     icon: LayoutPanelTopIcon,
     keywords: [
-      'window',
-      'webpage',
-      'block',
-      'section',
-      'grid',
-      'template',
-      'structure',
+      "window",
+      "webpage",
+      "block",
+      "section",
+      "grid",
+      "template",
+      "structure",
     ],
   },
   {
-    name: 'contrast',
+    name: "contrast",
     icon: ContrastIcon,
     keywords: [
-      'contrast',
-      'brightness',
-      'adjust',
-      'enhance',
-      'change',
-      'theme',
-      'dark',
-      'light',
-      'mode',
+      "contrast",
+      "brightness",
+      "adjust",
+      "enhance",
+      "change",
+      "theme",
+      "dark",
+      "light",
+      "mode",
     ],
   },
   {
-    name: 'book-text',
+    name: "cooking-pot",
+    icon: CookingPotIcon,
+    keywords: [
+      "pod",
+      "cooking",
+      "recipe",
+      "food",
+      "kitchen",
+      "chef",
+      "restaurant",
+      "dinner",
+      "lunch",
+      "breakfast",
+      "meal",
+      "eat",
+    ],
+  },
+  {
+    name: "book-text",
     icon: BookTextIcon,
     keywords: [
-      'reading',
-      'booklet',
-      'magazine',
-      'leaflet',
-      'pamphlet',
-      'tome',
-      'library',
+      "reading",
+      "booklet",
+      "magazine",
+      "leaflet",
+      "pamphlet",
+      "tome",
+      "library",
     ],
   },
   {
-    name: 'ev-charger',
+    name: "ev-charger",
     icon: EvChargerIcon,
-    keywords: ['ev', 'charger', 'charge', 'electric', 'vehicle'],
+    keywords: ["ev", "charger", "charge", "electric", "vehicle"],
   },
   {
-    name: 'plug-zap',
+    name: "plug-zap",
     icon: PlugZapIcon,
-    keywords: ['plug', 'zap', 'power', 'energy', 'charge'],
+    keywords: ["plug", "zap", "power", "energy", "charge"],
   },
   {
-    name: 'shower-head',
+    name: "shower-head",
     icon: ShowerHeadIcon,
-    keywords: ['shower', 'bath', 'bathroom', 'amenities', 'services'],
+    keywords: ["shower", "bath", "bathroom", "amenities", "services"],
   },
   {
-    name: 'telescope',
+    name: "telescope",
     icon: TelescopeIcon,
     keywords: [
-      'telescope',
-      'astronomy',
-      'space',
-      'discovery',
-      'exploration',
-      'explore',
-      'vision',
-      'perspective',
-      'focus',
-      'stargazing',
-      'observe',
-      'view',
+      "telescope",
+      "astronomy",
+      "space",
+      "discovery",
+      "exploration",
+      "explore",
+      "vision",
+      "perspective",
+      "focus",
+      "stargazing",
+      "observe",
+      "view",
     ],
   },
   {
-    name: 'wind',
+    name: "wind",
     icon: WindIcon,
-    keywords: ['wind', 'weather', 'air', 'blow'],
+    keywords: ["wind", "weather", "air", "blow"],
   },
   {
-    name: 'angry',
+    name: "angry",
     icon: AngryIcon,
-    keywords: ['mad', 'upset', 'angry', 'furious', 'emotion', 'face'],
+    keywords: ["mad", "upset", "angry", "furious", "emotion", "face"],
   },
   {
-    name: 'cctv',
+    name: "ambulance",
+    icon: AmbulanceIcon,
+    keywords: [
+      "ambulance",
+      "emergency",
+      "medical",
+      "hospital",
+      "vehicle",
+      "rescue",
+      "siren",
+      "healthcare",
+      "transportation",
+      "urgent",
+      "first aid",
+    ],
+  },
+  {
+    name: "cctv",
     icon: CctvIcon,
     keywords: [
-      'cctv',
-      'camera',
-      'surveillance',
-      'recording',
-      'film',
-      'videotape',
-      'crime',
-      'watching',
+      "cctv",
+      "camera",
+      "surveillance",
+      "recording",
+      "film",
+      "videotape",
+      "crime",
+      "watching",
     ],
   },
   {
-    name: 'coffee',
+    name: "coffee",
     icon: CoffeeIcon,
     keywords: [
-      'coffee',
-      'drink',
-      'cup',
-      'mug',
-      'tea',
-      'cafe',
-      'hot',
-      'beverage',
+      "coffee",
+      "drink",
+      "cup",
+      "mug",
+      "tea",
+      "cafe",
+      "hot",
+      "beverage",
     ],
   },
   {
-    name: 'arrow-down-a-z',
+    name: "cup-soda",
+    icon: CupSodaIcon,
+    keywords: ["beverage", "cup", "drink", "soda", "straw", "water"],
+  },
+  {
+    name: "arrow-down-a-z",
     icon: ArrowDownAZIcon,
     keywords: [
-      'filter',
-      'sort',
-      'ascending',
-      'descending',
-      'increasing',
-      'decreasing',
-      'rising',
-      'falling',
-      'alphabetical',
+      "filter",
+      "sort",
+      "ascending",
+      "descending",
+      "increasing",
+      "decreasing",
+      "rising",
+      "falling",
+      "alphabetical",
     ],
   },
   {
-    name: 'arrow-down-z-a',
+    name: "arrow-down-z-a",
     icon: ArrowDownZAIcon,
     keywords: [
-      'filter',
-      'sort',
-      'ascending',
-      'descending',
-      'increasing',
-      'decreasing',
-      'rising',
-      'falling',
-      'alphabetical',
+      "filter",
+      "sort",
+      "ascending",
+      "descending",
+      "increasing",
+      "decreasing",
+      "rising",
+      "falling",
+      "alphabetical",
     ],
   },
   {
-    name: 'arrow-down-0-1',
-    icon: ArrowDown01con,
+    name: "arrow-down-0-1",
+    icon: ArrowDown01Icon,
     keywords: [
-      'filter',
-      'sort',
-      'ascending',
-      'descending',
-      'increasing',
-      'decreasing',
-      'rising',
-      'falling',
-      'numerical',
+      "filter",
+      "sort",
+      "ascending",
+      "descending",
+      "increasing",
+      "decreasing",
+      "rising",
+      "falling",
+      "numerical",
     ],
   },
   {
-    name: 'arrow-down-1-0',
+    name: "arrow-down-1-0",
     icon: ArrowDown10Icon,
     keywords: [
-      'filter',
-      'sort',
-      'ascending',
-      'descending',
-      'increasing',
-      'decreasing',
-      'rising',
-      'falling',
-      'numerical',
+      "filter",
+      "sort",
+      "ascending",
+      "descending",
+      "increasing",
+      "decreasing",
+      "rising",
+      "falling",
+      "numerical",
     ],
   },
   {
-    name: 'x',
+    name: "x",
     icon: XIcon,
-    keywords: ['x', 'close', 'delete', 'remove', 'cancel', 'exit', 'stop'],
+    keywords: ["x", "close", "delete", "remove", "cancel", "exit", "stop"],
   },
   {
-    name: 'cast',
+    name: "cast",
     icon: CastIcon,
-    keywords: ['cast', 'screen', 'chromecast', 'airplay'],
+    keywords: ["cast", "screen", "chromecast", "airplay"],
   },
   {
-    name: 'upload',
+    name: "upload",
     icon: UploadIcon,
-    keywords: ['upload', 'send', 'share'],
+    keywords: ["upload", "send", "share"],
   },
   {
-    name: 'file-cog',
+    name: "file-cog",
     icon: FileCogIcon,
-    keywords: ['file', 'cog', 'settings', 'preferences', 'controls'],
+    keywords: ["file", "cog", "settings", "preferences", "controls"],
   },
   {
-    name: 'calendar-days',
+    name: "calendar-days",
     icon: CalendarDaysIcon,
-    keywords: ['calendar', 'days', 'days of the week', 'week', 'month'],
+    keywords: ["calendar", "days", "days of the week", "week", "month"],
   },
   {
-    name: 'chart-line',
+    name: "chart-line",
     icon: ChartLineIcon,
-    keywords: ['chart', 'line', 'increasing', 'linechart', 'chartline'],
+    keywords: ["chart", "line", "increasing", "linechart", "chartline"],
   },
   {
-    name: 'file-chart-line',
+    name: "file-chart-line",
     icon: FileChartLineIcon,
     keywords: [
-      'file',
-      'chart',
-      'line',
-      'increasing',
-      'filechartline',
-      'filechartline',
+      "file",
+      "chart",
+      "line",
+      "increasing",
+      "filechartline",
+      "filechartline",
     ],
   },
   {
-    name: 'chart-no-axes-column-increasing',
+    name: "chart-no-axes-column-increasing",
     icon: ChartNoAxesColumnIncreasingIcon,
-    keywords: ['chart', 'column', 'increasing', 'chartnoaxes'],
+    keywords: ["chart", "column", "increasing", "chartnoaxes"],
   },
   {
-    name: 'chart-no-axes-column-decreasing',
+    name: "chart-no-axes-column-decreasing",
     icon: ChartNoAxesColumnDecreasingIcon,
-    keywords: ['chart', 'column', 'decreasing', 'chartnoaxes'],
+    keywords: ["chart", "column", "decreasing", "chartnoaxes"],
   },
   {
-    name: 'radio',
+    name: "radio",
     icon: RadioIcon,
     keywords: [
-      'radio',
-      'signal',
-      'broadcast',
-      'wireless',
-      'frequency',
-      'connectivity',
-      'live',
+      "radio",
+      "signal",
+      "broadcast",
+      "wireless",
+      "frequency",
+      "connectivity",
+      "live",
     ],
   },
   {
-    name: 'radio-tower',
+    name: "radio-tower",
     icon: RadioTowerIcon,
     keywords: [
-      'radio',
-      'tower',
-      'radio tower',
-      'signal',
-      'broadcast',
-      'wireless',
-      'frequency',
-      'connectivity',
-      'live',
+      "radio",
+      "tower",
+      "radio tower",
+      "signal",
+      "broadcast",
+      "wireless",
+      "frequency",
+      "connectivity",
+      "live",
     ],
   },
   {
-    name: 'blocks',
+    name: "blocks",
     icon: BlocksIcon,
     keywords: [
-      'block',
-      'blocks',
-      'addon',
-      'plugin',
-      'integration',
-      'extension',
-      'package',
-      'build',
-      'stack',
-      'toys',
-      'kids',
-      'children',
-      'learning',
+      "block",
+      "blocks",
+      "addon",
+      "plugin",
+      "integration",
+      "extension",
+      "package",
+      "build",
+      "stack",
+      "toys",
+      "kids",
+      "children",
+      "learning",
     ],
   },
   {
-    name: 'calendar-check',
+    name: "calendar-check",
     icon: CalendarCheckIcon,
     keywords: [
-      'calendar',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
+      "calendar",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'calendar-check-2',
+    name: "calendar-check-2",
     icon: CalendarCheck2Icon,
     keywords: [
-      'calendar',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
+      "calendar",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'file-check',
+    name: "file-check",
     icon: FileCheckIcon,
     keywords: [
-      'file',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'document',
-      'confirm',
-      'complete',
+      "file",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "document",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'file-check-2',
+    name: "file-check-2",
     icon: FileCheck2Icon,
     keywords: [
-      'file',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'document',
-      'confirm',
-      'complete',
+      "file",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "document",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'mail-check',
+    name: "mail-check",
     icon: MailCheckIcon,
     keywords: [
-      'mail',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'email',
-      'confirm',
-      'complete',
-      'delivered',
-      'message',
-      'sent',
+      "mail",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "email",
+      "confirm",
+      "complete",
+      "delivered",
+      "message",
+      "sent",
     ],
   },
   {
-    name: 'monitor-check',
+    name: "monitor-check",
     icon: MonitorCheckIcon,
     keywords: [
-      'monitor',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
-      'tv',
-      'screen',
-      'display',
-      'desktop',
-      'running',
-      'active',
-      'virtual machine',
-      'vm',
+      "monitor",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
+      "tv",
+      "screen",
+      "display",
+      "desktop",
+      "running",
+      "active",
+      "virtual machine",
+      "vm",
     ],
   },
   {
-    name: 'laptop-minimal-check',
+    name: "laptop-minimal-check",
     icon: LaptopMinimalCheckIcon,
     keywords: [
-      'laptop',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
-      'computer',
-      'laptop',
-      'running',
-      'active',
-      'virtual machine',
-      'vm',
+      "laptop",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
+      "computer",
+      "laptop",
+      "running",
+      "active",
+      "virtual machine",
+      "vm",
     ],
   },
   {
-    name: 'gallery-horizontal-end',
+    name: "gallery-horizontal-end",
     icon: GalleryHorizontalEndIcon,
     keywords: [
-      'gallery',
-      'horizontal',
-      'end',
-      'last',
-      'carousel',
-      'pictures',
-      'images',
-      'scroll',
-      'swipe',
-      'album',
-      'portfolio',
-      'history',
-      'versions',
-      'backup',
-      'time machine',
+      "gallery",
+      "horizontal",
+      "end",
+      "last",
+      "carousel",
+      "pictures",
+      "images",
+      "scroll",
+      "swipe",
+      "album",
+      "portfolio",
+      "history",
+      "versions",
+      "backup",
+      "time machine",
     ],
   },
   {
-    name: 'gallery-vertical-end',
+    name: "gallery-vertical-end",
     icon: GalleryVerticalEndIcon,
     keywords: [
-      'carousel',
-      'pictures',
-      'images',
-      'scroll',
-      'swipe',
-      'album',
-      'portfolio',
-      'history',
-      'versions',
-      'backup',
-      'time machine',
+      "carousel",
+      "pictures",
+      "images",
+      "scroll",
+      "swipe",
+      "album",
+      "portfolio",
+      "history",
+      "versions",
+      "backup",
+      "time machine",
     ],
   },
   {
-    name: 'hand-heart',
+    name: "hand-heart",
     icon: HandHeartIcon,
     keywords: [
-      'hand',
-      'heart',
-      'love',
-      'affection',
-      'hug',
-      'cuddle',
-      'emotion',
+      "hand",
+      "heart",
+      "love",
+      "affection",
+      "hug",
+      "cuddle",
+      "emotion",
     ],
   },
   {
-    name: 'gallery-thumbnails',
+    name: "gallery-thumbnails",
     icon: GalleryThumbnailsIcon,
     keywords: [
-      'gallery',
-      'thumbnails',
-      'images',
-      'carousel',
-      'pictures',
-      'album',
-      'portfolio',
-      'preview',
+      "gallery",
+      "thumbnails",
+      "images",
+      "carousel",
+      "pictures",
+      "album",
+      "portfolio",
+      "preview",
     ],
   },
   {
-    name: 'user-check',
+    name: "user-check",
     icon: UserCheckIcon,
     keywords: [
-      'user',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
+      "user",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'user-round-check',
+    name: "user-round-check",
     icon: UserRoundCheckIcon,
     keywords: [
-      'user',
-      'check',
-      'checkmark',
-      'tick',
-      'done',
-      'confirm',
-      'complete',
+      "user",
+      "check",
+      "checkmark",
+      "tick",
+      "done",
+      "confirm",
+      "complete",
     ],
   },
   {
-    name: 'boxes',
+    name: "box",
+    icon: BoxIcon,
+    keywords: [
+      "cube",
+      "package",
+      "container",
+      "storage",
+      "geometry",
+      "3d",
+      "isometric",
+    ],
+  },
+  {
+    name: "boxes",
     icon: BoxesIcon,
-    keywords: ['boxes', 'box', 'container', 'package', 'shipping'],
+    keywords: ["boxes", "box", "container", "package", "shipping"],
   },
   {
-    name: 'file-text',
+    name: "file-text",
     icon: FileTextIcon,
-    keywords: ['file', 'text', 'document', 'document', 'document'],
+    keywords: ["file", "text", "document", "document", "document"],
   },
   {
-    name: 'user-round-plus',
+    name: "user-round-plus",
     icon: UserRoundPlusIcon,
-    keywords: ['user', 'plus', 'add', 'create', 'new'],
+    keywords: ["user", "plus", "add", "create", "new"],
   },
   {
-    name: 'panel-left-open',
+    name: "panel-left-open",
     icon: PanelLeftOpenIcon,
-    keywords: ['panel', 'left', 'open', 'menu', 'navigation'],
+    keywords: ["panel", "left", "open", "menu", "navigation"],
   },
   {
-    name: 'panel-left-close',
+    name: "panel-left-close",
     icon: PanelLeftCloseIcon,
-    keywords: ['panel', 'left', 'close', 'menu', 'navigation'],
+    keywords: ["panel", "left", "close", "menu", "navigation"],
   },
   {
-    name: 'panel-right-open',
+    name: "panel-right-open",
     icon: PanelRightOpenIcon,
-    keywords: ['panel', 'right', 'open', 'menu', 'navigation'],
+    keywords: ["panel", "right", "open", "menu", "navigation"],
   },
   {
-    name: 'construction',
+    name: "construction",
     icon: ConstructionIcon,
     keywords: [
-      'roadwork',
-      'maintenance',
-      'blockade',
-      'barricade',
-      'development',
+      "roadwork",
+      "maintenance",
+      "blockade",
+      "barricade",
+      "development",
     ],
   },
   {
-    name: 'git-merge',
+    name: "git-merge",
     icon: GitMergeIcon,
-    keywords: ['code', 'version control', 'merge', 'git', 'branch'],
+    keywords: ["code", "version control", "merge", "git", "branch"],
+  },
+  {
+    name: "zap",
+    icon: ZapIcon,
+    keywords: ["electricity", "energy", "power", "lightning", "bolt"],
+  },
+  {
+    name: "zap-off",
+    icon: ZapOffIcon,
+    keywords: ["electricity", "energy", "power", "lightning", "bolt", "off"],
+  },
+  {
+    name: "battery-charging",
+    icon: BatteryChargingIcon,
+    keywords: ["battery", "charging", "power", "electricity", "energy"],
+  },
+  {
+    name: "battery",
+    icon: BatteryIcon,
+    keywords: ["power", "electricity", "energy", "accumulator", "charge"],
+  },
+  {
+    name: "battery-plus",
+    icon: BatteryPlusIcon,
+    keywords: ["accumulator", "charge", "plus", "add", "battery", "new"],
+  },
+  {
+    name: "battery-warning",
+    icon: BatteryWarningIcon,
+    keywords: [
+      "battery",
+      "warning",
+      "power",
+      "electricity",
+      "energy",
+      "alert",
+      "exclamation",
+    ],
+  },
+  {
+    name: "hand",
+    icon: HandIcon,
+    keywords: ["wave", "hand", "hello", "bye", "gesture"],
+  },
+  {
+    name: "hand-grab",
+    icon: HandGrabIcon,
+    keywords: ["gesture", "hand", "grab"],
+  },
+  {
+    name: "heart-handshake",
+    icon: HeartHandshakeIcon,
+    keywords: [
+      "agreement",
+      "charity",
+      "deal",
+      "handshake",
+      "heart",
+      "love",
+      "partnership",
+      "relationship",
+      "support",
+      "together",
+    ],
+  },
+  {
+    name: "hand-fist",
+    icon: HandFistIcon,
+    keywords: ["fist", "bump", "power", "punch", "strength", "rock"],
+  },
+  {
+    name: "hand-helping",
+    icon: HandHelpingIcon,
+    keywords: [
+      "agreement",
+      "assistance",
+      "help",
+      "partnership",
+      "support",
+      "volunteer",
+    ],
+  },
+  {
+    name: "hand-metal",
+    icon: HandMetalIcon,
+    keywords: [
+      "rock",
+      "metal",
+      "heavy metal",
+      "music",
+      "gesture",
+      "concert",
+      "horns",
+    ],
+  },
+  {
+    name: "wifi-low",
+    icon: WifiLowIcon,
+    keywords: ["internet", "electronic", "connection", "data"],
+  },
+  {
+    name: "database-backup",
+    icon: DatabaseBackupIcon,
+    keywords: [
+      "database",
+      "backup",
+      "restore",
+      "storage",
+      "reload",
+      "sync",
+      "recovery",
+      "data",
+    ],
+  },
+  {
+    name: "disc-3",
+    icon: Disc3Icon,
+    keywords: [
+      "disc",
+      "vinyl",
+      "record",
+      "music",
+      "audio",
+      "spin",
+      "rotate",
+      "cd",
+      "dvd",
+      "media",
+    ],
+  },
+  {
+    name: "loader-circle",
+    icon: LoaderCircleIcon,
+    keywords: [
+      "loader",
+      "loading",
+      "spinner",
+      "spin",
+      "circle",
+      "progress",
+      "wait",
+      "processing",
+    ],
+  },
+  {
+    name: "loader",
+    icon: LoaderIcon,
+    keywords: [
+      "loader",
+      "loading",
+      "spinner",
+      "spin",
+      "rotate",
+      "progress",
+      "wait",
+      "processing",
+    ],
+  },
+  {
+    name: "binary",
+    icon: BinaryIcon,
+    keywords: ["binary"],
+  },
+  {
+    name: "cigarette",
+    icon: CigaretteIcon,
+    keywords: ["cigarette"],
+  },
+  {
+    name: "cigarette-off",
+    icon: CigaretteOffIcon,
+    keywords: ["cigarette", "off"],
+  },
+  {
+    name: "cloud-backup",
+    icon: CloudBackupIcon,
+    keywords: ["cloud", "backup"],
+  },
+  {
+    name: "cloud-sync",
+    icon: CloudSyncIcon,
+    keywords: ["cloud", "sync"],
+  },
+  {
+    name: "palette",
+    icon: PaletteIcon,
+    keywords: ["palette", "color", "colour", "paint", "art", "brush", "theme"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 

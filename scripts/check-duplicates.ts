@@ -1,4 +1,4 @@
-import { ICON_LIST } from '@/icons';
+import { ICON_LIST } from "@/icons";
 
 type DuplicateEntry = {
   name: string;
@@ -35,19 +35,20 @@ const checkDuplicates = (): DuplicateReport => {
 };
 
 const printReport = () => {
-  console.log('🔍 Checking for duplicates in ICON_LIST...');
+  console.log("🔍 Checking for duplicates in ICON_LIST...");
   console.log(`   Total icons: ${ICON_LIST.length}`);
 
   const report = checkDuplicates();
 
   if (report.duplicateNames.length > 0) {
-    console.log('❌ DUPLICATE NAMES FOUND:');
+    console.log("❌ DUPLICATE NAMES FOUND:");
     for (const { name, indexes } of report.duplicateNames) {
       console.log(`   name: "${name}" - appears ${indexes.length} times`);
     }
-    console.log('');
+    console.log("");
+    process.exit(1);
   } else {
-    console.log('✅ No duplicate names found\n');
+    console.log("✅ No duplicate names found\n");
   }
 };
 

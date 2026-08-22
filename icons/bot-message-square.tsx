@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { motion, useAnimation } from 'motion/react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import type { HTMLAttributes } from 'react';
-import { cn } from '@/lib/utils';
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface BotMessageSquareHandle {
   startAnimation: () => void;
@@ -24,46 +25,43 @@ export const BotMessageSquareIcon = forwardRef<
   useImperativeHandle(ref, () => {
     isControlledRef.current = true;
     return {
-      startAnimation: () => controls.start('animate'),
-      stopAnimation: () => controls.start('normal'),
+      startAnimation: () => controls.start("animate"),
+      stopAnimation: () => controls.start("normal"),
     };
   });
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) controls.start('animate');
-      else onMouseEnter?.(e);
+      if (isControlledRef.current) onMouseEnter?.(e);
+      else controls.start("animate");
     },
     [controls, onMouseEnter]
   );
 
   const handleMouseLeave = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) controls.start('normal');
-      else onMouseLeave?.(e);
+      if (isControlledRef.current) onMouseLeave?.(e);
+      else controls.start("normal");
     },
     [controls, onMouseLeave]
   );
 
   return (
     <div
-      className={cn('inline-flex items-center justify-center', className)}
+      className={cn("inline-flex items-center justify-center", className)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...props}
     >
       <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        viewBox="0 0 24 24"
+        animate={controls}
         fill="none"
+        height={size}
+        initial="normal"
         stroke="currentColor"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        initial="normal"
-        animate={controls}
+        strokeWidth="2"
         variants={{
           normal: { rotate: 0, y: 0, scale: 1 },
           animate: {
@@ -72,20 +70,18 @@ export const BotMessageSquareIcon = forwardRef<
             scale: [1, 1.03, 1],
             transition: {
               duration: 1,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               repeat: 0,
             },
           },
         }}
+        viewBox="0 0 24 24"
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        {/* antenna */}
         <path d="M12 6V2H8" />
-
-        {/* side connectors */}
         <path d="M2 12h2" />
         <path d="M20 12h2" />
-
-        {/* message bubble pulse */}
         <motion.path
           d="M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"
           variants={{
@@ -94,21 +90,19 @@ export const BotMessageSquareIcon = forwardRef<
               scale: [1, 1.04, 1],
               transition: {
                 duration: 0.6,
-                ease: 'easeInOut',
+                ease: "easeInOut",
                 repeat: 1,
               },
             },
           }}
         />
-
-        {/* eyes */}
         <motion.path
           d="M9 11v2"
           variants={{
             normal: { scaleY: 1, originY: 0.5 },
             animate: {
               scaleY: [1, 0.1, 1],
-              transition: { duration: 0.4, ease: 'easeInOut', delay: 0.1 },
+              transition: { duration: 0.4, ease: "easeInOut", delay: 0.1 },
             },
           }}
         />
@@ -118,12 +112,10 @@ export const BotMessageSquareIcon = forwardRef<
             normal: { scaleY: 1, originY: 0.5 },
             animate: {
               scaleY: [1, 0.1, 1],
-              transition: { duration: 0.4, ease: 'easeInOut', delay: 0.2 },
+              transition: { duration: 0.4, ease: "easeInOut", delay: 0.2 },
             },
           }}
         />
-
-        {/* typing dots (only visible when animating) */}
         <motion.circle
           cx="10"
           cy="18"
@@ -132,7 +124,11 @@ export const BotMessageSquareIcon = forwardRef<
             normal: { opacity: 0 },
             animate: {
               opacity: [0.3, 1, 0.3],
-              transition: { repeat: Infinity, duration: 1.2, delay: 0 },
+              transition: {
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 1.2,
+                delay: 0,
+              },
             },
           }}
         />
@@ -144,7 +140,11 @@ export const BotMessageSquareIcon = forwardRef<
             normal: { opacity: 0 },
             animate: {
               opacity: [0.3, 1, 0.3],
-              transition: { repeat: Infinity, duration: 1.2, delay: 0.3 },
+              transition: {
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 1.2,
+                delay: 0.3,
+              },
             },
           }}
         />
@@ -156,7 +156,11 @@ export const BotMessageSquareIcon = forwardRef<
             normal: { opacity: 0 },
             animate: {
               opacity: [0.3, 1, 0.3],
-              transition: { repeat: Infinity, duration: 1.2, delay: 0.6 },
+              transition: {
+                repeat: Number.POSITIVE_INFINITY,
+                duration: 1.2,
+                delay: 0.6,
+              },
             },
           }}
         />
@@ -165,4 +169,4 @@ export const BotMessageSquareIcon = forwardRef<
   );
 });
 
-BotMessageSquareIcon.displayName = 'BotMessageSquareIcon';
+BotMessageSquareIcon.displayName = "BotMessageSquareIcon";

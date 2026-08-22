@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import type { Variants, Transition } from 'motion/react';
-import { motion, useAnimation } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Transition, Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface LoaderPinwheelIconHandle {
   startAnimation: () => void;
@@ -15,20 +16,20 @@ interface LoaderPinwheelIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const gVariants: Variants = {
-  normal: { rotate: 0 }, // if you want to start from a different angle, change this value or remove it entirely
+const G_VARIANTS: Variants = {
+  normal: { rotate: 0 },
   animate: {
     rotate: 360,
     transition: {
-      repeat: Infinity,
+      repeat: Number.POSITIVE_INFINITY,
       duration: 1,
-      ease: 'linear',
+      ease: "linear",
     },
   },
 };
 
-const defaultTransition: Transition = {
-  type: 'spring',
+const DEFAULT_TRANSITION: Transition = {
+  type: "spring",
   stiffness: 50,
   damping: 10,
 };
@@ -44,17 +45,17 @@ const LoaderPinwheelIcon = forwardRef<
     isControlledRef.current = true;
 
     return {
-      startAnimation: () => controls.start('animate'),
-      stopAnimation: () => controls.start('normal'),
+      startAnimation: () => controls.start("animate"),
+      stopAnimation: () => controls.start("normal"),
     };
   });
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('animate');
-      } else {
+      if (isControlledRef.current) {
         onMouseEnter?.(e);
+      } else {
+        controls.start("animate");
       }
     },
     [controls, onMouseEnter]
@@ -62,10 +63,10 @@ const LoaderPinwheelIcon = forwardRef<
 
   const handleMouseLeave = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!isControlledRef.current) {
-        controls.start('normal');
-      } else {
+      if (isControlledRef.current) {
         onMouseLeave?.(e);
+      } else {
+        controls.start("normal");
       }
     },
     [controls, onMouseLeave]
@@ -79,20 +80,20 @@ const LoaderPinwheelIcon = forwardRef<
       {...props}
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        viewBox="0 0 24 24"
         fill="none"
+        height={size}
         stroke="currentColor"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width={size}
+        xmlns="http://www.w3.org/2000/svg"
       >
         <motion.g
-          transition={defaultTransition}
-          variants={gVariants}
           animate={controls}
+          transition={DEFAULT_TRANSITION}
+          variants={G_VARIANTS}
         >
           <path d="M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0" />
           <path d="M7 20.7a1 1 0 1 1 5-8.7 1 1 0 1 0 5-8.6" />
@@ -104,6 +105,6 @@ const LoaderPinwheelIcon = forwardRef<
   );
 });
 
-LoaderPinwheelIcon.displayName = 'LoaderPinwheelIcon';
+LoaderPinwheelIcon.displayName = "LoaderPinwheelIcon";
 
 export { LoaderPinwheelIcon };

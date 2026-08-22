@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { motion, useAnimation } from 'motion/react';
-import type { Variants } from 'motion/react';
-import type { HTMLAttributes } from 'react';
-import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import type { Variants } from "motion/react";
+import { motion, useAnimation } from "motion/react";
+import type { HTMLAttributes } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
+import { cn } from "@/lib/utils";
 
 export interface YoutubeIconHandle {
   startAnimation: () => void;
@@ -15,7 +16,7 @@ interface YoutubeIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const pathVariants: Variants = {
+const PATH_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -31,13 +32,13 @@ const pathVariants: Variants = {
     pathOffset: [1, 0],
     transition: {
       duration: 0.6,
-      ease: 'linear',
+      ease: "linear",
       opacity: { duration: 0.1 },
     },
   },
 };
 
-const triangleVariants: Variants = {
+const TRIANGLE_VARIANTS: Variants = {
   normal: {
     opacity: 1,
     pathLength: 1,
@@ -53,7 +54,7 @@ const triangleVariants: Variants = {
     pathOffset: [1, 0],
     transition: {
       duration: 0.6,
-      ease: 'linear',
+      ease: "linear",
       opacity: { duration: 0.1 },
     },
   },
@@ -70,23 +71,23 @@ const YoutubeIcon = forwardRef<YoutubeIconHandle, YoutubeIconProps>(
 
       return {
         startAnimation: () => {
-          pathControls.start('animate');
-          triangleControls.start('animate');
+          pathControls.start("animate");
+          triangleControls.start("animate");
         },
         stopAnimation: () => {
-          pathControls.start('normal');
-          triangleControls.start('normal');
+          pathControls.start("normal");
+          triangleControls.start("normal");
         },
       };
     });
 
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          pathControls.start('animate');
-          triangleControls.start('animate');
-        } else {
+        if (isControlledRef.current) {
           onMouseEnter?.(e);
+        } else {
+          pathControls.start("animate");
+          triangleControls.start("animate");
         }
       },
       [onMouseEnter, pathControls, triangleControls]
@@ -94,11 +95,11 @@ const YoutubeIcon = forwardRef<YoutubeIconHandle, YoutubeIconProps>(
 
     const handleMouseLeave = useCallback(
       (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isControlledRef.current) {
-          pathControls.start('normal');
-          triangleControls.start('normal');
-        } else {
+        if (isControlledRef.current) {
           onMouseLeave?.(e);
+        } else {
+          pathControls.start("normal");
+          triangleControls.start("normal");
         }
       },
       [pathControls, triangleControls, onMouseLeave]
@@ -112,27 +113,27 @@ const YoutubeIcon = forwardRef<YoutubeIconHandle, YoutubeIconProps>(
         {...props}
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
           fill="none"
+          height={size}
           stroke="currentColor"
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={size}
+          xmlns="http://www.w3.org/2000/svg"
         >
           <motion.path
-            variants={pathVariants}
-            initial="normal"
             animate={pathControls}
             d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+            initial="normal"
+            variants={PATH_VARIANTS}
           />
           <motion.path
-            variants={triangleVariants}
-            initial="normal"
             animate={triangleControls}
             d="M10 15l5-3-5-3z"
+            initial="normal"
+            variants={TRIANGLE_VARIANTS}
           />
         </svg>
       </div>
@@ -140,6 +141,6 @@ const YoutubeIcon = forwardRef<YoutubeIconHandle, YoutubeIconProps>(
   }
 );
 
-YoutubeIcon.displayName = 'YoutubeIcon';
+YoutubeIcon.displayName = "YoutubeIcon";
 
 export { YoutubeIcon };

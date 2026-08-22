@@ -1,5 +1,10 @@
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
+<br />
+
 ## `lucide-animated` is beautifully crafted animated icons.
-![preview](./app/og.png)
+![preview](./public/og.png)
 
 **Demo** → [lucide-animated](https://lucide-animated.com)
 
@@ -7,6 +12,8 @@
 
 #### Svelte icons: [movingicons.dev](https://www.movingicons.dev/) by [@jis3r](https://github.com/jis3r)
 #### Vue icons: [imfenghuang.github.io/icons](https://imfenghuang.github.io/icons/) by [@imfenghuang](https://github.com/imfenghuang)
+#### Angular icons: [ajitzero/animated-icons](https://github.com/ajitzero/animated-icons) by [@ajitzero](https://github.com/ajitzero)
+#### Flutter icons: [flutter_lucide_animated](https://pub.dev/packages/flutter_lucide_animated) by [@ravikovind](https://github.com/ravikovind)
 
 
 ## Contributing
